@@ -1,0 +1,58 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '2.7.9'
+	id 'io.spring.dependency-management' version '1.0.15.RELEASE'
+}
+
+group = 'com.voice'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf' // Thymeleaf 템플릿 엔진
+	implementation 'org.springframework.boot:spring-boot-starter-web' // 웹 애플리케이션을 개발하기 위한 기본 의존성
+	testImplementation 'org.springframework.boot:spring-boot-starter-test' // Spring Boot 테스트를 위한 의존성
+	//implementation 'mysql:mysql-connector-java' // MySQL 데이터베이스와의 연동을 위한 JDBC 드라이버
+	implementation 'mysql:mysql-connector-java:8.0.26'
+
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
+	// implementation 'com.zaxxer:HikariCP:5.0.0' // HikariCP 커넥션 풀을 사용하기 위한 의존성
+
+	implementation 'org.projectlombok:lombok:1.18.22' // Lombok 라이브러리를 사용하여 자바 코드에서 반복적인 작업을 단순화할 수 있는 의존성
+	annotationProcessor('org.projectlombok:lombok:1.18.22') // // Lombok의 애노테이션 프로세서를 사용하기 위한 의존성
+
+	// implementation 'org.springframework.boot:spring-boot-starter-validation:2.5.6' // Spring Boot에서 데이터 유효성 검사를 위한 의존성
+	// implementation 'nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect' // Thymeleaf 레이아웃 확장 기능을 사용하기 위한 의존성
+
+	// implementation group: 'org.webjars', name: 'webjars-locator', version: '0.32' // 웹 자원을 위한 의존성으로, WebJars Locator를 사용
+	// implementation 'org.webjars:jquery:3.6.0' // jQuery 라이브러리를 사용하기 위한 의존성
+	implementation 'org.webjars:bootstrap:5.1.2' // Bootstrap 프레임워크를 사용하기 위한 의존성
+
+	// JPA hibernate
+	// implementation 'org.hibernate.orm:hibernate-core:6.2.6.Final'
+	// implementation 'org.hibernate.orm:hibernate-entitymanager:6.0.0.Alpha7'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
+
+	//WebSocket
+	implementation 'org.springframework.boot:spring-boot-starter-websocket'
+
+	implementation 'javax.validation:validation-api:2.0.1.Final' // 또는 JSR-303 스펙 버전에 맞는 버전 사용
+
+	implementation 'commons-fileupload:commons-fileupload:1.4'
+
+
+	//implementation 'org.springframework.boot:spring-boot-starter-security'
+
+
+
+
+
+}
+
+

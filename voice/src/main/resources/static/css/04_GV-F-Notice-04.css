@@ -1,0 +1,160 @@
+@font-face {
+    font-family: 'S-CoreDream-4Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'S-CoreDream-5Medium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-5Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'S-CoreDream-6Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-6Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+a {
+    text-decoration: none; /* 링크의 밑줄 제거 */
+    color: inherit; /* 링크의 색상 제거 */
+}
+
+.upload {
+    max-width: 1500px;
+    height: 350px;
+    margin: 30px auto;
+    padding: 20px;
+    /* background-color: #f4f4f4; */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 15px;
+}
+
+.upload table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.upload table td {
+    padding: 10px;
+}
+
+.upload table tr {
+    border:  2.2px solid #9DB2BF;
+    width: 110px;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+}
+
+.important {
+    background-color: #d4e1ed33;
+}
+
+.tableB td {
+    font-family: 'S-CoreDream-5Medium';
+    text-align: center;
+}
+
+/* .tableB tr:first-child:hover {
+    background-color: #27374D;
+    color: fff;   
+}
+
+.tableB tr:first-child {
+    height: 60px;
+    background-color: #27374D;
+    color: #fff;
+    border-bottom: none;
+} */
+
+.tableB tr:first-child:hover {
+    background-color: #9DB2BF;
+    color: fff;   
+}
+
+.tableB tr:first-child {
+    height: 40px;
+    background-color: #9DB2BF;
+    color: #fff;
+    border-bottom: none;
+}
+
+.tableB td:first-child {
+    width: 180px;
+}
+
+.tableB td:last-child {
+    width: 250px;
+}
+
+.update button .upload table button {
+    font-family: 'S-CoreDream-5Medium';
+    padding: 10px 20px;
+    background-color: #526D82;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+.tableB tr:hover {
+    background-color: #dde6ed33;
+}
+
+.upload table .button2 {
+    font-family: 'S-CoreDream-5Medium';
+    padding: 10px 20px;
+    background-color: #9DB2BF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+.date {
+    font-family: 'S-CoreDream-4Regular';
+    text-align: center;
+}
+
+.tableB tr:hover {
+    background-color: #d4e1ed33;
+}
+
+.deal {
+    font-family: 'S-CoreDream-4Regular';
+    width: 700px; /* Adjust the width as needed */
+    text-align: left !important;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 5px;
+}
+
+.pagination li {
+    margin: 0 5px;
+}
+
+.pagination a {
+    text-decoration: none;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: #333;
+}
+
+.pagination a:hover {
+    background-color: #f0f0f0;
+}

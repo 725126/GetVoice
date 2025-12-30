@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="utf-8">
+        <title>겟보이스</title>
+        <link rel="stylesheet" type="text/css" th:href="@{/css/16.0_GV-F-MyInqu-16.0.css}">
+        <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script> 
+    </head>
+
+
+    <body>
+
+        <!-- 문의글 작성 부분 -->
+        <div class="container">
+            <span class="close">&times;</span>
+            <div class="header">문의하기</div>
+            <form name="fo" method="get">   
+                <div class="upload">
+                    <form name="fo" method="get">
+
+                        <table class="tableB">
+                            <tr>
+                                <td>
+                                    <h3 class="profile-title">제목</h3>
+                                </td>
+                                <td>
+                                    <input type="text" id="amount" name="amount" required>
+                                </td>
+                            </tr>
+                        </table>
+                        <table>
+                            <tr>
+                                <td colspan="6">
+                                    <textarea id="content" name="content" placeholder="내용" rows="8"></textarea>
+                                </td>
+                            </tr>
+                        </table>
+                        <table>
+                            <div class="Submitbutton">
+                                <button type="submit" class="submit-button">전송</button>
+                            </div>
+                        </table>
+                    </form>
+                </div>
+            </form>  
+        </div> 
+        
+
+        <footer>
+        </footer>
+    </body>
+    <script src="/js/modal_window.js"></script>
+    <script src="/js/1.2_dropdown.js"></script>
+</html>

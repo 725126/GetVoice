@@ -1,0 +1,160 @@
+@font-face {
+    font-family: 'S-CoreDream-4Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'S-CoreDream-5Medium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-5Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'S-CoreDream-6Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-6Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+a {
+    text-decoration: none; /* 링크의 밑줄 제거 */
+    color: inherit; /* 링크의 색상 제거 */
+}
+
+.upload {
+    max-width: 1000px;
+    height: 630px;
+    margin: 30px auto;
+    padding: 20px;
+    /* background-color: #f4f4f4; */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.upload table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'S-CoreDream-5Medium';
+    font-size: 16px;
+    color: #27374D;
+}
+  
+.upload table td {
+    padding: 10px;
+}
+  
+.upload table tr {
+    border:  2.2px solid #9DB2BF;
+    width: 110px;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+}
+  
+.upload label {
+  font-family: 'S-CoreDream-5Medium';
+  font-size: 16px;
+  text-align: center;
+}
+  
+.upload .submit-button {
+    font-family: 'S-CoreDream-5Medium';
+    padding: 6px 24px;
+    background-color: #526D82;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 120px; 
+    height: 40px;
+    margin-top : 20px;
+}
+  
+.upload .submit-button:hover {
+    background-color: #27374D;
+}
+
+.rounded-profile {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+  
+.rounded-profile-container {
+    display: flex;
+    justify-content: center;
+}  
+  
+.nickname {
+    font-family: 'S-CoreDream-4Regular';
+    font-size: 14px;
+    color: #333333;
+    margin-top: 5px; 
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.profile-container {
+    display: flex;
+    margin-left: -10px;
+}
+  
+.profile-title {
+    font-family: 'S-CoreDream-6Bold';
+    font-size: 28px;
+    margin: 0;
+    color: #333333;
+}
+  
+.Submitbutton {
+    text-align: center;
+}
+  
+.tableD {
+    text-align: center;
+}
+  
+.tableD td{
+    width: 25%;
+}
+  
+.tableD_label {
+    background-color: #DDE6ED;
+    width: 50px;
+}
+
+.tableE {
+    height: 380px;
+    text-align: left;
+}
+  
+.tableC {
+    text-align: center;
+}
+
+.td3 {
+    text-align: right;
+    margin-left:auto;
+    margin-right:auto;
+    width: 450px;
+}
+
+.tableA {
+    margin-left:auto;
+    margin-right:auto;
+    padding: 7px;
+    border-spacing: 10px 5px;
+}
+  
+.tableA td {
+    list-style: none;
+    text-align: left;
+}
+
+.table3 table tr {
+    list-style: none;
+}

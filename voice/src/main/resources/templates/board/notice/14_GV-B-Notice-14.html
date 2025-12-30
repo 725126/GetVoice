@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+        <title>공지사항 목록_관리자</title>
+        <link rel="stylesheet" type="text/css" th:href="@{/css/14_GV-B-Notice-14.css}">
+    </head>
+        
+    <body>
+        <!-- 헤더 -->
+        <th:block th:replace="fragments/00_GV-header-00 :: headerFragment"></th:block>
+        <th:block th:replace="fragments/00_GV-breadcrumb-00 :: breadcrumbFragment"></th:block>
+      
+
+        <main>
+            <button class="update" onclick="showBnotice()">게시물 등록</button>
+            <div class="upload">
+                <form name="fo" method="get">
+                    <table class="tableB">
+                        <tr>
+                            <td>
+                               번호
+                            </td>
+                            <td>
+                              제목
+                            </td>
+                            <td>
+                                등록일자
+                            </td>
+                        </tr>
+
+                        <!-- 공지사항1 -->
+                        <tr class="important">
+                            <td class="tdP">
+                                <div class="nickname">※</div>
+                            </td>
+                            <td class="deal">
+                                겟보이스 개인정보 처리방침 개정 안내입니다.
+                            </td>
+                            <td class="date">
+                                2023.11.19
+                            </td>
+                        </tr>
+
+                        <!-- 공지사항2 -->
+                        <tr class="important">
+                            <td class="tdP">
+                                <div class="nickname">※</div>
+                            </td>
+                            <td class="deal">
+                                리뷰 조작 및 페이 부정결제 행위 집중 모니터링합니다.
+                            </td>
+                            <td class="date">
+                                2023.11.27
+                            </td>
+                        </tr>
+
+                        <!-- 공지사항3 -->
+                        <tr>
+                            <td class="tdP">
+                                <div class="num">4</div>
+                            </td>
+                            <td class="deal">
+                                CJ ENM 12기(투니보이스 성우극회) 성우 공식 채용 관련 안내입니다.
+                            </td>
+                            <td class="date">
+                                2023.12.31
+                            </td>
+                        </tr>
+
+                        <!-- 공지사항4 -->
+                        <tr>
+                            <td class="tdP">
+                                <div class="num">3</div>
+                            </td>
+                            <td class="deal">
+                                겟보이스 회원 본인 인증 방식 변경 안내입니다.
+                            </td>
+                            <td class="date">
+                                2023.12.07
+                            </td>
+                        </tr>
+
+                        <!-- 공지사항5 -->
+                        <tr>
+                            <td class="tdP">
+                                <div class="num">2</div>
+                            </td>
+                            <td class="deal">
+                                겟보이스 긴급 점검 안내입니다.
+                            </td>
+                            <td class="date">
+                                2023.12.03
+                            </td>
+                        </tr>
+
+                        <!-- 공지사항6 -->
+                        <tr>
+                            <td class="tdP">
+                                <div class="num">1</div>
+                            </td>
+                            <td class="deal">
+                                V머니 결제 수수료 변경 안내입니다.
+                            </td>
+                            <td class="date">
+                                2023.12.01
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+                <ul class="pagination">
+                    <li><a href="first-page.html">&lt;&lt;</a></li>
+                    <li><a href="previous-page.html">&lt;</a></li>
+                    <li><a href="05_GV-F-NoticeView-05.html">1</a></li>
+                    <!-- 다른 페이지 번호를 여기에 추가하세요. -->
+                    <li><a href="next-page.html">&gt;</a></li>
+                    <li><a href="last-page.html">&gt;&gt;</a></li>
+                </ul>
+            </div>
+        </main>
+        <th:block th:replace="fragments/00_GV-footer-00 :: footerFragment"></th:block>
+    </body>
+    <script>
+        function showBnotice() { window.open("14_GV-B-Notice-14.html", "공지사항 작성_관리자"); }
+    </script>
+    <script src="/js/modal_window.js"></script>
+    <script src="/js/1.2_dropdown.js"></script>
+</html>

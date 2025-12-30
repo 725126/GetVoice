@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <th:block th:fragment="bannerFragment">
+        <link rel="stylesheet" type="text/css" th:href="@{/css/00_GV-banner-00.css}">
+        <!-- 배너 -->
+        <div class="banner-container">
+            <div class="banner" id="banner1">
+              <img class="banner-img" src="/img/ba_01.png" alt="Banner 1">
+            </div>
+            <div class="banner" id="banner2">
+              <img class="banner-img" src="/img/ba_02.png" alt="Banner 1">
+            </div>
+            <div class="banner" id="banner3">
+              <img class="banner-img" src="/img/ba_03.png" alt="Banner 1">
+            </div>
+            <div class="banner-nav">
+              <button class="banner-button" onclick="showBanner(1);">1</button>
+              <button class="banner-button" onclick="showBanner(2);">2</button>
+              <button class="banner-button" onclick="showBanner(3);">3</button>
+            </div>
+        </div>
+
+        <script th:inline="javascript">
+            let currentBanner = 1;
+
+            function showBanner(bannerNumber) {
+                // 현재 배너 감추기
+                document.getElementById(`banner${currentBanner}`).style.display = 'none';
+
+                // 선택한 배너 보이기
+                document.getElementById(`banner${bannerNumber}`).style.display = 'block';
+
+                currentBanner = bannerNumber;
+            }
+
+            // 자동 배너 전환 설정 (5초마다)
+            setInterval(() => {
+                let nextBanner = currentBanner % 3 + 1;
+                showBanner(nextBanner);
+            }, 5000);
+
+            // 초기로 첫 번째 배너 표시
+            showBanner(currentBanner);
+       </script>
+    </th:block>
+</body>
+</html>

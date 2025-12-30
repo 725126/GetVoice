@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="utf-8">
+        <title>겟보이스_닉네임 중복확인</title>
+        <link rel="stylesheet" media="screen" href="/css/2.2_2.3_GV-F.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>
+
+    <body>
+
+        <div class="container">
+            <div class="content">
+
+                <div class="form-group">
+                    <label>닉네임</label>
+                    <div class="input-group">
+                        <input class="input-join-nn" type="text" id="nickname" name="nickname" required>
+                        <br>
+                    </div>
+                </div>
+                <button type="submit" class="button-check" id="checknickname">중복확인</button>
+
+            </div>
+        </div>
+
+    <script th:src="@{/js/00_header-join-nn.js}"></script>
+    </body>
+</html>

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+        <title>겟보이스-회원정보</title>
+        <link rel="stylesheet" type="text/css" th:href="@{/css/05_GV-B-MemInfo-05.css}">
+    </head>
+        
+
+    <body>
+        <!-- 헤더 -->
+        <th:block th:replace="fragments/00_GV-header-00 :: headerFragment"></th:block>
+        <th:block th:replace="fragments/00_GV-breadcrumb-00 :: breadcrumbFragment"></th:block>
+
+
+                <table class="cate">
+                    <tr>
+                        <td class="dropdown">
+                            <span class="dropdown-button">전체 &nbsp;▼</span>
+                            <div class="dropdown-content">
+                            <a href="#">구인자</a>
+                            <a href="#">구직자</a>
+                            </div>
+                        </td>
+
+                        <td class="dropdown">
+                            <span class="dropdown-button2">정렬 &nbsp;▼</span>
+                            <div class="dropdown-content2">
+                            <a href="#">거래횟수 많은 순</a>
+                            <a href="#">신고횟수 많은 순</a>
+                            <a href="#">아이디 오름차순</a>
+                            <a href="#">아이디 내림차순</a>
+                            </div>
+                        </td>
+
+                        <td colspan="2"></td>
+
+                        <td class="id">
+                            <input type="text" class="search_id" placeholder="아이디 검색">
+                        </td>
+                    </tr>
+                </table>
+
+
+                <div class="upload">
+                        <table class="tableB">
+                            <tr>
+                                <td>
+                                   아이디
+                                </td>
+                                <td>
+                                  연락처
+                                </td>
+                                <td>
+                                    가입일자
+                                </td>
+                                <td>
+                                    거래횟수
+                                </td>
+                                <td>
+                                    신고횟수
+                                </td>
+                                <td>  
+                                    회원정지
+                                </td>
+                            </tr>
+
+                            <!-- 거래내역1 -->
+                            <tr>
+                                <td class="tdP">
+                                    <div class="rounded-profile-container">
+                                        <div class="nickname">GoYangI</div>
+                                    </div>
+                                </td>
+                                
+                                <td class="deal">
+                                    010-0991-0703
+                                </td>
+                                <td class="date">
+                                    2023.11.11
+                                </td>
+                                <td class="deal2">
+                                    0
+                                </td>
+                                <td class="deal2">
+                                    0
+                                </td>
+                                <td class="button">
+                                    <a href="">
+                                        <button class="get-voice-button">영구정지</button>
+                                    </a>
+                                </td>
+                              </tr>
+
+                            <!-- 거래내역2 -->
+                            <tr>
+                                <td class="tdP">
+                                    <div class="rounded-profile-container">
+                                        <div class="nickname">GwiYeoWeo88</div>
+                                    </div>
+                                </td>
+                                
+                                <td class="deal">
+                                    010-1002-0307
+                                </td>
+                                <td class="date">
+                                    2023.07.25
+                                </td>
+                                <td class="deal2">
+                                    2
+                                </td>
+                                <td class="deal2">
+                                    1
+                                </td>
+                                <td class="button">
+                                    <a href="">
+                                        <button class="get-voice-button">영구정지</button>
+                                    </a>
+                                </td>
+                              </tr>
+
+                              <!-- 거래내역3 -->
+                            <tr>
+                                <td class="tdP">
+                                    <div class="rounded-profile-container">
+                                        <div class="nickname">GangAJi_do</div>
+                                    </div>
+                                </td>
+                              
+                                <td class="deal">
+                                    010-1023-1002
+                                </td>
+                                <td class="date">
+                                    2023.4.14
+                                </td>
+                                <td class="deal2">
+                                    11
+                                </td>
+                                <td class="deal2">
+                                    1
+                                </td>
+                                <td class="button">
+                                    <a href="">
+                                        <button class="get-voice-button">영구정지</button>
+                                    </a>
+                                </td>
+                              </tr>
+
+                              <!-- 거래내역4 -->
+                            <tr>
+                                <td class="tdP">
+                                    <div class="rounded-profile-container">
+                                        <div class="nickname">_JohAYo_</div>
+                                    </div>
+                                </td>
+                                <td class="deal">
+                                    010-2003-0320
+                                </td>
+                                <td class="date">
+                                    2023.12.01
+                                </td>
+                                <td class="deal2">
+                                    4
+                                </td>
+                                <td class="deal2">
+                                    2
+                                </td>
+                                <td class="button">
+                                    <a href="">
+                                        <button class="get-voice-button">영구정지</button>
+                                    </a>
+                                </td>
+                              </tr>
+
+                              <!-- 거래내역5 -->
+                            <tr>
+                                <td class="tdP">
+                                    <div class="rounded-profile-container">
+                                        <div class="nickname">242324</div>
+                                    </div>
+                                </td>
+                                <td class="deal">
+                                    010-8919-1207
+                                </td>
+                                <td class="date">
+                                    2023.08.11
+                                </td>
+                                <td class="deal2">
+                                    0
+                                </td>
+                                <td class="deal2">
+                                    5
+                                </td>
+                                <td class="button">
+                                    <a href="">
+                                        <button class="get-voice-button">영구정지</button>
+                                    </a>
+                                </td>
+                              </tr>
+
+                               <!-- 거래내역6 -->
+                            <tr>
+                                <td class="tdP">
+                                        <div class="nickname">ewew</div>
+                                </td>
+                              
+                                <td class="deal">
+                                    010-0120-2601
+                                </td>
+                                <td class="date">
+                                    2023.12.24
+                                </td>
+                                <td class="deal2">
+                                    8
+                                </td>
+                                <td class="deal2">
+                                    0
+                                </td>
+                                <td class="button">
+                                    <a href="">
+                                        <button class="get-voice-button">영구정지</button>
+                                    </a>
+                                </td>
+                              </tr>
+                        </table>
+                </div>
+
+                
+                <!-- 여기까지가 구인글 작성 부분 -->
+
+        <th:block th:replace="fragments/00_GV-footer-00 :: footerFragment"></th:block>
+
+
+    </body>
+    <script src="/js/modal_window.js"></script>
+    <script src="/js/1.2_dropdown.js"></script>
+</html>
+
+
+
+
+
+  

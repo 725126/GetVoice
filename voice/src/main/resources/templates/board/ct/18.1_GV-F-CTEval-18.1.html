@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+    <head>
+        <meta charset="utf-8">
+        <title>겟보이스</title>
+        <link rel="stylesheet" type="text/css" th:href="@{/css/18.1_GV-F-CTEval-18.1.css}">
+        <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script> 
+    </head>
+
+
+    <body>
+              <!-- 메인부분 -->
+              <div class="container">
+                    <form name="fo" method="get">
+                            <table class="tableB">
+                                <tr>
+                                    <td class="tdP">
+                                        <div class="rounded-profile-container">
+                                            <img src="/img/s1.jpg" alt="Profile Image" class="rounded-profile">
+                                            <div class="nickname">성우지망생A
+                                                <div class="date">2023.9.22</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                            </table>
+
+                            <div class="rating">
+                                <input type="radio" name="stars" id="star1">
+                                <label for="star1"></label>
+                                <input type="radio" name="stars" id="star2">
+                                <label for="star2"></label>
+                                <input type="radio" name="stars" id="star3">
+                                <label for="star3"></label>
+                                <input type="radio" name="stars" id="star4">
+                                <label for="star4"></label>
+                                <input type="radio" name="stars" id="star5">
+                                <label for="star5"></label>
+                            </div>             
+
+                            <div class="upload">
+                                <div class="Submitbutton">
+                                    <button type="submit" class="submit-button">평점등록</button>
+                                </div>
+                            </div>
+
+                    </form>
+                </div>
+                
+
+        <footer>
+        </footer>
+    </body>
+    <script src="/js/modal_window.js"></script>
+    <script src="/js/1.2_dropdown.js"></script>
+    <script src="/js/review.js"></script>
+</html>
+
+
+
+
+  
+

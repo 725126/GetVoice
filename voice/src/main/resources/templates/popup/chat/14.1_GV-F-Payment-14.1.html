@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="utf-8">
+        <title>겟보이스_결제하기</title>
+        <link rel="stylesheet" media="screen" href="/css/10.3_14.1_GV-F.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    </head>
+
+    <body>
+        <div class="payment-container">
+            <div class="payment-estcal-header"><i class="fas fa-credit-card"></i> 결제하기</div>
+            <div class="va-profile1">
+                <table class="table1">
+                    <tr>
+                        <td>
+                            <div class="circle">
+                                <a href=""><img src="/img/profile_ex2.jpg" alt="대화상대_프로필"></a>
+                            </div>
+                        </td>
+                        <td>
+                            <li class="va-nickname">&nbsp;&nbsp;아무개 님, 에게</li>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="chat-messages">
+                <table class="table2">
+                    <tr>
+                        <td class="td1">현재 나의 V머니</td>
+                        <td class="td2"> 1000,000 원</td>
+                    </tr>
+                </table>
+                <hr class="hr0"/>
+
+                <table class="table3">
+                    <tr>
+                        <td class="td3"><input id="fileInput" class="upload-button1" type="file" value="파일업로드"/></td>
+                    </tr>
+                    <tr>
+                        <td class="td3"><li class="warning">※ hwp, pdf, txt 파일만 업로드 가능합니다</li></td>
+                    </tr>
+                </table>
+
+                <table class="table3">
+                    <tr>
+                        <td>
+                            <div class="option-container">&nbsp;&nbsp;&nbsp;&nbsp;
+                                <input th:readonly="${paymentDTO.profit != null}" th:checked="${paymentDTO.profit == 'for-profit'}" type="checkbox" id="forProfitPrice" name="profitPrice" value="forProfitPrice">
+                                <label for="forProfitPrice" class="checkbox-label">
+                                    <span class="custom-checkbox"></span>
+                                    영리
+                                </label>
+                                <input th:readonly="${paymentDTO.profit != null}" th:checked="${paymentDTO.profit == 'non-profit'}" type="checkbox" id="nonProfitPrice" name="profitPrice" value="nonProfitPrice">
+                                <label for="nonProfitPrice" class="checkbox-label">
+                                    <span class="custom-checkbox"></span>
+                                    비영리
+                                </label>
+                            </div>
+                        </td>
+                        <td class="td3"><button id="submitBtn" class="cal2-button">계산하기</button></td>
+                    </tr>
+                </table>
+
+                <hr class="hr1"/>
+
+                <table class="table3">
+                    <tr>
+                        <td>
+                            총 <input th:value="${paymentDTO.characterCount}" type="text" class="input-box1" placeholder="글자 수" readonly> 자
+                        </td>
+                        <td><li class="x">×</li></td>
+                        <td>
+                            글자 당
+                            <input th:if="${paymentDTO.profit != 'for-profit' and paymentDTO.profit != 'non-profit'}" type="text" class="input-box1" placeholder="액수" readonly>
+                            <input th:if="${paymentDTO.profit == 'for-profit'}" th:value="${paymentDTO.forProfitPrice}" type="text" class="input-box1" placeholder="액수" readonly>
+                            <input th:if="${paymentDTO.profit == 'non-profit'}" th:value="${paymentDTO.nonProfitPrice}" type="text" class="input-box1" placeholder="액수" readonly>
+                            &nbsp;원
+                        </td>
+                    </tr>
+                </table>
+
+                <table class="table3">
+                    <tr>
+                        <td><li class="x">총
+                            <input th:if="${paymentDTO.profit != 'for-profit' and paymentDTO.profit != 'non-profit'}" type="text" class="input-box2" placeholder="액수" readonly>
+                            <input th:if="${paymentDTO.profit == 'for-profit'}" th:value="${paymentDTO.forProfitPrice * paymentDTO.characterCount}" type="text" class="input-box2" placeholder="액수" readonly>
+                            <input th:if="${paymentDTO.profit == 'non-profit'}" th:value="${paymentDTO.nonProfitPrice * paymentDTO.characterCount}" type="text" class="input-box2" placeholder="액수" readonly>
+                            원 결제 </li></td>
+                    </tr>
+                </table>
+
+                <hr class="hr1"/>
+
+                <table class="table3">
+                    <tr>
+                        <td class="td3"><button id="paymentBtn" class="payment-button">결제하기</button></td>
+                    </tr>
+                </table>
+
+            </div>
+        </div>
+    </body>
+
+<script th:src="@{/js/14.1_payment-script.js}"></script>
+</html>

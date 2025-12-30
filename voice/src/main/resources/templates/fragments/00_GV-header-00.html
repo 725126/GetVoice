@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <th:block th:fragment="headerFragment">
+        <link rel="stylesheet" type="text/css" th:href="@{/css/00_GV-F-Header-00.css}">
+        <link rel="stylesheet" type="text/css" th:href="@{/css/00_GV-F-LoginJoin-00.css}">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+        <!-- 헤더 -->
+        <header>
+            <div class="header-left">
+                <button class="header-button" onclick="ct_board()"><i class="fas fa-user"></i> 구인</button>
+                <button class="header-button" onclick="va_board()"><i class="fas fa-briefcase"></i> 구직</button>
+            </div>
+            <div class="header-center">
+                <div class="logo"><i class="fas fa-microphone"></i>&nbsp;GetVoice</div>
+                <select class="header-select">
+                    <option>구인</option>
+                    <option>구직</option>
+                    <!-- 다른 옵션들 추가 -->
+                </select>
+                <input type="text" class="search-input" placeholder="검색어를 입력하세요.">
+            </div>
+            <div class="header-right">
+                <button th:if="${memberDTO == null or memberDTO.purpose == null}" id="login-button" class="header-button">로그인</button>
+                <button th:if="${memberDTO == null or memberDTO.purpose == null}" id="join-button" class="header-button">회원가입</button>
+
+                <button th:id="'vaMyVpBtn_' + ${memberDTO.id}" th:if="${memberDTO.purpose == 'va'}" class="header-button my-vp-button">나의 보이스포트</button>
+                <button th:id="'vaMyBtn_' + ${memberDTO.id}" th:if="${memberDTO.purpose == 'va'}" class="header-button">마이페이지</button>
+
+                <button th:id="'V-MoneyBtn_' + ${memberDTO.id}" th:if="${memberDTO.purpose == 'ct'}" class="header-button" onclick="showPopupPrkw11();">V머니충전</button>
+                <button th:id="'ctCrtPostBtn_' + ${memberDTO.id}" th:if="${memberDTO.purpose == 'ct'}" class="header-button">구인하기</button>
+                <button th:id="'ctMyBtn_' + ${memberDTO.id}" th:if="${memberDTO.purpose == 'ct'}" class="header-button">마이페이지</button>
+
+                <button th:id="'logoutBtn_' + ${memberDTO.id}" th:if="${memberDTO.purpose != null}" class="header-button logout-button">로그아웃</button>
+            </div>
+        </header>
+
+        <!-- 회원가입 페이지  -->
+        <div id="modal1" class="modal">
+            <div class="container">
+                <div class="header">
+                    <h2>회원가입<span class="close">&times;</span></h2>
+                </div>
+                <div class="content">
+
+                    <form name="join-form" action="/board/ct/0.0_join-register" method="post">
+
+                        <div class="form-group">
+                            <label for="username">아이디</label>
+                            <div class="input-group">
+                                <input class="input-join input-id" type="text" id="username" name="id" placeholder="중복확인 버튼을 클릭해주세요" onclick="showPopupID();" required>
+                                <input class="button-check id-chk-btn" id="checkUsername" type="button" value="중복확인" onclick="showPopupID();" />
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password">비밀번호</label>
+                            <input class="input-join" type="password" id="password" name="password" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">연락처</label>
+                            <input class="input-join input-phone" type="tel" id="phone" name="phone" placeholder="ex&#41; 010-1234-5678" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label id="purpose">사용목적</label>
+                            <div class="radio-group">
+                                <input type="radio" id="jobSeeker" name="purpose" value="va" required>
+                                <label for="jobSeeker">구직</label>
+                                <input type="radio" id="jobOffer" name="purpose" value="ct" required>
+                                <label for="jobOffer">구인</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="nickname">닉네임</label>
+                            <div class="input-group">
+                                <input class="input-join input-nn" type="text" id="nickname" name="nickname" placeholder="중복확인 버튼을 클릭해주세요" onclick="showPopupNickname();" required>
+                                <input class="button-check" id="checkNickname" type="button" value="중복확인" onclick="showPopupNickname();" />
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label id="keywords">선호키워드</label>
+                            <div class="input-group">
+                                <button class="selectKeywords-button" type="button" value="선호키워드 선택">선호키워드 선택</button>
+                            </div>
+                        </div>
+
+                        <input class="input-submit" type="submit" value="가입하기">
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+        <!-- 여기까지가 회원가입 -->
+
+        <!-- 로그인 페이지  -->
+        <div id="modal2" class="modal">
+            <div class="container">
+
+                <div class="header">
+                    <h2>로그인&nbsp;&nbsp;<span class="close">&times;</span></h2>
+                </div>
+
+                <div class="content">
+                    <!-- 로그인 폼 시작 -->
+                    <form name="login-form" action="/board/ct/0.0_login-check" method="post">
+                        <div class="login-form-group">
+                            <label for="username">아이디</label>
+                            <div class="input-group">
+                                <input class="input-login" type="text" id="lg_username" name="lg_username" required>
+                            </div>
+                        </div>
+
+                        <div class="login-form-group">
+                            <label for="password">비밀번호</label>
+                            <input class="input-login" type="password" id="lg_password" name="lg_password" required>
+                        </div>
+                        <input class="input-submit" type="submit" value="로그인">
+                    </form>
+                    <!-- 로그인 폼 여기까지 -->
+                </div>
+            </div>
+        </div>
+        <!-- 여기까지가 로그인 -->
+
+        <script src="/js/00_header-popup-vp.js"></script>
+        <script src="/js/00_header-login-chk.js"></script>
+        <script src="/js/00_header-logout.js"></script>
+        <script src="/js/00_header-join-chk.js"></script>
+        <script src="/js/00_join-save-checkbox.js"></script>
+        <script src="/js/modal_window.js"></script>
+        <script src="/js/00_goToNewPage.js"></script>
+    </th:block>
+</body>
+</html>

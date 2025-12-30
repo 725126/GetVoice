@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>겟보이스_보이스포트</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" type="text/css" th:href="@{/css/10.0_GV-F-VP-10.css}">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="shortcut icon" href="#">
+</head>
+<body>
+<div class="container">
+  <table class="vp-header">
+    <tr>
+      <td><h1 class="view-vp-h1" id="title">제목</h1></td>
+    </tr>
+  </table>
+  <table class="top-table">
+    <tr>
+      <td>
+        <div class="profile">
+          <img id="profile-img" src="/img/profile_ex5.png" alt="Profile Image">
+          <h2 class="nickname" id="nickname">닉네임</h2>
+          <div class="item-details" id="availabilityContainer">
+            <!-- JavaScript로 생성될 현재 구직 여부 아이콘이 들어갈 곳 -->
+          </div>
+        </div>
+      </td>
+
+      <td class="td-div_group">
+        <div class="clearfix">
+          <table class="table1">
+            <tr>
+              <td class="likes-icon">
+                <!-- 클릭 시 좋아요 수 +1 & ♡ → ♥ -->
+                <i class="heart far fa-heart" onclick="toggleHeart(this)"></i>
+                <!-- <i  class="fas fa-heart"></i> -->
+              </td>
+              <td class="posts-icon">
+                <i class="fas fa-microphone microphone-icon"></i>
+              </td>
+              <td class="rating-icon">
+                <i class="fas fa-star"></i>
+              </td>
+            </tr>
+            <tr>
+              <!-- 좋아요 수 -->
+              <td class="counts">
+                <p>100</p>
+              </td>
+              <!-- 게시물 수 -->
+              <td class="counts">
+                <p id="sample-count"></p>
+              </td>
+
+              <!-- 별점수치 (평가자 수) -->
+              <td class="counts">
+                <!-- 클릭 시 리뷰 팝업 창 생성 -->
+                <p>4.5 <span class="rw-count" onclick="showPopuprv()">(100)</span></p>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <hr class="hr1"/>
+
+        <div class="button-group">
+          <button id="downloadButton"><i class="fas fa-download"></i> 이력서 PDF</button>
+          <button onclick="showPopupEstCal()"><i class="fas fa-calculator"></i> 예상견적 계산</button>
+          <button onclick="showPopupChat()"><i class="fas fa-comments"></i> V채팅</button>
+        </div>
+      </td>
+
+      <td>
+        <div class="quote-table">
+          <table class="table2">
+            <tr>
+              <th class="quote-th-td">사용 목적</th>
+              <th class="quote-th-td">1000자</th>
+              <th class="quote-th-td">한 글자</th>
+            </tr>
+            <tr>
+              <td class="quote-th-td">영리 목적</td>
+              <!-- 1000자 가격 -->
+              <td id="for-1000" class="quote-th-td"></td>
+              <!-- 한 글자 가격 -->
+              <td id="for-1" class="forProfitPrice quote-th-td"></td>
+            </tr>
+            <tr>
+              <td class="quote-th-td">비영리 목적</td>
+              <!-- 1000자 가격 -->
+              <td id="non-1000" class="quote-th-td"></td>
+              <!-- 한 글자 가격 -->
+              <td id="non-1" class="nonProfitPrice quote-th-td"></td>
+            </tr>
+          </table>
+        </div>
+
+      </td>
+    </tr>
+
+  </table>
+
+  <hr class="hr0"/>
+
+  <!-- 키워드/카테고리 더보기 -->
+  <div class="keywords">
+    <table class="keywords-list" id="keywordsTable">
+      <tr>
+        <!-- JavaScript로 생성될 키워드들이 들어갈 곳 -->
+      </tr>
+    </table>
+    <button class="more-button">더보기 →</button>
+  </div>
+
+  <!-- 소개 / 수정·재진행 / 취소·환불 탭 -->
+  <div class="tab-menu-explain">
+    <button class="tab-button-explain active" onclick="changeTab2(0)"><i class="fas fa-info-circle"></i> 소개</button>
+    <button class="tab-button-explain" onclick="changeTab2(1)"><i class="fas fa-edit"></i> 수정·재진행</button>
+    <button class="tab-button-explain" onclick="changeTab2(2)"><i class="fas fa-times"></i> 취소·환불</button>
+  </div>
+
+  <div class="tab-content-explain active">
+    <textarea id="introduce" class="tab" readonly>소개 탭의 내용입니다. </textarea>
+  </div>
+
+  <div class="tab-content-explain">
+    <textarea id="modify" class="tab" readonly>수정·재진행 탭의 내용입니다.</textarea>
+  </div>
+
+  <div class="tab-content-explain">
+    <textarea id="refund" class="tab" readonly>취소·환불 탭의 내용입니다.</textarea>
+  </div>
+
+  <!-- 전시할 탭 결정 -->
+  <span id="tabNum" style="display: none;"></span>
+
+  <!-- 영상샘플 / 음성샘플 탭 -->
+  <div class="tab-menu">
+    <button class="tab-button active" onclick="changeTab(event, 'gallery1')"><i class="fab fa-youtube"></i> 영상샘플</button>
+    <button id="audio-tab-btn" class="tab-button" onclick="changeTab(event, 'gallery2')"><i class="fas fa-music"></i> 음성샘플</button>
+  </div>
+
+  <!-- 영상샘플 -->
+  <div id="gallery1" class="gallery">
+    <!--영상샘플 -->
+    <!-- 나머지 샘플들도 동일한 방식으로 추가 -->
+  </div>
+
+
+  <div id="gallery2" class="gallery" style="display: none;">
+    <!--음성샘플 -->
+    <!-- 나머지 샘플들도 동일한 방식으로 추가 -->
+  </div>
+
+</div>
+</body>
+<script src="/js/10.0_vp-script.js"></script>
+<script src="/js/10_VP-tapmenu_1.js"></script>
+<script src="/js/10_VP-tapmenu_2.js"></script>
+<script src="/js/10_open-vp-call-data.js"></script>
+</html>

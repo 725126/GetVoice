@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="utf-8">
+        <title>보이스포트_카테고리 설정</title>
+        <link rel="stylesheet" type="text/css" th:href="@{/css/11.1_GV-F-VP-ChKw-11.1.css}">
+    </head>
+
+<body>
+    <!-- 키워드/카테고리 설정 데이터 -->
+    <div class="chk-result" style="display: none;" th:if="${vpCtrlDTO.serviceKeyList != null}" th:unless="${vpCtrlDTO.serviceKeyList.isEmpty()}" th:text="${vpCtrlDTO.serviceKeyList != null ? 'not-null' : 'null'}"></div>
+    <th:block th:if="${vpCtrlDTO.voiceKeyList != null}">
+        <div style="display: none;" th:attr="data-serviceTypes=${#strings.arrayJoin(vpCtrlDTO.serviceKeyList, ',')}"></div>
+        <div style="display: none;" th:attr="data-voiceTypes=${#strings.arrayJoin(vpCtrlDTO.voiceKeyList, ',')}"></div>
+        <div style="display: none;" th:attr="data-recordingEnvironments=${#strings.arrayJoin(vpCtrlDTO.recordingKeyList, ',')}"></div>
+    </th:block>
+
+    <!-- 키워드/카테고리 설정 -->
+    <div class="container">
+
+    <div class="header">키워드 및 카테고리 선택</div>
+
+        <div class="title">
+            <label class="tit">서비스 유형</label>
+        </div>
+
+        <div class="container1">
+
+            <div class="checkbox">
+              <input type="checkbox" id="1001" name="1001">
+              <label for="1001">캐릭터</label>
+            </div>
+            <div class="checkbox">
+              <input type="checkbox" id="1002" name="1002">
+              <label for="1002">내레이션</label>
+            </div>
+            <div class="checkbox">
+              <input type="checkbox" id="1003" name="1003">
+              <label for="1003">다큐</label>
+            </div>
+            <div class="checkbox">
+              <input type="checkbox" id="1004" name="1004">
+              <label for="1004">광고</label>
+            </div>
+            <div class="checkbox">
+              <input type="checkbox" id="1005" name="1005">
+              <label for="1005">게임</label>
+            </div>
+            <div class="checkbox">
+              <input type="checkbox" id="1006" name="1006">
+              <label for="1006">더빙</label>
+            </div>
+            <div class="checkbox">
+              <input type="checkbox" id="1007" name="1007">
+              <label for="1007">ARS</label>
+            </div>
+            <div class="checkbox">
+              <input type="checkbox" id="1008" name="1008">
+              <label for="1008">동화</label>
+            </div>
+            <div class="checkbox">
+              <input type="checkbox" id="1009" name="1009">
+              <label for="1009">노래</label>
+            </div>
+            <div class="checkbox">
+              <input type="checkbox" id="1010" name="1010">
+              <label for="1010">교육</label>
+            </div>
+            <div class="checkbox">
+              <input type="checkbox" id="1011" name="1011">
+              <label for="1011">오디오북</label>
+            </div>
+            <div class="checkbox">
+              <input type="checkbox" id="1012" name="1012">
+              <label for="1012">라디오</label>
+            </div>
+            <div class="checkbox">
+              <input type="checkbox" id="1013" name="1013">
+              <label for="1013">홍보</label>
+            </div>
+            <div class="checkbox">
+              <input type="checkbox" id="1014" name="1014">
+              <label for="1014">애니</label>
+            </div>
+            <div class="checkbox">
+              <input type="checkbox" id="1015" name="1015">
+              <label for="1015">연기</label>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" id="1016" name="1016">
+                <label for="1016">성대모사</label>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" id="1017" name="1017">
+                <label for="1017">패러디</label>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" id="1018" name="1018">
+                <label for="1018">안내음성</label>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" id="1019" name="1019">
+                <label for="1019">TV</label>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" id="1020" name="1020">
+                <label for="1020">CM</label>
+            </div>
+
+        </div>
+
+      <hr class="hr0">
+
+      <div class="title">
+        <label class="tit">음성 유형</label>
+      </div>
+
+      <div class="container2">
+
+          <div class="checkbox">
+              <input class="checkbox-option" type="checkbox" id="1" name="1">
+              <label for="1">유아</label>
+          </div>
+          <div class="checkbox">
+              <input class="checkbox-option" type="checkbox" id="2" name="2">
+              <label for="2">소년</label>
+          </div>
+          <div class="checkbox">
+              <input class="checkbox-option" type="checkbox" id="3" name="3">
+              <label for="3">소녀</label>
+          </div>
+          <div class="checkbox">
+              <input class="checkbox-option" type="checkbox" id="4" name="4">
+              <label for="4">중년</label>
+          </div>
+          <div class="checkbox">
+              <input class="checkbox-option" type="checkbox" id="5" name="5">
+              <label for="5">노년</label>
+          </div>
+          <div class="checkbox">
+              <input class="checkbox-option" type="checkbox" id="6" name="6">
+              <label for="6">여성</label>
+          </div>
+          <div class="checkbox">
+              <input class="checkbox-option" type="checkbox" id="7" name="7">
+              <label for="7">남성</label>
+          </div>
+          <div class="checkbox">
+              <input class="checkbox-option" type="checkbox" id="8" name="8">
+              <label for="8">귀여운</label>
+          </div>
+          <div class="checkbox">
+              <input class="checkbox-option" type="checkbox" id="9" name="9">
+              <label for="9">밝은</label>
+          </div>
+          <div class="checkbox">
+              <input class="checkbox-option" type="checkbox" id="10" name="10">
+              <label for="10">차분</label>
+          </div>
+          <div class="checkbox">
+              <input class="checkbox-option" type="checkbox" id="11" name="11">
+              <label for="11">발랄</label>
+          </div>
+          <div class="checkbox">
+              <input class="checkbox-option" type="checkbox" id="12" name="12">
+              <label for="12">소심</label>
+          </div>
+          <div class="checkbox">
+              <input class="checkbox-option" type="checkbox" id="13" name="13">
+              <label for="13">열혈</label>
+          </div>
+          <div class="checkbox">
+              <input class="checkbox-option" type="checkbox" id="14" name="14">
+              <label for="14">맑은</label>
+          </div>
+          <div class="checkbox">
+              <input class="checkbox-option" type="checkbox" id="15" name="15">
+              <label for="15">따뜻</label>
+          </div>
+          <div class="checkbox">
+              <input class="checkbox-option" type="checkbox" id="16" name="16">
+              <label for="16">깔끔</label>
+          </div>
+          <div class="checkbox">
+              <input class="checkbox-option" type="checkbox" id="17" name="17">
+              <label for="17">편안</label>
+          </div>
+          <div class="checkbox">
+              <input class="checkbox-option" type="checkbox" id="18" name="18">
+              <label for="18">신뢰</label>
+          </div>
+          <div class="checkbox">
+              <input class="checkbox-option" type="checkbox" id="19" name="19">
+              <label for="19">청량</label>
+          </div>
+          <div class="checkbox">
+              <input class="checkbox-option" type="checkbox" id="20" name="20">
+              <label for="20">상쾌</label>
+          </div>
+          <div class="checkbox">
+              <input class="checkbox-option" type="checkbox" id="21" name="21">
+              <label for="21">단호</label>
+          </div>
+          <div class="checkbox">
+              <input class="checkbox-option" type="checkbox" id="22" name="22">
+              <label for="22">피곤</label>
+          </div>
+          <div class="checkbox">
+              <input class="checkbox-option" type="checkbox" id="23" name="23">
+              <label for="23">고상</label>
+          </div>
+          <div class="checkbox">
+              <input class="checkbox-option" type="checkbox" id="24" name="24">
+              <label for="24">상큼</label>
+          </div>
+          <div class="checkbox">
+              <input class="checkbox-option" type="checkbox" id="25" name="25">
+              <label for="25">튀는</label>
+          </div>
+          <div class="checkbox">
+              <input class="checkbox-option" type="checkbox" id="26" name="26">
+              <label for="26">음침</label>
+          </div>
+          <div class="checkbox">
+              <input class="checkbox-option" type="checkbox" id="27" name="27">
+              <label for="27">분노</label>
+          </div>
+          <div class="checkbox">
+              <input class="checkbox-option" type="checkbox" id="28" name="28">
+              <label for="28">시크</label>
+          </div>
+          <div class="checkbox">
+              <input class="checkbox-option" type="checkbox" id="29" name="29">
+              <label for="29">진중</label>
+          </div>
+          <div class="checkbox">
+              <input class="checkbox-option" type="checkbox" id="30" name="30">
+              <label for="30">가볍</label>
+          </div>
+          <div class="checkbox">
+              <input class="checkbox-option" type="checkbox" id="31" name="31">
+              <label for="31">감성</label>
+          </div>
+          <div class="checkbox">
+              <input class="checkbox-option" type="checkbox" id="32" name="32">
+              <label for="32">쿨</label>
+          </div>
+          <div class="checkbox">
+              <input class="checkbox-option" type="checkbox" id="33" name="33">
+              <label for="33">예민</label>
+          </div>
+          <div class="checkbox">
+              <input class="checkbox-option" type="checkbox" id="34" name="34">
+              <label for="34">지적</label>
+          </div>
+          <div class="checkbox">
+              <input class="checkbox-option" type="checkbox" id="35" name="35">
+              <label for="35">딱딱</label>
+          </div>
+          <div class="checkbox">
+              <input class="checkbox-option" type="checkbox" id="36" name="36">
+              <label for="36">섹시</label>
+          </div>
+          <div class="checkbox">
+              <input class="checkbox-option" type="checkbox" id="37" name="37">
+              <label for="37">애교</label>
+          </div>
+          <div class="checkbox">
+              <input class="checkbox-option" type="checkbox" id="38" name="38">
+              <label for="38">고음</label>
+          </div>
+          <div class="checkbox">
+              <input class="checkbox-option" type="checkbox" id="39" name="39">
+              <label for="39">중음</label>
+          </div>
+          <div class="checkbox">
+              <input class="checkbox-option" type="checkbox" id="40" name="40">
+              <label for="40">저음</label>
+          </div>
+          <div class="checkbox">
+              <input class="checkbox-option" type="checkbox" id="41" name="41">
+              <label for="41">외국어</label>
+          </div>
+          <div class="checkbox">
+              <input class="checkbox-option" type="checkbox" id="42" name="42">
+              <label for="42">차분</label>
+          </div>
+          <div class="checkbox">
+              <input class="checkbox-option" type="checkbox" id="43" name="43">
+              <label for="43">버튜버</label>
+          </div>
+          <div class="checkbox">
+              <input class="checkbox-option" type="checkbox" id="44" name="44">
+              <label for="44">사투리</label>
+          </div>
+          <div class="checkbox">
+              <input class="checkbox-option" type="checkbox" id="45" name="45">
+              <label for="45">중성적</label>
+          </div>
+
+      </div>
+
+      <hr class="hr0">
+
+      <div class="title">
+        <label class="tit">녹음 환경</label>
+      </div>
+
+      <div class="container3">
+
+          <div class="checkbox3">
+              <input type="checkbox" id="10001" name="10001">
+              <label for="10001">현장 녹음</label>
+          </div>
+          <div class="checkbox3">
+              <input type="checkbox" id="10002" name="10002">
+              <label for="10002">홈 레코딩</label>
+          </div>
+          <div class="checkbox3">
+              <input type="checkbox" id="10003" name="10003">
+              <label for="10003">바이노럴 레코딩</label>
+          </div>
+
+      </div>
+
+      <button class="btn">설정 저장</button>
+
+   </div>
+</body>
+<script th:src="@{/js/11.1_save-check-box.js}"></script>
+</html>

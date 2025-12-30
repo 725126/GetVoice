@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title>채팅 목록</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/22.0_GV-F-ChatDtl-22.0.css}">
+</head>
+<body>
+  <div class="chat-container">
+    <div class="chat-header">
+      <h2>채팅 목록</h2>
+    </div>
+    <div class="chat-body">
+      <ul class="chat-list">
+            <li class="chat-item">
+                <a href=""><img class="profile-image" src="/img/profile_ex.jpg" alt="프로필 이미지"></a>
+                <div class="chat-info">
+                    <div class="sender">몰랑이</div>
+                    <div class="last-message" onclick="showPopup1();">네. 가능합니다</div>
+                </div>
+                <div class="timestamp">오후 12:31</div>
+            </li>
+            <li class="chat-item">
+                <a href=""><img class="profile-image" src="/img/profile_ex2.jpg" alt="프로필 이미지"></a>
+                <div class="chat-info">
+                    <div class="sender">닉네임1</div>
+                    <div class="last-message" onclick="showPopup2();">확인했습니다. 감사합니다</div>
+                </div>
+                <div class="timestamp">오전 10:45</div>
+            </li>
+            <li class="chat-item">
+                <a href=""><img class="profile-image" src="/img/profile_ex3.jpg" alt="프로필 이미지"></a>
+                <div class="chat-info">
+                    <div class="sender">닉네임2</div>
+                    <div class="last-message">안녕하세요</div>
+                </div>
+                <div class="timestamp">어제</div>
+            </li>
+            <li class="chat-item">
+                <a href=""><img class="profile-image" src="/img/profile_ex4.jpg" alt="프로필 이미지"></a>
+                <div class="chat-info">
+                    <div class="sender">닉네임3</div>
+                    <div class="last-message">문의드립니다</div>
+                </div>
+                <div class="timestamp">어제</div>
+            </li>
+      </ul>
+    </div>
+  </div>
+</body>
+<!--팝업창을 띄우는 스크립트 문 -->
+<script language="javascript">
+  function showPopup2() { window.open("14.0_GV-F-Chat-14", "채팅방", "width=420, height=720, left=100, top=50"); }
+</script>
+</html>

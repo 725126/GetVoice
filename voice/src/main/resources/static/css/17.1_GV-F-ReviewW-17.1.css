@@ -1,0 +1,165 @@
+@font-face {
+    font-family: 'S-CoreDream-4Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'S-CoreDream-5Medium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-5Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'S-CoreDream-6Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-6Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+
+.container {
+    max-width: 400px;
+    margin: 15% auto;
+    padding: 20px;
+    text-align: center;
+    background-color: #526D82;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 그림자 효과 추가 */
+  }
+  
+  body {
+    display: flex; /* Flexbox를 사용하여 요소를 수평으로 정렬 */
+    flex-direction: column; /* 요소들을 수직으로 정렬 */
+    align-items: center; /* 요소들을 수평 방향으로 가운데 정렬 */
+    justify-content: center; /* 요소들을 수직 방향으로 가운데 정렬 */
+    height: 100vh; /* 뷰포트의 100% 높이를 설정하여 화면에 꽉 차도록 함 */
+    margin: 0;
+    padding: 0;
+    font-family: 'S-CoreDream-5Medium'; /* 폰트 지정 */
+    background-color: #8BBCCC; /* 배경색을 밝은 회색으로 지정 */
+  }
+  
+  .container {
+        width: 500px; /* 결제화면 컨테이너의 너비를 450px로 지정 */
+        height: 295px; /* 결제화면 컨테이너의 높이를 580px로 지정 */
+        border-radius: 10px; /* 테두리의 모서리를 10px의 둥근 모서리로 지정 */
+        background-color: #fff; /* 배경색을 흰색으로 지정 */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 그림자 효과 추가 */
+        margin: 40px auto;
+        text-align: center;
+   }
+  
+.upload table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+textarea#content {
+    resize: none;
+    padding: 5px;
+    font-size: 14px;
+    width: 100%;
+}
+
+.upload textarea#content { 
+    resize: none;
+    padding: 8px;
+    font-family: 'S-CoreDream-5Medium';
+    font-size: 14px;
+    border-radius: 5px;
+    background-color: #DDE6ED;
+    box-sizing: border-box; 
+    border: none;
+}
+
+.upload ::placeholder {
+  color: #526D82; 
+  text-align: center;
+  padding-top: 50px;
+}
+
+.upload .submit-button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'S-CoreDream-5Medium'; /* 폰트 지정 */
+    padding: 10px 18px; /* 내부 여백을 위아래 8px, 좌우 16px로 지정 */
+    margin-top: 20px;
+    margin-bottom: 10px;
+    background-color: #27374D; /* 배경색을 파란색으로 지정 */
+    color: #fff; /* 글자색을 흰색으로 지정 */
+    border: none; /* 테두리 제거 */
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    border-radius: 10px; /* 테두리를 10px의 둥근 모서리로 지정 */
+    cursor: pointer; /* 커서를 포인터로 변경하여 버튼임을 나타냄 */
+    margin-top: 15px;
+  }
+
+.upload .submit-button:hover {
+background-color: #569DAA;
+}
+
+.rounded-profile {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+  .rounded-profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 130px;
+  }
+
+  .nickname {
+    font-family: 'S-CoreDream-5Medium';
+    font-size: 14px;
+    color: #27374D;
+    text-align: left;
+    margin-left: 10px;
+}
+
+.date {
+    text-align: left;
+    color: #ccc;
+}
+
+.rating {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.rating input[type="radio"] {
+  display: none;
+}
+
+.rating label {
+  font-size: 30px;
+  color: #ccc;
+  cursor: pointer;
+  order: 5;
+}
+
+.rating label:before {
+  content: '\2605'; /* Unicode character for a star symbol */
+}
+
+.rating input[type="radio"]:checked ~ label {
+  color: gold; /* Change the color of the stars to indicate the rating */
+}
+
+
+
+
+
+
+

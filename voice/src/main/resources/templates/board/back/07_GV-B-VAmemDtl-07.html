@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+        <title>겟보이스-회원정보</title>
+        <link rel="stylesheet" type="text/css" th:href="@{/css/07_GV-B-VAmemDtl-07.css}">
+        <link rel="stylesheet" type="text/css" href="">
+    </head>
+        
+
+    <body>
+        <!-- 헤더 -->
+        <th:block th:replace="fragments/00_GV-header-00 :: headerFragment"></th:block>
+        <th:block th:replace="fragments/00_GV-breadcrumb-00 :: breadcrumbFragment"></th:block>
+               
+
+
+        <main>
+              <div class="upload">
+                <form name="fo" method="get">
+                    <table class="tableD">
+                        <tr>
+                            <td class="tableE">2022.12.22</td>
+                            <td class="tableD_label">아이디</td>
+                            <td class="tableC">jdjdj</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="3" class="tableC">
+                                <div class="rounded-profile-container">
+                                    <img src="img/profile_ex3.jpg" alt="Profile Image" class="rounded-profile">
+                                </div>
+                                <p class="nickname">몰랑삼</p>
+                            </td>
+                            <td class="tableD_label">연락처</td>
+                            <td class="tableC">010-2026-2027</td>
+                        </tr>
+                        <tr>
+                            <td class="tableD_label">사용목적</td>
+                            <td class="tableC">구직</td>
+                        </tr>
+                        <tr>
+                            <td class="tableD_label">신고횟수</td>
+                            <td class="tableC">0</td>
+                            <td class="tableC"><button>영구중지</button></td>
+                        </tr>
+                    </table>
+
+                    <table class="tableA">
+                        <tr>
+                            <td class="td3" colspan="2" rowspan="3">
+                                <div class="user-rating"> 
+                                    <!-- 꽉찬 별 -->
+                                    <div class="star-rating"></div>
+                                    <!-- 평점 숫자 -->
+                                    <span>&nbsp;(5.0)</span>
+                                </div>
+                                <br>평가도
+                            </td>              
+                            <td class="td4" colspan="4">전체 작업 수 : 7</td>
+                            <td class="td3" colspan="2" rowspan="3"><h3>162,500</h3>V 머니</td>
+                        </tr>
+                        <tr>
+                            <td><h3>2</h3>진행중</td>
+                            <td><h3>2</h3>작업완료</td>
+                            <td><h3>3</h3>거래확정</td>
+                        </tr>
+                    </table>
+
+                    <table class="tableC">
+                        <tr>
+                            <td>
+                                <a href="">
+                                    <div class="rounded-profile-container">
+                                        <img src="img/icon1.png" alt="Icon" class="icon">
+                                    </div>
+                                    거래내역 조회
+                                </a>
+                            </td>
+                            <td>
+                                <a href="">
+                                    <div class="rounded-profile-container">
+                                        <img src="img/icon2.png" alt="Icon" class="icon">
+                                    </div>
+                                    보이스포트 조회
+                                </a>
+                            </td>
+                            <td>
+                                <a href="">
+                                    <div class="rounded-profile-container">
+                                        <img src="img/icon5.png" alt="Icon" class="icon">
+                                    </div>
+                                    문의내역 조회
+                                </a>
+                            </td>
+                            <td>
+                                <a href="">
+                                    <div class="rounded-profile-container">
+                                        <img src="img/icon4.png" alt="Icon" class="icon">
+                                    </div>
+                                    V채팅
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </main>
+
+        <th:block th:replace="fragments/00_GV-footer-00 :: footerFragment"></th:block>
+    </body>
+    <script src="/js/modal_window.js"></script>
+    <script src="/js/1.2_dropdown.js"></script>
+</html>

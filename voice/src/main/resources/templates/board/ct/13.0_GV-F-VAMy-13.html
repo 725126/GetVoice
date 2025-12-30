@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+        <title>겟보이스-구직자_마이페이지</title>
+        <link rel="stylesheet" type="text/css" th:href="@{/css/13.0_GV-F-VAMy-13.css}">
+    </head>
+
+    <body>
+        <th:block th:replace="fragments/00_GV-header-00 :: headerFragment"></th:block>
+        <th:block th:replace="fragments/00_GV-breadcrumb-00 :: breadcrumbCtBoardFragment"></th:block>
+
+
+        <!-- 마이페이지 부분 -->
+        <div class="upload">
+            <form name="fo" method="get">
+                <table class="tableB">
+                    <tr>
+                        <td class="tdP">
+                            <div class="rounded-profile-container">
+                                <img src="/img/s1.jpg" alt="Profile Image" class="rounded-profile">
+                            </div>
+                            <!-- <p class="nickname">닉네임</p> -->
+                        </td>
+                        <td>
+                            <h2 class="profile-title" >환영합니다, '성우지망생A'님!</h2>
+                        </td>
+                        <td>
+                            <a href="">
+                                <button class="get-voice-button" onclick="showPopupPrkw5();">현재 겟보이스는</button>
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+                <table class="tableA">
+                    <tr>
+                        <td class="td3" colspan="2" rowspan="3">
+                            <div class="user-rating">
+                                <!-- 꽉찬 별 -->
+                                <div class="star-rating"></div>
+                                <div class="star-rating"></div>
+                                <div class="star-rating"></div>
+                                <div class="star-rating"></div>
+                                <!-- 비어있는 별 -->
+                                <div class="star-rating-empty"></div>
+                                <!-- 평점 숫자 -->
+                                <span>&nbsp;(4.1)</span>
+                            </div>
+                            <br>나의 평가도
+                        </td>
+                        <td class="td4" colspan="4">전체 작업 수 : 30</td>
+                        <td class="td3" colspan="2" rowspan="3"><h3>173,500</h3>V 머니</td>
+                    </tr>
+                    <tr>
+                        <td><h3>3</h3>진행중</td>
+                        <td><h3>5</h3>작업완료</td>
+                        <td><h3>22</h3>거래완료</td>
+                    </tr>
+                </table>
+
+
+                <table class="tableC">
+                    <tr>
+                        <td>
+                            <a href="18.0_GV-F-VATH-18">
+                                <div class="rounded-profile-container">
+                                    <img src="/img/icon1.png" alt="Icon" class="icon">
+                                </div>
+                                거래내역
+                            </a>
+                        </td>
+                        <td>
+                                <div class="rounded-profile-container" onclick="showPopupPrkw12();">
+                                    <img src="/img/icon2.png" alt="Icon" class="icon">
+                                </div>
+                                나의 보이스포트
+                        </td>
+                        <td>
+                                <div class="rounded-profile-container" onclick="showPopupPrkw8();">
+                                    <img src="/img/icon3.png" alt="Icon" class="icon">
+                                </div>
+                                회원정보 변경/확인
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                                <div class="rounded-profile-container" onclick="showPopupPrkw9();">
+                                    <img src="/img/icon4.png" alt="Icon" class="icon">
+                                </div>
+                                채팅내역
+                        </td>
+                        <td>
+                                <div class="rounded-profile-container" onclick="showPopupPrkw7();">
+                                    <img src="/img/icon5.png" alt="Icon" class="icon">
+                                </div>
+                                1:1 문의
+                        </td>
+                        <td>
+                                <div class="rounded-profile-container">
+                                    <img src="/img/icon6.png" alt="Icon" class="icon">
+                                </div>
+                                탈퇴
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+
+    </body>
+    <th:block th:replace="fragments/00_GV-footer-00 :: footerFragment"></th:block>
+    <script src="/js/modal_window.js"></script>
+    <script src="/js/1.2_dropdown.js"></script>
+</html>
+
+
+
+
+  
+

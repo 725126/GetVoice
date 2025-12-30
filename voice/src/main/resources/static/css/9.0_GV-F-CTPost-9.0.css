@@ -1,0 +1,415 @@
+@font-face {
+    font-family: 'S-CoreDream-4Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'S-CoreDream-5Medium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-5Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'S-CoreDream-6Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-6Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+a {
+    text-decoration: none; /* 링크의 밑줄 제거 */
+    color: inherit; /* 링크의 색상 제거 */
+}
+
+
+
+/* 구인글 보기 부분 */
+
+.upload {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 20px;
+    /* background-color: #f4f4f4; */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.upload table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'S-CoreDream-5Medium';
+    font-size: 16px;
+    color: #27374D;
+    text-align: center;
+}
+
+.upload table td {
+    padding: 10px;
+
+}
+
+.upload table tr {
+    border:  2.2px solid #9DB2BF;
+    width: 110px;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+}
+
+.upload label {
+  font-family: 'S-CoreDream-5Medium';
+  font-size: 16px;
+  text-align: center;
+}
+
+
+.upload table button {
+    font-family: 'S-CoreDream-5Medium';
+    padding: 10px 20px;
+    background-color: #526D82;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    float: right;
+}
+
+.upload table button:hover {
+    background-color: #27374D;
+}
+
+
+
+.upload textarea#content {
+    resize: none;
+    padding: 8px;
+    font-family: 'S-CoreDream-5Medium';
+    font-size: 14px;
+    border-radius: 5px;
+    background-color: #DDE6ED;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+}
+
+.upload .submit-button {
+    font-family: 'S-CoreDream-5Medium';
+    padding: 6px 24px;
+    background-color: #526D82;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 120px;
+    height: 40px;
+    margin-top : 20px;
+}
+
+.upload .submit-button:hover {
+    background-color: #27374D;
+}
+
+
+  .tableB tr {
+    height: 80px;
+  }
+
+.tdP {
+    width: 80px;
+}
+
+  .rounded-profile {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+  }
+
+  .rounded-profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+
+  .nickname {
+    font-family: 'S-CoreDream-4Regular';
+    font-size: 14px;
+    color: #333333;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+  }
+
+  .profile-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .profile-title {
+    font-family: 'S-CoreDream-6Bold';
+    font-size: 28px;
+    margin: 0;
+    color: #333333;
+  }
+
+  .post-status {
+    background-color: #f1f1f1;
+    text-align: center;
+    border-radius: 4px;
+    font-size: 15px;
+    color: #333333;
+    width: 60px;
+    font-family: 'S-CoreDream-4Regular';
+    padding: 2px 8px;
+    margin-left: auto;
+  }
+
+
+
+
+  .td3 {
+    text-align: center;
+    margin-left:auto;
+    margin-right:auto;
+    width: 450px;
+  }
+
+  .upload-button1 {
+    font-family: 'S-CoreDream-5Medium';
+    padding: 8px 16px;
+    margin-left: 10px;
+    background-color: #577D86;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+  }
+
+
+  .tableA {
+    margin-left:auto;
+    margin-right:auto;
+    padding: 7px;
+    border-spacing: 10px 5px;
+  }
+
+  .tableA td {
+    list-style: none;
+    text-align: left;
+  }
+
+
+.table3 table tr {
+    list-style: none;
+}
+
+.Submitbutton {
+    text-align: center;
+}
+
+  .post-details {
+    margin-top: 10px; /* 상단 마진을 10px로 설정하여 상세 정보와 이전 요소 간의 간격을 조절합니다. */
+    margin-top: 10px;
+    white-space: nowrap; /* 줄바꿈 방지 */
+    overflow: hidden; /* 넘치는 부분 감춤 */
+    text-overflow: ellipsis; /* 넘치는 부분을 ...으로 표시 */
+  }
+
+  .post-details span {
+    font-family: 'S-CoreDream-4Regular';
+    display: inline-block; /* 상세 정보를 인라인 블록으로 설정합니다. */
+    margin-right: 10px; /* 우측 여백을 10px로 설정하여 각 정보 사이의 간격을 조절합니다. */
+    font-size: 14px; /* 상세 정보의 폰트 크기를 14px로 설정합니다. */
+    color: #526D82; /* 상세 정보의 글자 색상 설정. */
+    margin-top: 0px;
+  }
+
+  .keywords {
+    margin: 0;/* Remove top and bottom margin */
+    background-color: #f2f2f2;
+    padding: 8px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: inline-block; /* Ensure the element only takes the necessary width */
+    line-height: 1; /* Adjust as needed for vertical alignment */
+  }
+
+
+.date {
+    text-align: right;
+}
+
+.tableC {
+    border: none;
+    color: #27374D;
+    font-family: 'S-CoreDream-5Medium';
+    font-size: 16px;
+    text-align: center;
+}
+
+.tableD td{
+    width: 25%;
+}
+
+.tableD_label {
+  background-color: #DDE6ED;
+}
+
+.tableE {
+    height: 150px;
+    text-align: center;
+}
+
+.tableF td {
+    font-size: 14px;
+    text-align: left;
+}
+
+.tableF .date {
+  text-align: right;
+}
+
+.tableF tr:last-child {
+    border-bottom: none;
+}
+
+.dropdown {
+  position: absolute;
+
+  margin-left: 870px;
+}
+
+.dropdown-toggle {
+  cursor: pointer;
+  color: #000;
+  font-size: 30px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 120px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  padding: 10px;
+  text-align: center;
+}
+
+.dropdown-content a {
+  padding: 5px 0;
+  text-decoration: none;
+  display: block;
+  color: #000;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown-content a:hover { /* 드롭다운 내용 링크 호버 스타일 */
+  background-color: #27374D;
+  color: #fff;
+}
+
+.dropdown-content a.selected {  /* 드롭다운 내용 링크 선택 스타일 */
+  background-color: #526D82;
+  color: white;
+  margin-bottom: 5px; /* 각 항목 사이의 간격을 조정 */
+}
+
+.show-dropdown {
+  display: block;
+}
+
+
+.item-details {
+  padding: 15px 0px 0px 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: right;
+  margin-left: 180px;
+  margin-top: -11px;
+  }
+
+  .item-profile {
+    padding: 10px 0px 0px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: right;
+    white-space: nowrap; /* 줄바꿈 방지 */
+    overflow: hidden; /* 내용이 넘칠 경우 숨김 처리 */
+    text-overflow: ellipsis; /* 내용이 넘칠 경우 ...으로 표시 */
+    float: right;
+    }
+
+    .price-info-ok {
+      white-space: nowrap;
+      background-color: #526D82;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 13px;
+      color: #fff;
+
+      margin-right: 5px;
+    }
+
+    .price-info-no {
+      white-space: nowrap;
+      background-color: #888;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 13px;
+      color: #fff;
+      margin-right: 5px;
+    }
+
+    .fa-circle {
+      color: red; /* 아이콘 색상을 빨간색으로 설정 */
+      font-size: 11px;
+    }
+
+    .square-icon {
+      color: #333333; /* 아이콘 색상 설정 */
+      font-size: 11px; /* 아이콘 크기 설정 */
+    }
+
+
+    /* CSS 스타일 */
+.download-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.download-container a {
+  margin-bottom: 10px; /* 각 다운로드 버튼 사이의 간격 조정 */
+}
+
+
+.td1 {
+  width: 59px;
+  vertical-align: top;
+}
+
+.tableF i {
+  margin-right: 3px;
+}
+
+.file-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.file-list a {
+  margin-bottom: 3px;
+}

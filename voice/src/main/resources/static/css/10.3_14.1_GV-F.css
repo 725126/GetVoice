@@ -1,0 +1,371 @@
+  @font-face {
+    font-family: 'S-CoreDream-4Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'S-CoreDream-5Medium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-5Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'S-CoreDream-6Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-6Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  body {
+    display: flex; /* Flexbox를 사용하여 요소를 수평으로 정렬 */
+    flex-direction: column; /* 요소들을 수직으로 정렬 */
+    align-items: center; /* 요소들을 수평 방향으로 가운데 정렬 */
+    justify-content: center; /* 요소들을 수직 방향으로 가운데 정렬 */
+    height: 100vh; /* 뷰포트의 100% 높이를 설정하여 화면에 꽉 차도록 함 */
+    margin: 0;
+    padding: 0;
+    font-family: 'S-CoreDream-5Medium'; /* 폰트 지정 */
+    background-color: #8BBCCC; /* 배경색을 밝은 회색으로 지정 */
+  }
+
+  li {
+    list-style: none;
+  }
+
+  .va-nickname {
+    font-size: 19px;
+    font-family: 'S-CoreDream-6Bold';
+    color: #fff;
+  }
+
+  .warning {
+    font-size: 12px;
+    font-family: 'S-CoreDream-4Regular';
+  }
+
+  .x {
+    font-size: 30px;
+    color: #27374D;
+    font-family: 'S-CoreDream-6Bold';
+  }
+
+  .payment-container {
+    width: 450px; /* 결제화면 컨테이너의 너비를 450px로 지정 */
+    height: 670px; /* 결제화면 컨테이너의 높이를 580px로 지정 */
+    border-radius: 10px; /* 테두리의 모서리를 10px의 둥근 모서리로 지정 */
+    overflow: hidden; /* 내용이 넘칠 경우 숨김 처리 */
+    background-color: #fff; /* 배경색을 흰색으로 지정 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 그림자 효과 추가 */
+  }
+
+  .estcal-container {
+    width: 450px; /* 결제화면 컨테이너의 너비를 450px로 지정 */
+    height: 600px; /* 결제화면 컨테이너의 높이를 580px로 지정 */
+    border-radius: 10px; /* 테두리의 모서리를 10px의 둥근 모서리로 지정 */
+    overflow: hidden; /* 내용이 넘칠 경우 숨김 처리 */
+    background-color: #fff; /* 배경색을 흰색으로 지정 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 그림자 효과 추가 */
+  }
+
+  .upload-container {
+    width: 450px; /* 결제화면 컨테이너의 너비를 450px로 지정 */
+    height: 300px; /* 결제화면 컨테이너의 높이를 580px로 지정 */
+    border-radius: 10px; /* 테두리의 모서리를 10px의 둥근 모서리로 지정 */
+    overflow: hidden; /* 내용이 넘칠 경우 숨김 처리 */
+    background-color: #fff; /* 배경색을 흰색으로 지정 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 그림자 효과 추가 */
+  }
+
+
+  .payment-estcal-header {
+    padding: 10px; /* 내부 여백을 10px로 지정 */
+    background-color: #27374D; /* 배경색을 파란색으로 지정 */
+    color: #fff; /* 글자색을 흰색으로 지정 */
+    font-size: 18px; /* 글자 크기를 18px로 지정 */
+    font-weight: bold; /* 글자 굵기를 bold로 지정 */
+    text-align: center; /* 가운데 정렬 */
+  }
+
+  .va-profile1 {
+    padding: 10px;
+    background-color: #526D82;
+  }
+
+  .va-profile2 {
+    padding: 10px;
+    background-color: #577D86;
+  }
+
+  .circle {
+    width: 60px; /* 원형 이미지를 감싸는 <div> 요소의 가로 크기 */
+    height: 60px; /* 원형 이미지를 감싸는 <div> 요소의 세로 크기 */
+    border-radius: 50%; /* 원형 이미지를 만들기 위해 50%의 border-radius 값을 설정 */
+    overflow: hidden; /* 이미지가 원형 경계를 넘어가지 않도록 설정 */
+  }
+
+  .circle img {
+    width: 100%; /* 원형 이미지의 가로 크기를 부모 요소에 맞게 확대/축소 */
+    height: auto; /* 이미지의 세로 크기를 가로 크기에 맞게 자동으로 조정 */
+  }
+
+  .chat-messages {
+    height: 450px; /* 채팅 메시지 영역의 높이를 450px로 지정 */
+    padding: 10px; /* 내부 여백을 10px로 지정 */
+  }
+
+  .table1 {
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  .table2 {
+    margin-left:auto;
+    margin-right:auto;
+    border-spacing: 10px;
+    padding: 7px;
+  }
+
+  .table3 {
+    margin-left:auto;
+    margin-right:auto;
+    padding: 7px;
+    border-spacing: 10px 5px;
+  }
+
+  .table4 {
+    margin-left:auto;
+    margin-right:auto;
+    padding: 7px;
+    border-spacing: 10px 5px;
+    min-height: 140px;
+  }
+
+  .hr0 {
+    height: 1px;
+    color: #577D86;
+    background-color: #577D86;
+}
+
+  .td1 {
+    font-family: 'S-CoreDream-6Bold';
+    color: #27374D;
+    text-align: center;
+    margin-left:auto;
+    margin-right:auto;
+    padding: 10px;
+    width: 200px;
+    background-color: #DDE6ED;
+    border-radius: 10px;
+  }
+
+  .td2 {
+    text-align: center;
+    border:2px solid #9DB2BF;
+    margin-left:auto;
+    margin-right:auto;
+    padding: 10px;
+    width: 250px;
+    border-radius: 10px;
+  }
+
+  .td3 {
+    text-align: center;
+    margin-left:auto;
+    margin-right:auto;
+    width: 450px;
+  }
+
+  .upload-button1 {
+    font-family: 'S-CoreDream-5Medium'; /* 폰트 지정 */
+    padding: 8px 16px; /* 내부 여백을 위아래 8px, 좌우 16px로 지정 */
+    margin-left: 10px; /* 왼쪽 여백을 10px로 지정 */
+    background-color: #577D86; /* 배경색을 파란색으로 지정 */
+    color: #fff; /* 글자색을 흰색으로 지정 */
+    border: none; /* 테두리 제거 */
+    border-radius: 10px; /* 테두리를 20px의 둥근 모서리로 지정 */
+    cursor: pointer; /* 커서를 포인터로 변경하여 버튼임을 나타냄 */
+    font-size: 15px; /* 글자 크기를 14px로 지정 */
+  }
+
+  .upload-button2 {
+    font-family: 'S-CoreDream-5Medium'; /* 폰트 지정 */
+    padding: 8px 16px; /* 내부 여백을 위아래 8px, 좌우 16px로 지정 */
+    margin-left: 10px; /* 왼쪽 여백을 10px로 지정 */
+    background-color: #526D82; /* 배경색을 파란색으로 지정 */
+    color: #fff; /* 글자색을 흰색으로 지정 */
+    border: none; /* 테두리 제거 */
+    border-radius: 10px; /* 테두리를 20px의 둥근 모서리로 지정 */
+    cursor: pointer; /* 커서를 포인터로 변경하여 버튼임을 나타냄 */
+    font-size: 15px; /* 글자 크기를 14px로 지정 */
+  }
+
+  input[type=file]::file-selector-button {
+    width: 100px;
+    height: 30px;
+    font-family: 'S-CoreDream-5Medium';
+    color: #fff;
+    background: #569DAA;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  /* 계산 버튼  */
+  .cal1-button {
+    font-family: 'S-CoreDream-5Medium'; /* 폰트 지정 */
+    padding: 10px 18px; /* 내부 여백을 위아래 8px, 좌우 16px로 지정 */
+    margin-left: 10px; /* 왼쪽 여백을 10px로 지정 */
+    background-color: #577D86; /* 배경색을 파란색으로 지정 */
+    color: #fff; /* 글자색을 흰색으로 지정 */
+    border: none; /* 테두리 제거 */
+    border-radius: 10px; /* 테두리를 20px의 둥근 모서리로 지정 */
+    cursor: pointer; /* 커서를 포인터로 변경하여 버튼임을 나타냄 */
+    font-size: 20px; /* 글자 크기를 14px로 지정 */
+  }
+
+  .cal1-button:hover {
+    color: #fff;
+    background: #569DAA;
+  }
+
+  .cal2-button {
+    font-family: 'S-CoreDream-5Medium'; /* 폰트 지정 */
+    padding: 10px 18px; /* 내부 여백을 위아래 8px, 좌우 16px로 지정 */
+    margin-left: 10px; /* 왼쪽 여백을 10px로 지정 */
+    background-color: #526D82; /* 배경색을 파란색으로 지정 */
+    color: #fff; /* 글자색을 흰색으로 지정 */
+    border: none; /* 테두리 제거 */
+    border-radius: 10px; /* 테두리를 20px의 둥근 모서리로 지정 */
+    cursor: pointer; /* 커서를 포인터로 변경하여 버튼임을 나타냄 */
+    font-size: 20px; /* 글자 크기를 14px로 지정 */
+  }
+
+  .cal2-button:hover {
+    color: #fff;
+    background: #569DAA;
+  }
+
+  .hr1 {
+    border-top: 2px #9DB2BF dashed;
+  }
+
+
+  .payment-button {
+    font-family: 'S-CoreDream-5Medium'; /* 폰트 지정 */
+    padding: 10px 18px; /* 내부 여백을 위아래 8px, 좌우 16px로 지정 */
+    margin-left: 10px; /* 왼쪽 여백을 10px로 지정 */
+    background-color: #27374D; /* 배경색을 파란색으로 지정 */
+    color: #fff; /* 글자색을 흰색으로 지정 */
+    border: none; /* 테두리 제거 */
+    border-radius: 10px; /* 테두리를 20px의 둥근 모서리로 지정 */
+    cursor: pointer; /* 커서를 포인터로 변경하여 버튼임을 나타냄 */
+    font-size: 20px; /* 글자 크기를 14px로 지정 */
+  }
+
+  .payment-button:hover {
+    color: #fff;
+    background: #569DAA;
+  }
+
+  .input-box1 {
+    font-family: 'S-CoreDream-5Medium'; /* 폰트 지정 */
+    padding: 8px; /* 내부 여백을 8px로 지정 */
+    border: none; /* 테두리 제거 */
+    border-radius: 20px; /* 테두리를 20px의 둥근 모서리로 지정 */
+    background-color: #DDE6ED; /* 배경색을 밝은 회색으로 지정 */
+    font-size: 20px; /* 글자 크기를 14px로 지정 */
+    width: 100px;
+  }
+
+  .input-box2 {
+    font-family: 'S-CoreDream-6Bold'; /* 폰트 지정 */
+    padding: 8px; /* 내부 여백을 8px로 지정 */
+    border: none; /* 테두리 제거 */
+    border-radius: 20px; /* 테두리를 20px의 둥근 모서리로 지정 */
+    background-color: #DDE6ED; /* 배경색을 밝은 회색으로 지정 */
+    font-size: 20px; /* 글자 크기를 14px로 지정 */
+    width: 160px;
+  }
+
+  ::placeholder {
+    color: #526D82;
+  }
+
+
+/* 파일 다운로드 버튼 스타일 */
+
+/* #downloadButton {
+    text-align: center;
+    margin: 0 auto;
+    background-color: #569DAA;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    outline: none;
+    font-family: 'S-CoreDream-5Medium';
+}
+
+#downloadButton i {
+    margin-right: 5px;
+}
+
+#downloadButton:hover {
+    background-color: #27374D;
+} */
+
+#downloadButton {
+  width: 400px;
+  background-color: none;
+  font-family: 'S-CoreDream-5Medium';
+  font-size: 16px;
+  color: #27374D;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap; /* 줄바꿈 방지 */
+  overflow: hidden; /* 내용이 넘칠 경우 숨김 처리 */
+  text-overflow: ellipsis; /* 내용이 넘칠 경우 ...으로 표시 */
+}
+
+  /*현재 의뢰 가능 여부 체크박스 부분*/
+.option-container {
+    display: flex;
+    font-family: 'S-CoreDream-5Medium';
+    margin-left: auto;
+    margin-right: 30px;
+    align-items: center;
+    gap: 5px; /* 글자 사이 간격을 조정합니다. */
+    font-size: 16px; /* 글자 크기를 조정합니다. */
+    color: #526D82;
+}
+
+.checkbox-label {
+    cursor: pointer;
+    white-space: nowrap; /* 줄바꿈 방지 */
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #27374D;
+    border-radius: 3px;
+    outline: none;
+    cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+    background-color: #569DAA;
+    border: 2px solid  #27374D;
+}
+    /*여기까지*/

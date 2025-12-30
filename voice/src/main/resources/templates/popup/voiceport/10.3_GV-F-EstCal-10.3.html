@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="utf-8">
+        <title>겟보이스_예상견적 계산</title>
+        <link rel="stylesheet" media="screen" href="/css/10.3_14.1_GV-F.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    </head>
+
+    <body>
+        <div class="estcal-container">
+            <div class="payment-estcal-header"><i class="fas fa-calculator"></i> 견적 계산하기</div>
+            <div class="va-profile2">
+                <table class="table1">
+                    <tr>
+                        <td>
+                            <div class="circle">
+                                <img id="profile-img" class="profile-image" alt="Profile Image">
+                            </div>
+                        </td>
+                        <td>
+                            <li id="nickname" class="va-nickname"></li>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="chat-messages">
+                <table class="table2">
+                    <tr>
+                        <td class="td1">현재 나의 V머니</td>
+                        <td id="myMoney" class="td2">0원</td>
+                    </tr>
+                </table>
+                <hr class="hr0"/>
+                    <table class="table3">
+                        <tr>
+                            <td class="td3"><input id="fileInput" class="upload-button2" type="file" value="파일업로드"/></td>
+                        </tr>
+                        <tr>
+                            <td class="td3"><li class="warning">※ hwp, pdf, txt 파일만 업로드 가능합니다</li></td>
+                        </tr>
+                    </table>
+                    <hr class="hr0"/>
+
+                    <table class="table3">
+                        <tr>
+                            <td>
+                                <div class="option-container">&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <input th:checked="${estCalDTO.profit == 'for-profit'}" type="checkbox" id="forProfitPrice" name="profitPrice" value="forProfitPrice">
+                                    <label for="forProfitPrice" class="checkbox-label">
+                                        <span class="custom-checkbox"></span>
+                                        영리
+                                    </label>
+                                    <input th:checked="${estCalDTO.profit == 'non-profit'}" type="checkbox" id="nonProfitPrice" name="profitPrice" value="nonProfitPrice">
+                                    <label for="nonProfitPrice" class="checkbox-label">
+                                        <span class="custom-checkbox"></span>
+                                        비영리
+                                    </label>
+                                </div>
+                            </td>
+                            <td class="td3"><button id="submitBtn" class="cal1-button">계산하기</button></td>
+                        </tr>
+                    </table>
+
+                <hr class="hr1"/>
+
+                <table class="table3">
+                    <tr>
+                        <td>
+                            총 <input id="totalNum" th:value="${estCalDTO.characterCount}" type="text" class="input-box1" placeholder="글자 수" readonly> 자
+                        </td>
+                        <td><li class="x">×</li></td>
+                        <td>
+                            글자 당
+                            <input th:if="${estCalDTO.profit != 'for-profit' and estCalDTO.profit != 'non-profit'}" type="text" class="input-box1 per-num" placeholder="액수" readonly>
+                            <input th:if="${estCalDTO.profit == 'for-profit'}" th:value="${estCalDTO.forProfitPrice}" type="text" class="input-box1 per-num" placeholder="액수" readonly>
+                            <input th:if="${estCalDTO.profit == 'non-profit'}" th:value="${estCalDTO.nonProfitPrice}" type="text" class="input-box1 per-num" placeholder="액수" readonly>
+                            &nbsp;원
+                        </td>
+                    </tr>
+                </table>
+
+                <table class="table3">
+                    <tr>
+                        <td><li class="x">
+                            예상견적 총
+                            <input th:if="${estCalDTO.profit != 'for-profit' and estCalDTO.profit != 'non-profit'}" type="text" class="input-box2 est-num" placeholder="액수" readonly>
+                            <input th:if="${estCalDTO.profit == 'for-profit'}" th:value="${estCalDTO.forProfitPrice * estCalDTO.characterCount}" type="text" class="input-box2 est-num" placeholder="액수" readonly>
+                            <input th:if="${estCalDTO.profit == 'non-profit'}" th:value="${estCalDTO.nonProfitPrice * estCalDTO.characterCount}" type="text" class="input-box2 est-num" placeholder="액수" readonly>
+                            &nbsp;원</li>
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+        </div>
+
+    </body>
+
+</body>
+<script th:src="@{/js/10.3_est-cal-script.js}"></script>
+</html>

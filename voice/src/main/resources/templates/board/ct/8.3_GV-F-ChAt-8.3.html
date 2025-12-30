@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="utf-8">
+        <title>겟보이스_녹음환경 선택</title>
+        <link rel="stylesheet" type="text/css" th:href="@{/css/8.3_GV-F-ChAt-8.3.css}">
+    </head>
+
+<body>
+  <div class="container">
+    <div class="header">녹음환경 선택</div>
+        <form name="fo" method="get">
+
+        <div class="title">
+            <label class="tit">녹음 환경</label>
+        </div>
+        <div class="container3">
+            <div class="checkbox3">
+            <input type="checkbox" id="checkbox23" name="checkbox23">
+            <label for="checkbox23">현장 녹음</label>
+            </div>
+            <div class="checkbox3">
+            <input type="checkbox" id="checkbox24" name="checkbox24">
+            <label for="checkbox24">홈 레코딩</label>
+            </div>
+            <div class="checkbox3">
+            <input type="checkbox" id="checkbox25" name="checkbox25">
+            <label for="checkbox25">바이노럴 레코딩</label>
+            </div>
+        </div>
+
+        <button class="btn" onclick="saveCheckbox()">완료</button>
+    </form>
+   </div>
+</body>
+<script src="/js/1.2_dropdown.js"></script>
+</html>
+

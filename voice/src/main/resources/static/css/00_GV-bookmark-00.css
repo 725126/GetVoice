@@ -1,0 +1,131 @@
+/* 즐겨찾기 부분*/
+/* 스타일 설정 */
+.container1 {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .checkbox {
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 10px;
+  }
+
+  input[type="checkbox"] {
+    display: none;
+  }
+
+  .checkbox label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 30px;
+    font-size: 14px;
+    background-color: #f2f2f2;
+    color: #526D82;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    white-space: nowrap;
+
+  }
+
+  input[type="checkbox"]:checked + label {
+    background-color: #27374D;
+    color: #fff;
+  }
+
+  .search {
+    cursor: pointer;
+  }
+
+  .bookmark-keyword ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .bookmark-keyword li {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    background-color: #f2f2f2;
+    padding: 8px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .bookmark-keyword li:hover {
+    background-color: #e0e0e0;
+  }
+
+  table.bookmark {
+    border-radius: 15px;
+    background-color: #DDE6ED;
+    margin-top: 10px;
+
+    border-spacing: 0;
+    border: 1px #577D86;
+    color:#526D82;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    font-family: 'S-CoreDream-4Regular';
+    }
+
+  table.bookmark td {
+    border: 0px solid #577D86;
+    padding: 8px;
+  }
+
+  .bookmark td:first-child {
+    width: 20px;
+  }
+
+  .bookmark td:last-child {
+    width: 5px;
+  }
+
+  table.bookmark td:first-child {
+    text-align: left;
+  }
+
+  .bookmark-keyword {
+    width: 80%;
+
+  }
+
+  .bookmark-srh {
+    font-family: 'S-CoreDream-5Medium';
+    white-space: nowrap;
+    font-size: 17px;
+  }
+
+  .bookmark-button {
+    font-family: 'S-CoreDream-6Bold';
+    background-color: transparent;
+    border: none;
+    color: #27374D;
+    cursor: pointer;
+    font-size: 17px;
+    white-space: nowrap;
+  }
+
+  .bookmark-button:hover {
+    color: #569DAA;
+
+  }
+/* 여기까지가 즐겨찾기 검색 부분*/

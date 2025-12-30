@@ -1,0 +1,160 @@
+  /* 헤더 스타일 */
+  @font-face {
+    font-family: 'S-CoreDream-4Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'S-CoreDream-5Medium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-5Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'S-CoreDream-6Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-6Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cafe24Supermagic-Bold-v1.0';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/Cafe24Supermagic-Bold-v1.0.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #526D82; /* 배경색 변경 */
+    color: white;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+}
+
+.header-left, .header-right {
+    display: flex;
+    align-items: center;
+}
+
+.header-button {
+    font-family: 'S-CoreDream-6Bold';
+    background-color: transparent;
+    white-space: nowrap;
+    border: none;
+    color: white;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 17px;
+    border-radius: 20px;
+    padding: 5px 15px;
+    transition: background-color 0.3s ease;
+}
+
+.header-button:hover {
+    background-color: #27374D;
+}
+
+.header-button_1 {
+    font-family: 'Cafe24Supermagic-Bold-v1.0';
+    background-color: transparent;
+    border: none;
+    white-space: nowrap;
+    color: #fff;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 20px;
+    padding: 5px 15px;
+    transition: background-color 0.3s ease;
+}
+
+.header-button_1:hover {
+    color: #AFD3E2;
+}
+
+.header-center {
+    display: flex;
+    justify-content: center; /* 수평 가운데 정렬 */
+    align-items: center; /* 수직 가운데 정렬 */
+}
+
+.logo {
+    font-family: 'Cafe24Supermagic-Bold-v1.0';
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 20px;
+    white-space: nowrap;
+    cursor: pointer;
+    color: #fff; /* 로고 색상 변경 */
+}
+
+.logo a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* 검색창 옵션 css */
+/* select 요소 스타일링 */
+  /* option 요소 스타일링 */
+option {
+    font-family: 'S-CoreDream-6Bold';
+    font-size: 14px; /* 글꼴 크기 설정 */
+    padding: 5px; /* 내부 여백 설정 */
+    background-color: white; /* 배경색 설정 */
+    color: #526D82; /* 글자색 설정 */
+}
+
+.header-select {
+    -moz-appearance: none;
+    appearance:none;
+    background:url('/img/arrow1.png') no-repeat 85% 50%;
+
+    -webkit-appearance: none;
+    
+    background-size: 16px;
+    padding: 9px; /* 내부 여백 설정 */
+    font-size: 15px; /* 글꼴 크기 설정 */
+    width: 80px; /* 너비 설정 */
+
+    
+    font-family: 'S-CoreDream-6Bold';
+    background-color: #9DB2BF;
+    color: white;
+    border: none;
+    /* padding: 8px; */
+    margin-right: 10px;
+    /* font-size: 14px; */
+    border-radius: 20px;
+}
+
+.search-input {
+    font-family: 'S-CoreDream-5Medium';
+    background-color: #9DB2BF;
+    color: #27374D;
+    border: none;
+    padding: 8px;
+    width: 500px;
+    font-size: 14px;
+    border-radius: 20px;
+}
+
+.search-input::placeholder {
+    font-size: 15px;
+    font-family: 'S-CoreDream-5Medium';
+    color: #526D82;
+}
+
+
+
+
+
+
+

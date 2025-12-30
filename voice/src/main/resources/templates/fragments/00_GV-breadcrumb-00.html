@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <th:block th:fragment="breadcrumbFragment">
+        <link rel="stylesheet" type="text/css" th:href="@{/css/00_GV-breadcrumb-00.css}">
+        <div class="breadcrumb">
+          <a href="1.1_GV-F-CTMain-1.1">메인</a> > 구직게시판
+        </div>
+    </th:block>
+
+    <th:block th:fragment="breadcrumbCtBoardFragment">
+        <link rel="stylesheet" type="text/css" th:href="@{/css/00_GV-breadcrumb-00.css}">
+        <div class="breadcrumb">
+            <a href="1.2_GV-F-VAMAIN-1.2">메인</a> > 구인게시판
+        </div>
+    </th:block>
+</body>
+</html>

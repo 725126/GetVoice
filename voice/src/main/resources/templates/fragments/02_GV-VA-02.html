@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<th:block th:fragment="VAFragment">
+  <link rel="stylesheet" type="text/css" th:href="@{/css/1.0_GV-F-VA-1.0.css}">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- 구직게시판 시작 -->
+    <div class="gallery-container">
+
+        <!-- 첫 번째 게시물 -->
+        <div  th:each="vpCtrlDTO : ${vpCtrlDTOList}" class="gallery-item vp-item" th:id="'vpItem_' + ${vpCtrlDTO.pid}">
+          <div class="image-container">
+            <!-- 썸네일 -->
+            <img th:src="${vpCtrlDTO.thumnbDownUrl != null} ? ${vpCtrlDTO.thumnbDownUrl} : '/img/s15.jpg'"  alt="Image 1">
+          </div>
+          <div class="item-info">
+            <!-- 제목 -->
+            <h6 th:text="${vpCtrlDTO.title}" th:title="${vpCtrlDTO.title}"></h6>
+            <div class="item-profile">
+              <!-- 닉네임 -->
+              <div><p th:text="${vpCtrlDTO.nickname}"></p></div>
+              <!-- 평점 -->
+              <div class="rating">
+                <i class="fas fa-star"></i> 4.5
+                <span class="review-count">(30개의 평가)</span>
+              </div>
+            </div>
+            <!-- 키워드 -->
+            <div class="item-keywords">
+              <span th:each="voiceType, iterStat : ${vpCtrlDTO.voiceTypes}" th:if="${iterStat.index lt 3}" th:text="${voiceType}" th:title="${voiceType}" class="keyword"></span>
+            </div>
+
+            <div class="item-details">
+              <!-- 의뢰 가능 여부 -->
+              <div th:if="${vpCtrlDTO.availability == 'possible'}" class="price-info-ok">
+                <i class="fas fa-circle"></i> 의뢰 가능
+              </div>
+              <div th:if="${vpCtrlDTO.availability == 'not-possible'}" class="price-info-no">
+                <i class="fas fa-square square-icon"></i> 의뢰 불가
+              </div>
+              <!-- 1000자당 가격(비영리) -->
+              <div class="price">
+                <i class="fas fa-won-sign"></i> <span th:text="${#numbers.formatInteger(vpCtrlDTO.nonProfitPrice * 1000, 3, 'COMMA') + '원'}"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+    </div>
+
+  <script th:src="@{/js/02_open-vp.js}"></script>
+</th:block>
+
+</body>
+</html>

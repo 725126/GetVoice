@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+    <title>겟보이스-구인글_작성/수정</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/8.0_GV-F-CrtCTPost-8.0.css}">
+</head>
+
+<body>
+<th:block th:replace="fragments/00_GV-header-00 :: headerFragment"></th:block>
+<th:block th:replace="fragments/00_GV-breadcrumb-00 :: breadcrumbCtBoardFragment"></th:block>
+
+<!-- 구인글 작성 부분 -->
+<div class="upload">
+    <form method="post" action="/board/ct/9.0_GV-F-CTPost-9.0" onsubmit="validateForm()" enctype="multipart/form-data">
+        <table class="tableB">
+            <tr>
+                <td class="tdP">
+                    <div class="rounded-profile-container">
+                        <img src="/img/profile_ex5.png" alt="Profile Image" class="rounded-profile">
+                    </div>
+                    <p class="nickname">닉네임</p>
+                </td>
+                <td colspan="5">
+                    <input type="text" id="title" name="title" required placeholder="제목" rows="5">
+                </td>
+            </tr>
+        </table>
+        <table class="tableA">
+            <tr>
+                <td class="td3" colspan="2" rowspan="3"><input class="selectKeywords-button" type="button" value="키워드 선택" onclick="showPopupPrkw1_1();" /></td>
+                <td class="td3" colspan="2"><input class="selectFiles-button" type="file" name="attachment" id="attachment"></td>
+            </tr>
+            <tr>
+                <td class="warning">
+                    ※ (최대 3개까지) 음원은 wav/mp3, 영상은 mp4, <br>
+                    그 외는 hwp, pdf, txt, jpg 파일만 업로드 가능합니다.
+                </td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td><label for="amount">가능 금액</label></td>
+                <td>
+                    <input type="text" id="amount" name="amount" required>
+                </td>
+                <td><label for="word_limit">기준 글자 수</label></td>
+                <td>
+                    <input type="text" id="word_limit" name="word_limit" required>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="deadline">마감일</label></td>
+                <td><input type="date" id="deadline" name="deadline" required></td>
+                <td><label id="recording_environment" name="environment">녹음 환경</label></td>
+                <td>
+                    <div class="input-group">
+                        <input class="selectKeywords-button" type="button" value="선택" onclick="showPopupPrkw3();" />
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="usage_range">사용 범위</label></td>
+                <td>
+                    <input type="text" id="usage_range" name="usage_range" required>
+                </td>
+                <td><label for="usage_purpose">사용 목적</label></td>
+                <td>
+                    <input type="text" id="usage_purpose" name="usage_purpose" required>
+                </td>
+            </tr>
+            <tr>
+                <td><label id="category" name="category">카테고리</label></td>
+                <td>
+                    <div class="input-group">
+                        <input class="selectKeywords-button" type="button" value="선택" onclick="showPopupPrkw2();" />
+                    </div>
+                </td>
+                <td><label for="affiliation">소속</label></td>
+                <td>
+                    <input type="text" id="affiliation" name="affiliation" required>
+                </td>
+            </tr>
+        </table>
+        <table class="tableC">
+            <tr>
+                <td>
+                    <span class="option-label">현재 구인 여부</span>
+                </td>
+                <td>
+                    <div class="option-container">
+                        <input type="checkbox" id="possible" name="availability" value="possible">
+                        <label for="possible" class="checkbox-label">
+                            <span class="custom-checkbox"></span>
+                            구인중
+                        </label>
+                        <input type="checkbox" id="not-possible" name="availability" value="not-possible">
+                        <label for="not-possible" class="checkbox-label">
+                            <span class="custom-checkbox"></span>
+                            구인완료
+                        </label>
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+        <table>
+            <tr>
+                <td colspan="6">
+                    <textarea id="content" name="content" required placeholder="내용" rows="6"></textarea>
+                </td>
+            </tr>
+        </table>
+        <table class="tableF">
+            <tr>
+                <td class="td1">
+                    <span>첨부파일:</span>
+                </td>
+                <td>
+                    <div class="file-list">
+                        <a class="download-link" href="이이코에 귀요밍.png" download></a>
+                        <a class="download-link" href="이이코에 귀요밍.png" download></a>
+                        <a class="download-link" href="이이코에 귀요밍.png" download></a>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <!--        <input type="hidden" name="selectedKeywords" id="selectedKeywordsField" value="">-->
+        <div class="Submitbutton">
+            <button type="submit" class="submit-button" id="submit">올리기</button>
+        </div>
+    </form>
+</div>
+<!-- 여기까지가 구인글 작성 부분 -->
+
+<th:block th:replace="fragments/00_GV-footer-00 :: footerFragment"></th:block>
+</body>
+<script>
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+
+    checkboxes.forEach(checkbox => {
+      checkbox.addEventListener('change', () => {
+        checkboxes.forEach(cb => {
+          if (cb !== checkbox) {
+            cb.checked = false;
+          }
+        });
+      });
+    });
+</script>
+<script>
+    // 모든 링크에 대해 반복하고 파일명을 추출하여 아이콘과 파일명으로 설정합니다.
+    const downloadLinks = document.querySelectorAll('.download-link');
+    downloadLinks.forEach(link => {
+        const filename = link.getAttribute('href').split('/').pop();
+        link.innerHTML = `<i class="fas fa-download"></i> ${filename} <span class="close">&times;</span>`;
+    });
+</script>
+<!--<script src="/js/8.0_crtct-post-script.js"></script>-->
+<!--<script src="/js/8.0_dateInputMin.js"></script>-->
+<!--<script src="/js/modal_window.js"></script>-->
+<!--<script src="/js/1.2_dropdown.js"></script>-->
+</html>

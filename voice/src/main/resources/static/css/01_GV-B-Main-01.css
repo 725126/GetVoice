@@ -1,0 +1,87 @@
+@font-face {
+    font-family: 'S-CoreDream-4Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'S-CoreDream-5Medium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-5Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'S-CoreDream-6Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-6Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+a {
+    text-decoration: none; /* 링크의 밑줄 제거 */
+    color: inherit; /* 링크의 색상 제거 */
+}
+
+
+.upload {
+    max-width: 1000px;
+    margin: 30px auto;
+    margin-top: 10%;
+    padding: 20px;
+    /* background-color: #f4f4f4; */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.upload table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.upload table td {
+    padding: 10px;
+}
+
+.upload table tr {
+    border:  2.2px solid #9DB2BF;
+    width: 110px;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+}
+
+.tableC {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 7px;
+    border-collapse: collapse; 
+  } 
+  
+  .tableC td {
+    list-style: none;
+    text-align: center;
+    font-family: 'S-CoreDream-4Regular';
+    width: 25%;
+    height: 130px;
+  }
+
+  .tableC tr:first-child {
+    border-bottom: none;
+  }
+
+.tableC td:hover {
+    background-color: #dde6ed33;
+  }
+  
+.icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 15px;
+}
+
+.upload form {
+    margin: 0; 
+}
+

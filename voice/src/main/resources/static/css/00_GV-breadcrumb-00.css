@@ -1,0 +1,55 @@
+/* 헤더 스타일 */
+  @font-face {
+    font-family: 'S-CoreDream-4Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'S-CoreDream-5Medium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-5Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'S-CoreDream-6Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-6Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cafe24Supermagic-Bold-v1.0';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/Cafe24Supermagic-Bold-v1.0.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* 브레드크럼 스타일 */
+.breadcrumb {
+    width: 98%;
+    margin-left: auto;
+    margin-right: auto;
+
+    font-family: 'S-CoreDream-5Medium';
+
+    background-color: #DDE6ED;
+    padding: 10px 20px;
+    color: #526D82;
+    font-size: 16px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    margin-top: 10px; /* 브레드크럼을 헤더와 간격을 주기 위해 추가 */
+}
+
+.breadcrumb a {
+    text-decoration: none;
+    color: #526D82;
+    transition: color 0.3s ease;
+}
+
+.breadcrumb a:hover {
+    color: #569DAA; /* 호버 시 색상 변경 */
+}

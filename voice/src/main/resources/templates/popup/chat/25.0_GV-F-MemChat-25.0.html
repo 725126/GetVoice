@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="utf-8">
+        <title>겟보이스_관리자 채팅(회원)</title>
+        <link rel="stylesheet" media="screen" href="/css/25.0_GV-F-MemChat-25.0.css">
+    </head>
+
+<body>
+  <div class="chat-container">
+    <div class="chat-header">V-채팅</div>
+    <div class="receiver-profile">
+        <table>
+            <tr>
+                <td>
+                    <div class="circle">
+                        <a href=""><img src="/img/profile_ex5.png" alt="대화상대_프로필"></a>
+                    </div>
+                </td>
+                <td>
+                    <li>&nbsp;&nbsp;관리자</li>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="chat-messages">
+        <div class="message receiver-message">
+            【문의가 접수되었습니다】
+            <br><br>
+            0000.00.00 	&lt;제목&gt; <br>
+            문의내용
+            <br><br>
+            고객 서비스에서 내용 확인 후, <br> 
+            답변 드리겠습니다. 
+            <br><br>
+            감사합니다.
+        </div>
+        <div class="message receiver-message">
+            0000.00.00 &lt;제목&gt; <br>
+            에 대한 문의 답변 <br>
+            ⇒ <br>
+            문제 상황 확인하였으며, <br>
+            - (거래일자) <br>
+            - (거래자 닉네임) <br> 
+            - (거래금액) <br>
+            건 거래 중지 처리했습니다. <br> 
+            감사합니다. <br>
+        </div>
+      <!-- 채팅 메시지들 동적으로 추가 가능. -->
+    </div>
+    <div class="input-container">
+      <li class="warning">채팅이 불가능한 서비스입니다.</li>
+    </div>
+  </div>
+</body>
+</html>

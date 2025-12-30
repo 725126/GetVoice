@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="utf-8">
+        <title>겟보이스</title>
+        <link rel="stylesheet" type="text/css" th:href="@{/css/17.1_GV-F-ReviewW-17.1.css}">
+        <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>
+
+
+    <body>
+
+            
+              <!-- 메인부분 -->
+              <div class="container">
+                    <form name="fo" method="get">
+                            <table class="tableB">
+                                <tr>
+                                    <td class="tdP">
+                                        <div class="rounded-profile-container">
+                                            <img src="/img/profile_ex2.jpg" alt="Profile Image" class="rounded-profile">
+                                            <div class="nickname">몰랑이
+                                                <div class="date">2023.9.18</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <div class="rating">
+                                <input type="radio" name="stars" id="star1" value="1">
+                                <label for="star1"></label>
+                                <input type="radio" name="stars" id="star2" value="2">
+                                <label for="star2"></label>
+                                <input type="radio" name="stars" id="star3" value="3">
+                                <label for="star3"></label>
+                                <input type="radio" name="stars" id="star4" value="4">
+                                <label for="star4"></label>
+                                <input type="radio" name="stars" id="star5" value="5">
+                                <label for="star5"></label>
+                            </div>             
+
+                            <div class="upload">
+                                <table>
+                                    <tr>
+                                        <td colspan="6">
+                                            <textarea for="content" id="content" name="content" placeholder="내용" rows="6"></textarea>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <div class="Submitbutton">
+                                    <button type="button" id="submitBtn" class="submit-button">리뷰등록</button>
+                                </div>
+
+                            </div>
+                            
+
+
+                            
+                    </form>
+                </div>
+
+               <!-- 여기까지가 메인부분 -->
+                  
+                
+
+        <footer>
+        </footer>
+    </body>
+    <script th:src="@{/js/17.1_popup-script.js}"></script>
+</html>
+
+
+
+
+  
+

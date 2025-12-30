@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+        <title>공지사항</title>
+        <link rel="stylesheet" type="text/css" th:href="@{/css/05_GV-F-NoticeView-05.css}">
+    </head>
+        
+    <body>
+        <!-- 헤더 -->
+        <th:block th:replace="fragments/00_GV-header-00 :: headerFragment"></th:block>
+        <th:block th:replace="fragments/00_GV-breadcrumb-00 :: breadcrumbFragment"></th:block>
+      
+
+        <main>
+            <div class="upload">
+                <form name="fo" method="get">
+                    <table class="tableB">
+                        <tr>
+                            <td class="tdP">
+                                <div class="rounded-profile-container">
+                                    <img src="/img/profile_ex5.png" alt="Profile Image" class="rounded-profile">
+                                </div>
+                                <p class="nickname">관리자</p>
+                            </td>
+                            <td>
+                                <div class="profile-container">
+                                    <h2 class="profile-title">겟보이스 개인정보 처리방침 개정 안내입니다.</h2>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                       
+                    <table class="tableD">
+                        <tr>
+                            <td class="tableD_label"><label class="amount">등록날짜</label></td>
+                            <td class="tableC">2023.11.19</td>
+                            <td class="tableD_label"><label class="amount">공지유형</label></td>
+                            <td class="tableC">개인정보처리</td>
+                        </tr>
+                    </table>
+                    <table class="tableE">
+                        <tr>
+                            <td colspan="6">안녕하세요, 겟보이스입니다.<br>
+                                이용해주시는 회원 여러분께 진심으로 감사합니다.<br>
+                                <br>
+                                겟보이스의 개인정보 처리 방침이 아래와 같이 변경될 예정입니다. 서비스 이용에 참고해 주시기 바랍니다.</td>
+                        </tr>
+                    </table>
+                    <table class="tableA">
+                        <tr>
+                            <td class="td3" colspan="2">첨부파일</td>
+                        </tr>
+                    </table>
+                    <div class="Submitbutton">
+                        <button type="submit" class="submit-button">목록으로</button>
+                    </div>
+                </form>
+            </div>
+        </main>
+        <th:block th:replace="fragments/00_GV-footer-00 :: footerFragment"></th:block>
+    </body>
+    <script src="/js/modal_window.js"></script>
+    <script src="/js/1.2_dropdown.js"></script>
+</html>

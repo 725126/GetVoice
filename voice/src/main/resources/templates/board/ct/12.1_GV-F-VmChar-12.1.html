@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="utf-8">
+        <title>겟보이스_V머니충전</title>
+        <link rel="stylesheet" type="text/css" th:href="@{/css/12.1_GV-F-VmChar-12.1.css}">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <link rel="shortcut icon" href="#">
+    </head>
+
+<body>
+  <div class="container">
+    <div class="header"><i class="fas fa-coins"></i>&nbsp;&nbsp;V머니 충전</div>
+
+        <div class="radio-container">
+
+            <div class="radio">
+                <input type="checkbox" id="5,000원" name="availability" value="5000">
+                <label for="5,000원" class="checkbox-label">
+                    <span class="custom-checkbox"></span>5,000원</label>
+            </div>
+
+            <div class="radio">
+                <input type="checkbox" id="10,000원" name="availability" value="10000">
+                <label for="10,000원" class="checkbox-label">
+                    <span class="custom-checkbox"></span>10,000원</label>
+            </div>
+
+            <div class="radio">
+                <input type="checkbox" id="20,000원" name="availability" value="20000">
+                <label for="20,000원" class="checkbox-label">
+                    <span class="custom-checkbox"></span>20,000원</label>
+            </div>
+
+            <div class="radio">
+                <input type="checkbox" id="30,000원" name="availability" value="30000">
+                <label for="30,000원" class="checkbox-label">
+                    <span class="custom-checkbox"></span>30,000원</label>
+            </div>
+        </div>
+        <div class="radio-container">
+            <div class="radio">
+                <input type="checkbox" id="40,000원" name="availability" value="40000">
+                <label for="40,000원" class="checkbox-label">
+                    <span class="custom-checkbox"></span>40,000원</label>
+            </div>
+
+            <div class="radio">
+                <input type="checkbox" id="50,000원" name="availability" value="50000">
+                <label for="50,000원" class="checkbox-label">
+                    <span class="custom-checkbox"></span>50,000원</label>
+            </div>
+
+            <div class="radio">
+                <input type="checkbox" id="70,000원" name="availability" value="70000">
+                <label for="70,000원" class="checkbox-label">
+                    <span class="custom-checkbox"></span>70,000원</label>
+            </div>
+
+            <div class="radio">
+                <input type="checkbox" id="100,000원" name="availability" value="100000">
+                <label for="100,000원" class="checkbox-label">
+                    <span class="custom-checkbox"></span>100,000원</label>
+            </div>
+        </div>
+        <div class="radio-container">
+            <div class="radio">
+                <input type="checkbox" id="200,000원" name="availability" value="200000">
+                <label for="200,000원" class="checkbox-label">
+                    <span class="custom-checkbox"></span>200,000원</label>
+            </div>
+
+            <div class="radio">
+                <input type="checkbox" id="300,000원" name="availability" value="300000">
+                <label for="300,000원" class="checkbox-label">
+                    <span class="custom-checkbox"></span>300,000원</label>
+            </div>
+
+            <div class="radio">
+                <input type="checkbox" id="500,000원" name="availability" value="500000">
+                <label for="500,000원" class="checkbox-label">
+                    <span class="custom-checkbox"></span>500,000원</label>
+            </div>
+
+            <div class="radio">
+                <input type="checkbox" id="1,000,000원" name="availability" value="1,000000">
+                <label for="1,000,000원" class="checkbox-label">
+                    <span class="custom-checkbox"></span>1,000,000원</label>
+            </div>
+
+        </div>
+
+  <button class="btn" onclick="saveCheckbox()">충전하기</button>
+
+   </div>
+</body>
+
+<script src="/js/12.1_vm-char.js"></script>
+</html>
+

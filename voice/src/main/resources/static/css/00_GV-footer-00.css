@@ -1,0 +1,53 @@
+@font-face {
+    font-family: 'S-CoreDream-4Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'S-CoreDream-5Medium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-5Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'S-CoreDream-6Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-6Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cafe24Supermagic-Bold-v1.0';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/Cafe24Supermagic-Bold-v1.0.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* Footer 스타일 */
+footer {
+/*    상우하좌  */
+    margin-top: 10px;
+
+    font-family: 'S-CoreDream-4Regular';
+    background-color: #DDE6ED; /* 배경색 설정 */
+    text-align: center;
+    padding: 10px;
+
+    /* 페이지 하단에 고정 */
+    bottom: 0;
+}
+
+/* 링크 스타일 */
+footer a {
+    text-decoration: none;
+    color: #526D82; /* 링크 색상 설정 */
+    font-weight: bold;
+}
+
+/* Hover 시 색상 변경 */
+footer a:hover {
+    color: #569DAA; /* Hover 시 색상 변경 */
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="utf-8">
+        <title>겟보이스_회원정보수정</title>
+        <link rel="stylesheet" type="text/css" th:href="@{/css/21.0_GV-F-MyMod-21.0.css}">
+    </head>
+
+    <body>
+    <div class="container">
+        <div class="header">회원정보 확인/변경</div>
+            <form name="fo" method="get">
+
+                <div class="upload">
+                        <table>
+                            <tr>
+                                <td><label for="id">아이디</label></td>
+                                <td><input type="text" readonly id="id" name="id" required placeholder="변경불가"></td>
+                            </tr>
+                            <tr>
+                                <td><label for="pw">비밀번호</label></td>
+                                <td><input type="text" id="pw" name="pw" required></td>
+                            </tr>
+                            <tr>
+                                <td><label for="pn">연락처</label></td>
+                                <td><input type="text" id="pn" name="pn" required></td>
+                            </tr>
+                            <tr>
+                                <td><label id="usage_purpose">사용 목적</label></td>
+                                <!-- <td><input type="text" id="usage_purpose" name="usage_purpose" required> -->
+                                <td class="radio-container">
+                                    <input type="checkbox" id="possible" name="availability" value="possible">
+                                    <label for="possible" class="checkbox-label">
+                                        <span class="custom-checkbox"></span>구인</label>
+                                    &nbsp;
+                                    <input type="checkbox" id="not-possible" name="availability" value="not-possible"><label for="not-possible" class="checkbox-label">
+                                        <span class="custom-checkbox"></span>구직
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label for="nn">닉네임</label></td>
+                                <td><input type="text" readonly id="nn" name="nn" required placeholder="변경불가">
+                                    <!-- <input class="selectKeywords-button" type="button" value="중복확인" /> -->
+                                </td>
+                                
+                            </tr>
+                            <tr>
+                                <td><label fid="category">키워드선택</label></td>
+                                <td>
+                                    <div class="input-group">
+                                        <input class="selectKeywords-button" type="button" value="고르기" onclick="showPopupPrkw();" />
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                <button class="btn" onclick="saveCheckbox()">저장하기</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        checkboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', () => {
+                checkboxes.forEach(cb => {
+                    if (cb !== checkbox) {
+                        cb.checked = false;
+                    }
+                });
+            });
+        });
+    </script>
+        
+    </body>
+<script src="/js/1.2_dropdown.js"></script>
+<script src="/js/modal_window.js"></script>
+</html>
+

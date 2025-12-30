@@ -1,0 +1,212 @@
+@font-face {
+    font-family: 'S-CoreDream-4Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'S-CoreDream-5Medium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-5Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'S-CoreDream-6Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-6Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'S-CoreDream-5Medium';
+
+    display: flex; /* Flexbox를 사용하여 요소를 수평으로 정렬 */
+    flex-direction: column; /* 요소들을 수직으로 정렬 */
+    align-items: center; /* 요소들을 수평 방향으로 가운데 정렬 */
+    justify-content: center; /* 요소들을 수직 방향으로 가운데 정렬 */
+    height: 100vh; /* 뷰포트의 100% 높이를 설정하여 화면에 꽉 차도록 함 */
+    margin: 0;
+    padding: 0;
+    font-family: 'S-CoreDream-5Medium'; /* 폰트 지정 */
+    background-color: #8BBCCC; /* 배경색을 밝은 회색으로 지정 */
+}
+
+.box-container {
+    width: 1220px; /* 컨테이너의 너비를 450px로 지정 */
+    height: 650px; /* 컨테이너의 높이를 580px로 지정 */
+    border-radius: 10px; /* 테두리의 모서리를 10px의 둥근 모서리로 지정 */
+    overflow: hidden; /* 내용이 넘칠 경우 숨김 처리 */
+    background-color: #fff; /* 배경색을 흰색으로 지정 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 그림자 효과 추가 */
+}
+
+.container {
+    display: flex;
+    align-items: flex-start;
+    border-radius: 10px; /* 테두리의 모서리를 10px의 둥근 모서리로 지정 */
+    padding: 15px;
+    background-color: #fff;
+}
+
+.header {
+    padding: 10px; /* 내부 여백을 10px로 지정 */
+    background-color: #27374D; /* 배경색을 파란색으로 지정 */
+    color: #fff; /* 글자색을 흰색으로 지정 */
+    font-size: 18px; /* 글자 크기를 18px로 지정 */
+    font-weight: bold; /* 글자 굵기를 bold로 지정 */
+    text-align: center; /* 가운데 정렬 */
+}
+
+.bar-chart {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 250px;
+    height: 200px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    padding: 20px;
+    position: relative;
+}
+
+.bar {
+    width: 40px;
+    background-color: #569DAA;
+    border-radius: 15px 15px 0 0;
+    font-size: 18px;
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    position: relative;
+
+    text-align: center;
+}
+
+.bar:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.bar-label {
+    margin-top: 10px;
+    font-family: 'S-CoreDream-6Bold';
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+}
+
+.x-axis {
+    border-top: 2px solid #9DB2BF;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.y-axis {
+    border-left: 2px solid #9DB2BF;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.axis-label {
+    position: absolute;
+    font-size: 16px;
+}
+
+.x-label {
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.y-label {
+    top: 50%;
+    left: -20px;
+    transform: translateY(-50%) rotate(-90deg);
+}
+
+.bar-name {
+    text-align: center;
+    font-size: 14px;
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    color: #27374D;
+    white-space: nowrap;
+    bottom: -43px; /* 이름을 더 아래로 조절 */
+}
+
+.info-and-graph {
+    width: 400px;
+    text-align: center;
+    margin-top: -20px;
+    margin-right: 10px;
+
+}
+
+.info-and-graph_1 {
+    width: 500px;
+    text-align: center;
+    margin-top: -20px;
+    margin-left: 10px;
+
+}
+
+.info-and-graph h3 {
+    background-color: #569DAA;
+    color: white;
+    border-radius: 10px 10px 0 0;
+    padding: 10px;
+
+    font-weight: normal;
+    font-family: 'S-CoreDream-6Bold';
+}
+
+.info-and-graph_1 h2 {
+    background-color: #577D86;
+    color: white;
+    border-radius: 10px 10px 0 0;
+    padding: 10px;
+
+    font-weight: normal;
+    font-family: 'S-CoreDream-6Bold';
+}
+
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-radius: 0 0 10px 10px;
+    background-color: #f0f0f0;
+}
+
+li {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.label {
+    font-family: 'S-CoreDream-6Bold';
+    font-size: 16px;
+}
+
+.value {
+    font-size: 16px;
+    background-color: #526D82;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+.hr0 {
+    border-top: 2px #27374D dashed;
+    margin-left: 20px;
+    margin-right: 20px;
+}

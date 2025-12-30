@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>겟보이스_보이스포트</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/10.0_GV-F-VP-10.css}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="shortcut icon" href="#">
+</head>
+<body>
+    <div class="container">
+        <table class="vp-header">
+            <tr>
+                <td><h1 class="vp-h1" id="title" th:text="${vpCtrlDTO.title}" th:title="${vpCtrlDTO.title}">제목</h1></td>
+                <td>
+                    <div class="dropdown">
+                        <span class="dropdown-toggle">  ⋮ </span>
+                        <div id="mypageDropdown" class="dropdown-content">
+                            <!-- 드롭다운 내용을 추가 -->
+                            <a id="vp-mod-btn">수정</a>
+                            <a href="#">삭제</a>
+                            <a href="#">비공개</a>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <table class="top-table">
+            <tr>
+                <td>
+                    <div class="profile">
+                        <img id="profile-img" th:src="${profileDTO.id != null} ? ${profileDTO.fileDownloadUri} : '/img/profile_ex5.png'" alt="Profile Image">
+                        <h2 class="nickname" id="nickname">닉네임</h2>
+                        <div class="item-details">
+                            <div th:if="${vpCtrlDTO.availability == 'possible'}" class="price-info-ok">
+                                <i class="fas fa-circle"></i> 의뢰가능
+                            </div>
+                            <div th:if="${vpCtrlDTO.availability == 'not-possible'}" class="price-info-no">
+                                <i class="fas fa-square square-icon"></i> 의뢰불가
+                            </div>
+                        </div>
+                    </div>
+                </td>
+
+                <td class="td-div_group">
+                    <div class="clearfix">
+                        <table class="table1">
+                            <tr>
+                                <td class="likes-icon">
+                                    <!-- 클릭 시 좋아요 수 +1 & ♡ → ♥ -->
+                                    <i class="heart far fa-heart" onclick="toggleHeart(this)"></i>
+                                    <!-- <i  class="fas fa-heart"></i> -->
+                                </td>
+                                <td class="posts-icon">
+                                    <i class="fas fa-microphone microphone-icon"></i>
+                                </td>
+                                <td class="rating-icon">
+                                    <i class="fas fa-star"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <!-- 좋아요 수 -->
+                                <td class="counts">
+                                    <p>100</p>
+                                </td>
+                                <!-- 게시물 수 -->
+                                <td class="counts">
+                                    <p id="sample-count" th:text="${vpCtrlDTO.sampleCount}"></p>
+                                </td>
+                                
+                                <!-- 별점수치 (평가자 수) -->
+                                <td class="counts">
+                                    <!-- 클릭 시 리뷰 팝업 창 생성 -->
+                                    <p>4.5 <span class="rw-count" onclick="showPopuprv()">(100)</span></p> 
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <hr class="hr1"/>
+
+                    <div class="button-group">
+                        <button th:attr="data-pdf-save=${pdfDTO.saveFileName}, data-pdf-ori=${pdfDTO.originalFileName}" id="downloadButton"><i class="fas fa-download"></i> 이력서 PDF</button>
+                        <button onclick="showPopupEstCal()"><i class="fas fa-calculator"></i> 예상견적 계산</button>
+                        <button onclick="showPopupChat()"><i class="fas fa-comments"></i> V채팅</button>
+                    </div>
+                </td>
+
+                <td>
+                    <div class="quote-table">
+                        <table class="table2">
+                            <tr>
+                              <th class="quote-th-td">사용 목적</th>
+                              <th class="quote-th-td">1000자</th>
+                              <th class="quote-th-td">한 글자</th>
+                            </tr>
+                            <tr>
+                              <td class="quote-th-td">영리 목적</td>
+                                <!-- 1000자 가격 -->
+                              <td id="for-1000" th:text="${#numbers.formatInteger(vpCtrlDTO.forProfitPrice * 1000, 3, 'COMMA') + '원'}" class="quote-th-td"></td>
+                                <!-- 한 글자 가격 -->
+                              <td id="for-1" th:text="${vpCtrlDTO.forProfitPrice >= 100 ? #numbers.formatInteger(vpCtrlDTO.forProfitPrice, 3, 'COMMA') + '원' : #numbers.formatInteger(vpCtrlDTO.forProfitPrice, 1) + '원'}" class="forProfitPrice quote-th-td"></td>
+                            </tr>
+                            <tr>
+                              <td class="quote-th-td">비영리 목적</td>
+                                <!-- 1000자 가격 -->
+                              <td id="non-1000" th:text="${#numbers.formatInteger(vpCtrlDTO.nonProfitPrice * 1000, 3, 'COMMA') + '원'}" class="quote-th-td"></td>
+                                <!-- 한 글자 가격 -->
+                              <td id="non-1" th:text="${vpCtrlDTO.nonProfitPrice >= 100 ? #numbers.formatInteger(vpCtrlDTO.nonProfitPrice, 3, 'COMMA') + '원' : #numbers.formatInteger(vpCtrlDTO.nonProfitPrice, 1) + '원'}" class="nonProfitPrice quote-th-td"></td>
+                            </tr>
+                          </table>
+                    </div>
+        
+                </td>
+            </tr>
+
+        </table>
+
+        <hr class="hr0"/>
+
+        <!-- 키워드/카테고리 설정 데이터 -->
+        <div style="display: none;" th:if="${vpCtrlDTO.serviceKeyList != null}">
+            <div style="display: none;" th:attr="data-serviceTypes=${#strings.arrayJoin(vpCtrlDTO.serviceKeyList, ',')}"></div>
+            <div style="display: none;" th:attr="data-voiceTypes=${#strings.arrayJoin(vpCtrlDTO.voiceKeyList, ',')}"></div>
+            <div style="display: none;" th:attr="data-recordingEnvironments=${#strings.arrayJoin(vpCtrlDTO.recordingKeyList, ',')}"></div>
+        </div>
+
+        <!-- 키워드/카테고리 더보기 -->
+        <div class="keywords">
+            <table  class="keywords-list">
+              <tr>
+                  <td th:each="voiceType, iterStat : ${vpCtrlDTO.voiceTypes}" th:if="${iterStat.index lt 8}">
+                      <div class="keyword-item" th:text="${voiceType}"></div>
+                  </td>
+                  <td th:if="${vpCtrlDTO.voiceTypes != null and vpCtrlDTO.voiceTypes.size() le 8}" th:attr="colspan=${5 - vpCtrlDTO.voiceTypes.size()}"></td>
+                  <td class="more">…</td>
+              </tr>
+            </table>
+            <button class="more-button" onclick="showpopupchkw()">더보기 →</button>
+          </div>
+
+
+       
+
+        <!-- 소개 / 수정·재진행 / 취소·환불 탭 -->
+        <div class="tab-menu-explain">
+            <button class="tab-button-explain active" onclick="changeTab2(0)"><i class="fas fa-info-circle"></i> 소개</button>
+            <button class="tab-button-explain" onclick="changeTab2(1)"><i class="fas fa-edit"></i> 수정·재진행</button>
+            <button class="tab-button-explain" onclick="changeTab2(2)"><i class="fas fa-times"></i> 취소·환불</button>
+        </div>
+
+        <div class="tab-content-explain active">
+            <textarea id="introduce" class="tab" th:utext="${vpCtrlDTO.introduceContent}" readonly>소개 탭의 내용입니다. </textarea>
+        </div>
+
+        <div class="tab-content-explain">
+            <textarea id="modify" class="tab" th:utext="${vpCtrlDTO.modifyContent}" readonly>수정·재진행 탭의 내용입니다.</textarea>
+        </div>
+
+        <div class="tab-content-explain">
+            <textarea id="refund" class="tab" th:utext="${vpCtrlDTO.refundContent}" readonly>취소·환불 탭의 내용입니다.</textarea>
+        </div>
+
+        <!-- 전시할 탭 결정 -->
+        <span id="tabNum" th:text="${tabNum}" style="display: none;"></span>
+
+        <!-- 영상샘플 / 음성샘플 탭 -->
+        <div class="tab-menu">
+            <button class="tab-button active" onclick="changeTab(event, 'gallery1')"><i class="fab fa-youtube"></i> 영상샘플</button>
+            <button id="audio-tab-btn" class="tab-button" onclick="changeTab(event, 'gallery2')"><i class="fas fa-music"></i> 음성샘플</button>
+          </div>
+          
+          <!-- 영상샘플 -->
+        <div id="gallery1" class="gallery">
+            <!--영상샘플 -->
+            <div th:each="urlDTO : ${urlDTOList}" class="gallery-item">
+                <a th:href="'javascript:showYoutubePopup(\'' + ${urlDTO.youtubeUrl} + '\')'">
+                    <img th:src="${urlDTO.thumbnailUrl}" alt="이미지 1">
+                </a>
+                <h3 th:text="${urlDTO.title}" th:title="${urlDTO.title}">제목</h3>
+                <ul>
+                    <li th:each="keyword : ${urlDTO.selectedKeywords}" th:text="${keyword}" th:title="${keyword}">키워드</li>
+                </ul>
+            </div>
+            <!-- 나머지 샘플들도 동일한 방식으로 추가 -->
+        </div>
+
+
+        <div id="gallery2" class="gallery" style="display: none;">
+            <!--음성샘플 -->
+            <div th:each="audioDTO : ${audioDTOList}" class="gallery-item">
+                <div class="imageContainer">
+                    <div class="imageDiv">
+                        <img class="myImage" src="/img/play.jpg" alt="이미지 5">
+                        <audio id="audio" class="audio">
+                            <source th:src="${audioDTO.fileDownloadUri}" type="audio/mpeg" style="display: none;">
+                        </audio>
+                    </div>
+                    <h3 th:text="${audioDTO.title}" th:title="${audioDTO.title}"></h3>
+                    <ul>
+                        <li th:each="keyword : ${audioDTO.selectedKeywords}" th:text="${keyword}" th:title="${keyword}"></li>
+                    </ul>
+                </div>
+            </div>
+      
+            <!-- 나머지 사진들도 동일한 방식으로 추가 -->
+          </div>
+    </div>
+</body>
+<script src="/js/10.0_vp-script.js"></script>
+<script src="/js/10_VP-tapmenu_1.js"></script>
+<script src="/js/10_VP-tapmenu_2.js"></script>
+</html>

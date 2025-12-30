@@ -1,0 +1,383 @@
+@font-face {
+    font-family: 'S-CoreDream-4Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'S-CoreDream-5Medium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-5Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'S-CoreDream-6Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-6Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+a {
+  text-decoration: none; /* 링크의 밑줄 제거 */
+  color: inherit; /* 링크의 색상 제거 */
+}
+
+
+
+/* 구인글 작성 부분 */
+
+.upload {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 20px;
+    /* background-color: #f4f4f4; */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.upload table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.upload table td {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.upload table tr {
+    border:  2.2px solid #9DB2BF;
+    width: 110px;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+}
+
+.upload table td label {
+    font-family: 'S-CoreDream-5Medium';
+    font-size: 16px;
+    color: #27374D;
+}
+
+.upload table input[type="text"],
+.upload table input[type="date"] {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    background-color: #DDE6ED;
+    color: #27374D;
+    font-family: 'S-CoreDream-5Medium';
+    font-size: 14px;
+}
+
+.upload .tableB input[type="text"] {
+  height: 60px;
+  font-family: 'S-CoreDream-5Medium';
+  font-size: 25px;
+}
+
+.upload table button {
+    font-family: 'S-CoreDream-5Medium';
+    padding: 10px 20px;
+    background-color: #526D82;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    float: right;
+}
+
+.upload table button:hover {
+    background-color: #27374D;
+}
+
+textarea#content {
+    resize: none;
+    padding: 5px;
+    font-size: 14px;
+    width: 100%;
+}
+
+.upload textarea#content {
+    resize: none;
+    padding: 8px;
+    font-family: 'S-CoreDream-5Medium';
+    font-size: 14px;
+    border-radius: 5px;
+    background-color: #DDE6ED;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+}
+
+.upload .submit-button {
+    font-family: 'S-CoreDream-5Medium';
+    padding: 6px 24px;
+    background-color: #526D82;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 120px;
+    height: 40px;
+    margin-top : 20px;
+}
+
+.upload .submit-button:hover {
+    background-color: #27374D;
+}
+
+input[type=file]::file-selector-button {
+    width: 100px;
+    height: 30px;
+    font-family: 'S-CoreDream-5Medium';
+    font-size: 15px;
+    color: #fff;
+    background: #526D82;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+
+  .selectFiles-button {
+    font-family: 'S-CoreDream-4Regular';
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    width: 220px;
+  }
+
+  .upload ::placeholder {
+    color: #526D82;
+    text-align: center;
+    padding-top: 50px;
+  }
+
+  .tableB ::placeholder {
+    color: #526D82;
+    text-align: left;
+    padding-left: 5px;
+    text-size-adjust: 20px;
+  }
+
+  .upload label {
+    text-align: center;
+  }
+
+  .tableB tr {
+    height: 80px;
+  }
+
+  .tdP {
+      width: 80px;
+  }
+
+  .rounded-profile {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+  }
+
+  .rounded-profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+
+  .nickname {
+    font-family: 'S-CoreDream-4Regular';
+    font-size: 14px;
+    color: #333333;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+  }
+
+  .profile-title {
+    font-family: 'S-CoreDream-6Bold';
+    font-size: 28px;
+    margin: 0;
+    color: #333333;
+  }
+
+
+  .td3 {
+    text-align: center;
+    margin-left:auto;
+    margin-right:auto;
+    width: 450px;
+  }
+
+  .upload-button1 {
+    font-family: 'S-CoreDream-5Medium';
+    padding: 8px 16px;
+    /* margin-left: 10px; */
+    background-color: #577D86;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+  }
+
+
+  .tableA {
+    margin-left:auto;
+    margin-right:auto;
+    padding: 7px;
+    border-spacing: 10px 5px;
+  }
+
+  .tableA td {
+    list-style: none;
+    text-align: center;
+  }
+
+  .warning {
+    font-size: 9px;
+    font-family: 'S-CoreDream-4Regular';
+  }
+
+
+.table3 table tr {
+    list-style: none;
+}
+
+.Submitbutton {
+    text-align: center;
+}
+
+.selectKeywords-button, selectEnvironment-button, selectCategory-button {
+  font-family: 'S-CoreDream-5Medium'; /* 폰트 지정 */
+  padding: 8px 16px; /* 내부 여백을 위아래 8px, 좌우 16px로 지정 */
+  /* margin-left: 10px;  */
+  background-color: #526D82; /* 배경색을 파란색으로 지정 */
+  color: #fff; /* 글자색을 흰색으로 지정 */
+  border: none; /* 테두리 제거 */
+  border-radius: 10px; /* 테두리를 10px의 둥근 모서리로 지정 */
+  cursor: pointer; /* 커서를 포인터로 변경하여 버튼임을 나타냄 */
+  font-size: 15px; /* 글자 크기를 14px로 지정 */
+}
+
+
+
+.profile-title {
+  text-align: left;
+}
+
+ /*구인상태 체크박스 부분*/
+
+ .upload .tableC td:first-child {
+     width: 130px;
+ }
+
+
+  .option-label {
+      font-family: 'S-CoreDream-5Medium';
+      font-size: 16px;
+      color: #27374D;
+   }
+
+    .option-container {
+        display: flex;
+        font-family: 'S-CoreDream-5Medium';
+        margin-left: auto;
+        margin-right: 30px;
+        align-items: center;
+        gap: 5px; /* 글자 사이 간격을 조정합니다. */
+        font-size: 16px; /* 글자 크기를 조정합니다. */
+    }
+
+    .checkbox-label {
+        cursor: pointer;
+        margin: 0;
+    }
+
+    input[type="checkbox"] {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        width: 20px;
+        height: 20px;
+        border: 2px solid #27374D;
+        border-radius: 3px;
+        outline: none;
+        cursor: pointer;
+    }
+
+    input[type="checkbox"]:checked {
+        background-color: #569DAA;
+        border: 2px solid  #27374D;
+    }
+
+
+/*구인상태 체크박스 부여부분 여기까지*/
+
+
+/* 첨부파일 부분 */
+.td1 {
+  width: 59px;
+  vertical-align: top;
+}
+
+.tableF i {
+  margin-right: 3px;
+}
+
+.file-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.file-list a {
+  /* margin-bottom: 3px; */
+  display: flex; /* 첨부 파일 아이콘과 텍스트를 가로로 정렬 */
+  align-items: center; /* 아이콘과 텍스트를 수직 중앙 정렬 */
+}
+
+.file-list a .fa-download {
+  margin-right: 5px; /* 다운로드 아이콘과 텍스트 사이 여백 조정 */
+}
+
+.tableF td {
+  font-size: 14px;
+  text-align: left;
+  font-family: 'S-CoreDream-5Medium';
+  color: #27374D;
+}
+
+.close {
+  color: #aaa; /* 닫기 버튼 색상 */
+  font-size: 20px; /* 폰트 크기 */
+  font-weight: bold; /* 폰트 굵기 */
+  cursor: pointer; /* 마우스 커서를 포인터로 변경 */
+  margin-right: 10px; /* 닫기 버튼과 파일명 사이 여백 조정 */
+  float: right; /* 오른쪽에 위치 */
+  margin-left: 6px;
+}
+
+.close:hover,
+.close:focus {
+  color: black; /* 마우스 호버 또는 포커스 시 색상 변경 */
+  text-decoration: none; /* 밑줄 제거 */
+  cursor: pointer; /* 마우스 커서를 포인터로 변경 */
+}
+
+.download-link {
+  display: flex; /* 아이콘과 텍스트를 가로로 정렬 */
+  align-items: center; /* 아이콘과 텍스트를 수직 중앙 정렬 */
+}
+
+.download-link .fa-download {
+  margin-right: 5px; /* 다운로드 아이콘과 텍스트 사이 여백 조정 */
+}

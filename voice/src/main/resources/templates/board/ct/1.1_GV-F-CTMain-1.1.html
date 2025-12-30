@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+    <link rel="shortcut icon" href="#">
+    <title>겟보이스-구인자메인</title>
+</head>
+
+<body>
+
+    <th:block th:replace="fragments/00_GV-header-00 :: headerFragment"></th:block>
+    <th:block th:replace="fragments/00_GV-bookmark-00 :: bookmarkFragment"></th:block>
+    <th:block th:replace="fragments/00_GV-banner-00 :: bannerFragment"></th:block>
+
+    <th:block th:replace="fragments/02_GV-VA-02 :: VAFragment"></th:block>
+
+    <th:block th:replace="fragments/00_GV-footer-00 :: footerFragment"></th:block>
+</body>
+
+</html>

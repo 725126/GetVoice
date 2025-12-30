@@ -1,0 +1,8 @@
+{"messageType":"TALK","roomId":"33","mid":"아무개","message":"ㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇ","timestamp":"2023. 11. 04. 오후 11:15"}
+{"messageType":"TALK","roomId":"33","mid":"ㄷ","message":"ㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴ","timestamp":"2023. 11. 04. 오후 11:15"}
+{"messageType":"TALK","roomId":"33","mid":"ㄷ","message":"안녕","timestamp":"2023. 11. 04. 오후 11:15"}
+{"messageType":"TALK","roomId":"33","mid":"아무개","message":"응 안녕","timestamp":"2023. 11. 04. 오후 11:15"}
+{"messageType":"TALK","roomId":"33","mid":"ㄷ","message":"빙가워","timestamp":"2023. 11. 04. 오후 11:15"}
+{"messageType":"TALK","roomId":"33","mid":"아무개","message":"나도 방ㄱ가","timestamp":"2023. 11. 04. 오후 11:15"}
+{"messageType":"TALK","roomId":"33","mid":"ㄷ","message":"결제했어요!","timestamp":"2023. 11. 04. 오후 11:16"}
+{"messageType":"TALK","roomId":"33","mid":"아무개","message":"감사합니다^^","timestamp":"2023. 11. 04. 오후 11:16"}

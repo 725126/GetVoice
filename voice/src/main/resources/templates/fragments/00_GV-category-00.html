@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <th:block th:fragment="categoryFragment">
+        <link rel="stylesheet" type="text/css" th:href="@{/css/00_GV-category-00.css}">
+        <!-- 카테고리 / 정렬 / 키워드 -->
+        <table class="cate">
+          <tbody>
+              <tr>
+                <!-- 중복 선택 가능 -->
+                <td class="dropdown">
+                  <span class="dropdown-button" onclick="toggleDropdown(event)">카테고리 <i class="fas fa-angle-down"></i></span>
+                  <div id="myDropdown" class="dropdown-content">
+                    <a href="#" onclick="toggleCheckbox(event)">광고<input type="checkbox"></a>
+                    <a href="#" onclick="toggleCheckbox(event)">내래이션<input type="checkbox"></a>
+                    <a href="#" onclick="toggleCheckbox(event)">게임<input type="checkbox"></a>
+                    <a href="#" onclick="toggleCheckbox(event)">더빙<input type="checkbox"></a>
+                    <a href="#" onclick="toggleCheckbox(event)">ARS<input type="checkbox"></a>
+                    <a href="#" onclick="toggleCheckbox(event)">노래<input type="checkbox"></a>
+                    <a href="#" onclick="toggleCheckbox(event)">교육<input type="checkbox"></a>
+                    <a href="#" onclick="toggleCheckbox(event)">동화<input type="checkbox"></a>
+                  </div>
+                </td>
+                <!-- 중복 선택 가능 -->
+                <td class="dropdown">
+                  <span class="dropdown-button">키워드 <i class="fas fa-angle-down"></i></span>
+                  <div id="myDropdown2" class="dropdown-content">
+                    <a href="#" onclick="toggleCheckbox(event)">외국어<input type="checkbox"></a>
+                    <a href="#" onclick="toggleCheckbox(event)">여성<input type="checkbox"></a>
+                    <a href="#" onclick="toggleCheckbox(event)">남성<input type="checkbox"></a>
+                    <a href="#" onclick="toggleCheckbox(event)">유아<input type="checkbox"></a>
+                    <a href="#" onclick="toggleCheckbox(event)">소녀<input type="checkbox"></a>
+                    <a href="#" onclick="toggleCheckbox(event)">소년<input type="checkbox"></a>
+                    <a href="#" onclick="toggleCheckbox(event)">중장년<input type="checkbox"></a>
+                    <a href="#" onclick="toggleCheckbox(event)">노인<input type="checkbox"></a>
+                    <a href="#" onclick="toggleCheckbox(event)">허스키<input type="checkbox"></a>
+                    <a href="#" onclick="toggleCheckbox(event)">귀여운<input type="checkbox"></a>
+                    <a href="#" onclick="toggleCheckbox(event)">차분한<input type="checkbox"></a>
+                  </div>
+                </td>
+                <!-- 하나만 선택 가능 -->
+                <td class="dropdown">
+                  <span class="dropdown-button" onclick="toggleDropdown()">정렬 <i class="fas fa-angle-down"></i></span>
+                  <div class="dropdown-content">
+                    <a href="#">높은 가격 순</a>
+                    <a href="#">낮은 가격 순</a>
+                    <a href="#">최신 순</a>
+                    <a href="#">평점 순</a>
+                    <a href="#">리뷰 순</a>
+                  </div>
+                </td>
+                <td colspan="2"></td>
+              </tr>
+          </tbody>
+        </table>
+        <script src="/js/1.2_dropdown.js"></script>
+    </th:block>
+</body>
+</html>

@@ -1,0 +1,286 @@
+@font-face {
+  font-family: 'S-CoreDream-4Regular';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'S-CoreDream-5Medium';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-5Medium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'S-CoreDream-6Bold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-6Bold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+a {
+text-decoration: none; /* 링크의 밑줄 제거 */
+color: inherit; /* 링크의 색상 제거 */
+}
+
+
+  
+/* 새로운 구인글 부분 */
+.board {
+font-family: 'S-CoreDream-4Regular';
+width: 100%; /* 게시판의 가로 너비를 100%로 설정합니다. */
+max-width: 1100px; /* 게시판의 최대 가로 너비를 600px로 제한합니다. */
+margin-right: auto;
+margin-left: auto;
+margin-bottom: 80px;
+margin-top: 80px;
+}
+
+.project-list {
+list-style-type: none; /* 목록 스타일을 없앱니다. */
+padding: 0; /* 목록의 패딩을 0으로 설정합니다. */
+margin: 0; /* 목록의 마진을 0으로 설정합니다. */
+}
+
+.project-item {
+border: 1px solid #f1f1f1; /* 프로젝트 아이템에 1px 두께의 테두리를 설정하고 색상은 #f1f1f1로 지정합니다. */
+background-color: #ffffff; /* 프로젝트 아이템의 배경 색상을 #ffffff (흰색)으로 설정합니다. */
+padding: 20px; /* 내부 여백을 20px로 설정합니다. */
+margin-bottom: 20px; /* 하단 마진을 20px로 설정하여 아이템 간의 간격을 조절합니다. */
+border-radius: 10px; /* 4px의 테두리 반경을 설정하여 모서리를 둥글게 만듭니다. */
+}
+
+.project-item:hover {
+background-color: #dde6ed33;
+}
+
+.project-item .user-profile {
+display: flex; /* 사용자 프로필을 가로로 나열하기 위해 flexbox를 사용합니다. */
+justify-content: space-between; /* 사용자 프로필 요소 사이의 여백을 동일하게 배분합니다. */
+margin-bottom: 10px; /* 하단 마진을 10px로 설정하여 프로필과 다음 요소 간의 간격을 조절합니다. */
+}
+
+.project-item .profile-info {
+display: flex; /* 프로필 정보 요소를 가로로 나열하기 위해 flexbox를 사용합니다. */
+align-items: center; /* 아이템을 수직 정렬합니다. */
+}
+
+.project-item .profile-info img {
+width: 50px; /* 프로필 이미지의 가로 크기를 50px로 설정합니다. */
+height: 50px; /* 프로필 이미지의 세로 크기를 50px로 설정합니다. */
+border-radius: 50%; /* 50%의 테두리 반경을 가진 원형으로 이미지를 설정합니다. */
+margin-right: 10px; /* 오른쪽 여백을 10px로 설정하여 프로필 이미지와 닉네임 사이의 간격을 조절합니다. */
+}
+
+.project-item .user-nickname {
+/* font-size: 16px; 
+color: #333333;  */
+color: #9b9ba7;
+font-size: 15px;
+display: flex;
+}
+
+.project-item .user-rating {
+display: flex; /* 평점 요소를 가로로 나열하기 위해 flexbox를 사용합니다. */
+align-items: center; /* 아이템을 수직 정렬합니다. */
+}
+
+.project-item .star-rating {
+display: inline-block; /* 별점 요소를 인라인 블록으로 설정합니다. */
+font-size: 16px; /* 별점의 폰트 크기를 16px로 설정합니다. */
+color: #ffd700; /* 별점의 색상을 #ffd700 (금색)으로 설정합니다. */
+}
+
+.project-item .star-rating::before {
+content: "\2605"; /* ::before 가상 요소를 사용하여 별 모양 문자(★)를 추가합니다. */
+}
+
+.project-item .star-rating-empty {
+display: inline-block; /* 빈 별점 요소를 인라인 블록으로 설정합니다. */
+font-size: 16px; /* 빈 별점의 폰트 크기를 16px로 설정합니다. */
+color: #ccc; /* 빈 별점의 색상을 #ccc (회색)으로 설정합니다. */
+}
+
+.project-item .star-rating-empty::before {
+content: "\2606"; /* ::before 가상 요소를 사용하여 빈 별 모양 문자(☆)를 추가합니다. */
+}
+
+.project-item h3 {
+cursor: pointer;
+font-size: 30px; /* 게시물 제목의 폰트 크기를 20px로 설정합니다. */
+margin: 0; /* 상하 여백을 없앱니다. */
+margin-top: 10px;
+color: #333333; /* 게시물 제목의 글자 색상을 #333333으로 설정합니다. */
+}
+
+.project-item .post-header {
+display: flex; /* 게시물 헤더 요소를 가로로 나열하기 위해 flexbox를 사용합니다. */
+justify-content: space-between; /* 게시물 헤더 요소 사이의 여백을 동일하게 배분합니다. */
+align-items: baseline; /* 게시물 헤더 요소의 기준선을 정렬합니다. */
+margin-bottom: 10px; /* 하단 마진을 10px로 설정하여 헤더와 다음 요소 간의 간격을 조절합니다. */
+}
+
+.project-item .project-info span {
+display: inline-block; /* 프로젝트 정보를 인라인 블록으로 설정합니다. */
+margin-right: 10px; /* 우측 여백을 10px로 설정하여 각 정보 사이의 간격을 조절합니다. */
+margin-top: 30px;
+font-size: 15px; /* 프로젝트 정보의 폰트 크기를 15px로 설정합니다. */
+color: #777777; /* 프로젝트 정보의 글자 색상을 #777777으로 설정합니다. */
+}
+
+.project-item .post-status {
+background-color: #f1f1f1; /* 구인 상태 표시 요소의 배경 색상을 #f1f1f1로 설정합니다. */
+padding: 2px 8px; /* 내부 여백을 위아래 2px, 좌우 8px로 설정합니다. */
+border-radius: 4px; /* 4px의 테두리 반경을 설정하여 모서리를 둥글게 만듭니다. */
+font-size: 15px; /* 구인 상태 표시 요소의 폰트 크기를 15px로 설정합니다. */
+color: #333333; /* 구인 상태 표시 요소의 글자 색상을 #333333으로 설정합니다. */
+}
+
+.project-item .post-status2 {
+background-color: #333333ad; /* 구인 상태 표시 요소의 배경 색상을 #333333ad로 설정합니다. */
+padding: 2px 8px; /* 내부 여백을 위아래 2px, 좌우 8px로 설정합니다. */
+border-radius: 4px; /* 4px의 테두리 반경을 설정하여 모서리를 둥글게 만듭니다. */
+font-size: 14px; /* 구인 상태 표시 요소의 폰트 크기를 14px로 설정합니다. */
+color: #f1f1f1; /* 구인 상태 표시 요소의 글자 색상을 #f1f1f1으로 설정합니다. */
+}
+
+.project-item .post-details {
+margin-top: 10px; /* 상단 마진을 10px로 설정하여 상세 정보와 이전 요소 간의 간격을 조절합니다. */
+margin-top: 10px;
+white-space: nowrap; /* 줄바꿈 방지 */
+overflow: hidden; /* 넘치는 부분 감춤 */
+text-overflow: ellipsis; /* 넘치는 부분을 ...으로 표시 */
+}
+
+.project-item .post-details span {
+display: inline-block; /* 상세 정보를 인라인 블록으로 설정합니다. */
+margin-right: 10px; /* 우측 여백을 10px로 설정하여 각 정보 사이의 간격을 조절합니다. */
+font-size: 14px; /* 상세 정보의 폰트 크기를 14px로 설정합니다. */
+color: #526D82; /* 상세 정보의 글자 색상 설정. */
+}
+
+.keywords {
+margin-right: 10px;
+margin-bottom: 10px;
+margin-top: 0px;
+margin-bottom: 0px;
+background-color: #f2f2f2;
+padding: 8px 12px;
+border-radius: 20px;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+
+.keywords:hover {
+background-color: #e0e0e0;
+}
+
+
+.item-details {
+padding: 15px 0px 0px 5px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.rating {
+display: flex;
+float: right;
+align-items: center;
+font-size: 14px;
+color: #f39c12;
+}
+
+.rating .star-rating-empty::before {
+content: "\2606"; /* ::before 가상 요소를 사용하여 빈 별 모양 문자(☆)를 추가합니다. */
+}
+
+.review-count {
+margin-left: 5px;
+color: #888;
+font-size: 0.8rem;
+}
+
+.price {
+font-family: 'S-CoreDream-6Bold';
+color: #333333;
+display: flex;
+align-items: center;
+
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis; /* 내용이 넘칠 경우 ...으로 표시 */
+}
+
+.price i {
+margin-right: 2px;
+}
+
+/* 뉴 */
+.item-profile {
+padding: 10px 0px 0px 0px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+
+white-space: nowrap; /* 줄바꿈 방지 */
+overflow: hidden; /* 내용이 넘칠 경우 숨김 처리 */
+text-overflow: ellipsis; /* 내용이 넘칠 경우 ...으로 표시 */
+}
+
+.price-info-ok {
+  white-space: nowrap;
+  background-color: #526D82;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #fff;
+
+  margin-right: 5px;
+}
+
+.price-info-no {
+  white-space: nowrap;
+  background-color: #888;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #fff;
+
+  margin-right: 5px;
+}
+
+.fa-circle {
+  color: red; /* 아이콘 색상을 빨간색으로 설정 */
+  font-size: 11px;
+}
+
+.square-icon {
+  color: #333333; /* 아이콘 색상 설정 */
+  font-size: 11px; /* 아이콘 크기 설정 */
+}
+
+  
+  
+.item-keywords {
+margin-top: 10px;
+white-space: nowrap; /* 줄바꿈 방지 */
+overflow: hidden; /* 내용이 넘칠 경우 숨김 처리 */
+text-overflow: ellipsis; /* 내용이 넘칠 경우 ...으로 표시 */
+}
+
+.keyword {
+display: inline-block;
+background-color: #e8e8e8;
+color: #526d82;
+padding: 5px 10px;
+margin-right: 5px;
+border-radius: 10px;
+font-size: 11px;
+white-space: nowrap; /* 줄바꿈 방지 */
+}
+
+
+
+    

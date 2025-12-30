@@ -1,0 +1,84 @@
+  /* 헤더 스타일 */
+  @font-face {
+    font-family: 'S-CoreDream-4Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'S-CoreDream-5Medium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-5Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'S-CoreDream-6Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-6Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cafe24Supermagic-Bold-v1.0';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/Cafe24Supermagic-Bold-v1.0.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* 배너 스타일 */
+.banner-container {
+    position: relative;
+
+    width: 98%;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 20px;
+    margin-top: 20px;
+
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.banner {
+    width: 1920px;
+    height: 100%;
+    position: absolute;
+
+    left: 50%;
+    transform: translateX(-50%);
+
+    cursor: pointer;
+
+    display: none;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    z-index: 1; /* 배너를 이미지 위에 놓음 */
+}
+
+.banner-nav {
+    text-align: center;
+    margin-top: 10px;
+    position: relative; /* 배너 버튼 위치 설정 */
+    z-index: 2; /* 배너 버튼을 이미지 위에 놓음 */
+}
+
+.banner-button {
+    font-family: 'S-CoreDream-5Medium';
+    background-color: #526D82;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin: 0 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.banner-button:hover {
+    background-color: #27374D;
+}

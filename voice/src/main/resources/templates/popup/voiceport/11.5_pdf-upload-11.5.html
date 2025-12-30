@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="utf-8">
+        <title>이력서_PDF_업로드</title>
+        <link rel="stylesheet" type="text/css" th:href="@{/css/10.3_14.1_GV-F.css}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>
+
+    <body>
+        <div class="upload-container">
+            <div class="payment-estcal-header"><i class="fas fa-file-pdf"></i> 이력서 PDF 업로드/변경</div>
+
+
+            <div class="chat-messages">
+                    <table class="table4">
+                        <tr>
+                            <td class="td3">
+                                <!-- 파일 업로드 입력 필드 -->
+                                <input id="fileInput" class="upload-button1" type="file" value="올리기">
+                            </td>
+                        <tr>
+                            <td class="td3"><li class="warning">※ pdf 파일만 업로드 가능합니다</li></td>
+                        </tr>
+                        <tr>
+                            <td class="td3">
+                                <!-- 파일 다운로드 버튼 -->
+                                <button id="downloadButton"></button>
+                            </td>
+                        </tr>
+                        </tr>
+                    </table>
+
+                    <hr class="hr0"/>
+                    <table class="table3">
+                        <tr>
+                            <td class="td3"><button id="submitBtn" class="cal2-button">올리기</button></td>
+                        </tr>
+                    </table>
+
+            </div>
+
+        </div>
+
+    </body>
+<script th:src="@{/js/11.5_pdf-upload.js}"></script>
+</html>

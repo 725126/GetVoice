@@ -1,0 +1,619 @@
+    @font-face {
+        font-family: 'S-CoreDream-4Regular';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'S-CoreDream-5Medium';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-5Medium.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'S-CoreDream-6Bold';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-6Bold.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    /* 전체 페이지 스타일 */
+  body {
+        display: flex; /* Flexbox를 사용하여 요소를 수평으로 정렬 */
+        flex-direction: column; /* 요소들을 수직으로 정렬 */
+        align-items: center; /* 요소들을 수평 방향으로 가운데 정렬 */
+        justify-content: center; /* 요소들을 수직 방향으로 가운데 정렬 */
+        height: 100vh; /* 뷰포트의 100% 높이를 설정하여 화면에 꽉 차도록 함 */
+        margin: 0;
+        padding: 0;
+        font-family: 'S-CoreDream-4Regular';
+        background-color: #8BBCCC; /* 배경색을 밝은 회색으로 지정 */*/
+  }
+
+    /* 컨테이너 스타일 */
+    .container {
+        width: 1010px;
+        height: 905px;
+        margin: 0 auto;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 그림자 효과 추가 */
+        border-radius: 10px;
+        background-color: #fff;
+
+    }
+
+    .vp-h1 {
+        color: #fff; /* 글자색을 흰색으로 지정 */
+        text-align: left;
+        font-size: 18px;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        margin-left: 9px;
+        width: 970px;
+        margin-right: -2px;
+    }
+
+    .view-vp-h1 {
+        color: #fff; /* 글자색을 흰색으로 지정 */
+        text-align: left;
+        font-size: 18px;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        margin-left: 9px;
+        width: 995px;
+        margin-right: -2px;
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+    
+    .dropdown-toggle {
+        cursor: pointer;
+        color: #fff;
+        font-size: 20px;
+        margin-right: 15px;
+        font-weight: bold;
+    }
+    
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 120px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        padding: 10px;
+        text-align: center;
+
+        right: 0;
+        left: auto;
+    }
+    
+    .dropdown-content a {
+        padding: 5px 0;
+        text-decoration: none;
+        display: block;
+        color: #000;
+    }
+    
+    .dropdown-content a:hover {
+        background-color: #ddd;
+    }
+    
+    .dropdown-content a:hover { /* 드롭다운 내용 링크 호버 스타일 */
+        background-color: #27374D;
+        color: #fff;
+    }
+      
+    .dropdown-content a.selected {  /* 드롭다운 내용 링크 선택 스타일 */
+        background-color: #526D82;
+        color: white;
+        margin-bottom: 5px; /* 각 항목 사이의 간격을 조정 */
+    }
+
+    .show-dropdown {
+        display: block;
+    }
+
+    .vp-header {
+        background-color: #27374D; /* 배경색을 파란색으로 지정 */
+        border-top-left-radius: 10px; /* 테두리의 모서리를 10px의 둥근 모서리로 지정 */
+        border-top-right-radius: 10px;
+        padding: 1px;
+        margin-bottom: 10px;
+    }
+
+
+    /* 소개, 수정&재녹음, 취소&환불 탭 메뉴 css */
+    .tab-menu-explain {
+        display: flex;
+        justify-content: flex-start;
+        /* margin-bottom: 20px; */
+        margin-top: 20px;
+
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .tab-button-explain {
+        font-family: 'S-CoreDream-6Bold';
+        background-color: #9DB2BF;
+        border: none;
+        color: #fff;
+        padding: 10px 20px;
+        margin-right: 5px;
+        cursor: pointer;
+        font-size: 17px;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .tab-button-explain.active {
+        background-color: #526D82;
+        color: #fff;
+    }
+
+    /* 소개, 수정&재녹음, 취소&환불 탭 내용 css */
+    .tab-content-explain {
+        display: none;
+        background-color: #DDE6ED;
+        border-radius: 0 10px 10px 10px;
+        padding-left: 10px;
+        color: #27374D;
+
+        flex-wrap: wrap;
+        justify-content: flex-start;
+
+        height: 120px;
+
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .tab-content-explain.active {
+        display: block;
+    }
+
+    textarea.tab {
+        font-family: 'S-CoreDream-4Regular';
+        background: transparent;
+        border: none;
+        outline: none;
+        resize: none;
+        font-size: 16px;
+        color: #27374D;
+        padding: 10px 15px;
+        width: 97.1%;
+        height: 100px;
+    }
+    /* 소개, 수정&재녹음, 취소&환불 탭 내용 css  여기까지 */
+
+    .gallery-image {
+        width: 80px;
+        height: 80px;
+        margin: 5px;
+    }
+
+    /* 견적표 div css */
+    .quote-table {
+        /* margin-bottom: 5px; */
+        margin-left: 12px;
+        margin-bottom: 0px;
+        width: 100%;
+        text-align: center;
+        font-size: 14px;
+    }
+
+    /* 견적표 table css */
+    .table2 {
+        width: 450px;
+        height: 160px;
+        /* border-collapse: separate; */
+        border-spacing: 0;
+       
+        background-color: #DDE6ED;
+        color: #27374D;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .quote-th-td {
+        padding: 10px;
+        text-align: center;
+       
+    }
+    /* 1번째 행 css */
+    .table2 tr:first-child {
+        background-color: #27374D;
+        color: #fff;
+    }
+
+    /* 2번째 행 css */
+    .table2 tr:nth-child(even) { 
+        background-color: #F0F0F0;
+        color: #27374D;
+        font-family: 'S-CoreDream-5Medium';
+    }
+
+    /* 3번째 행 css */
+    .table2 tr:last-child {
+        font-family: 'S-CoreDream-5Medium';
+    }
+
+    .table2 th:first-child {
+        border-top-left-radius: 10px;
+    }
+
+    .table2 th:last-child {
+        border-top-right-radius: 10px;
+    }
+
+    .table2 tr:last-child td:first-child {
+        border-bottom-left-radius: 10px;
+    }
+
+    .table2 tr:last-child td:last-child {
+        border-bottom-right-radius: 10px;
+    }
+    
+  
+    /* 좋아요, 게시물, 별점 css */
+    .table1 {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .table1 td {
+        width: 40px;
+        text-align: center;
+    }
+
+    .profile-image {
+        text-align: center;
+        vertical-align: middle;
+    }
+    
+    .profile-image img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+    }
+    
+    .nickname {
+        font-size: 24px;
+        font-weight: bold;
+        text-align: center;
+    }
+    
+    .v-chat {
+        text-align: center;
+    }
+    
+    .v-chat button {
+        padding: 8px 20px;
+        font-size: 16px;
+        font-weight: bold;
+        color: #fff;
+        background-color: #3897f0;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    .likes-icon, .posts-icon, .rating-icon {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    
+    .posts-icon i {
+        font-size: 20px;
+        color: #27374D;
+        padding-top: 20px;
+        
+    }
+
+    .likes-icon i {
+        font-size: 20px;
+        color: #D21312;
+        padding-top: 20px;
+        cursor: pointer;
+    }
+
+    .rating-icon i {
+        font-size: 20px;
+        color: #ffd700;
+        padding-top: 20px;
+    }
+    
+    .counts {
+        text-align: center;
+        font-family: 'S-CoreDream-5Medium';
+    }
+    
+    .counts p {
+        font-size: 16px;
+        color: #777;
+    }
+    
+    /* 프로필 이미지 닉네임, 버튼 css */
+    .profile {
+        float: left;
+        text-align: center;
+        margin-top: 25px;
+        margin-left: 25px;
+        margin-right: 17px;
+    }
+    .profile img {
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+    }
+    .profile h2 {
+        margin-top: 10px;
+        font-size: 18px;
+        color: #27374D;
+    }
+    .button-group {
+        float: left;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    .button-group button {
+
+        font-family: 'S-CoreDream-5Medium'; /* 폰트 지정 */
+        padding: 8px 16px; /* 내부 여백을 위아래 8px, 좌우 16px로 지정 */
+        margin-left: 10px;
+        background-color: #526D82; /* 배경색을 파란색으로 지정 */
+        color: #fff; /* 글자색을 흰색으로 지정 */
+        border: none; /* 테두리 제거 */
+        border-radius: 12px; /* 테두리를 20px의 둥근 모서리로 지정 */
+        cursor: pointer; /* 커서를 포인터로 변경하여 버튼임을 나타냄 */
+        font-size: 13px; /* 글자 크기를 14px로 지정 */
+    }
+    .clearfix::after {
+        content: "";
+        /* display: table; */
+        clear: both;
+    }
+
+    /* 음성샘플 / 영상샘플 탭 css */
+    .tab-menu {
+        display: flex;
+        justify-content: flex-start;
+        margin-top: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .tab-button {
+        font-family: 'S-CoreDream-6Bold';
+        background-color: #9DB2BF;
+        border: none;
+        color: #fff;
+        padding: 10px 20px;
+        margin-right: 5px;
+        cursor: pointer;
+        font-size: 17px;
+        border-radius: 20px 20px 0 0;
+    }
+    .tab-button.active {
+        background-color: #27374D;
+        color: #fff;
+    }
+
+    /* 갤러리(음성, 영상) css */
+    .gallery {
+        background-color: #DDE6ED;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        height: 290px; 
+        overflow-y: auto;
+        margin-left: 10px;
+        margin-right: 10px;
+        border-radius: 0 10px 10px 10px;
+    }
+    .gallery-item {
+        cursor: pointer;
+        width: 150px;
+        height: 242.5px;
+        /* 상 우 하 좌 */
+        margin: 15px 10px 5px 14px; 
+        background-color: #fff;
+        border-radius: 5px;
+        padding: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+        overflow: hidden;   /*넘치는 부분 잘라내기*/
+    }
+    .gallery-item:hover {
+        transform: translateY(-5px);
+    }
+    .gallery-item img {
+        width: 100%;
+        height: 150px;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        object-fit: cover;  /*이미지가 컨테이너를 꽉 차게 채움*/
+    }
+    .gallery-item h3 {
+        margin: 0;
+        font-size: 16px;
+        text-align: center;
+        color: #27374D;
+        white-space: nowrap; /* 줄바꿈 방지 */
+        overflow: hidden; /* 넘치는 부분을 숨김 */
+        text-overflow: ellipsis; /* 넘치는 부분을 ...으로 표시 */
+    }
+    .gallery-item li {
+        list-style: none;
+        float: left;
+        text-align: center;
+        background-color: #f2f2f2;
+        padding: 5px 7px;
+        border-radius: 20px;
+        color: #526D82;
+        font-size: 12px;
+        margin-left: 1px;
+        white-space: nowrap; /* 줄바꿈 방지 */
+        overflow: hidden; /* 넘치는 부분을 숨김 */
+        text-overflow: ellipsis; /* 넘치는 부분을 ...으로 표시 */
+    }
+
+    ul {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .top-table {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* 키워드, 더보기 */
+    .keywords {
+        margin-top: 19px;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        border-radius: 10px;
+        background-color: #DDE6ED;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .keywords-list {
+        margin-left: 30px 
+    }
+        
+    .keyword-item {
+        font-family: 'S-CoreDream-5Medium';
+        padding: 8px 16px;
+        margin-right: 5px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        background-color: #f2f2f2;
+        color: #526D82;
+        border: none;
+        border-radius: 20px;
+        font-size: 14px;
+    }
+
+    .more-button {
+        font-family: 'S-CoreDream-5Medium';
+        padding: 0; /* 내부 여백 제거 */
+        margin-left: auto;
+        margin-right: 35px;
+        background-color: transparent; /* 배경색을 투명하게 설정 */
+        color: #526D82;
+        border: none; /* 테두리 제거 */
+        cursor: pointer; /* 커서를 포인터로 변경하여 버튼임을 나타냄 */
+        font-size: 16px; /* 글자 크기를 16px로 지정 */
+        text-decoration: underline;
+    }
+
+    .more-button:hover {
+        color: #569DAA;
+    }
+
+    
+
+    .hr0 {
+        border-top: 2px #27374D dashed;
+        margin-top: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .hr1 {
+        border-top: 2px #DDE6ED solid;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 15px;
+        margin-top: -5px;
+    }
+
+    .td-div_group {
+        border: 2px #9DB2BF solid;
+        border-radius: 20px;
+        margin-left: 10px;
+    }
+
+    .rw-count {
+        cursor: pointer;
+    }
+
+    .rw-count:hover {
+        color: #569DAA;
+    }
+
+    audio {
+        display: none;
+    }
+
+    .nickname {
+        white-space: nowrap; /* 줄바꿈 방지 */
+        overflow: hidden; /* 넘치는 부분을 숨김 */
+        text-overflow: ellipsis; /* 넘치는 부분을 ...으로 표시 */
+    }
+
+   /* 현재 구직 여부 */
+ .item-details {
+   padding: 0px 0px 0px 10.885px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+ }
+
+  .price-info-ok {
+       white-space: nowrap;
+       background-color: #526D82;
+       padding: 2px 8px;
+       border-radius: 4px;
+       font-size: 13px;
+       color: #fff;
+
+       margin-right: 5px;
+   }
+
+   .price-info-no {
+       white-space: nowrap;
+       background-color: #888;
+       padding: 2px 8px;
+       border-radius: 4px;
+       font-size: 13px;
+       color: #fff;
+
+       margin-right: 5px;
+   }
+
+   .fa-circle {
+       color: red; /* 아이콘 색상을 빨간색으로 설정 */
+       font-size: 11px;
+   }
+
+   .square-icon {
+       color: #333333; /* 아이콘 색상 설정 */
+       font-size: 11px; /* 아이콘 크기 설정 */
+   }
+
+   .more {
+        font-weight: bold;
+        color: #526D82;
+        font-size: 25px;
+   }
+
+
+

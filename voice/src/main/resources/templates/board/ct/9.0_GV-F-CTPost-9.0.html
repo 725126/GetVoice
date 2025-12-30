@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+        <title>겟보이스-구인글</title>
+        <link rel="stylesheet" type="text/css" th:href="@{/css/9.0_GV-F-CTPost-9.0.css}">
+    </head>
+        
+
+    <body>
+        <!-- 구인 글 보기 부분 -->
+        <th:block th:replace="fragments/00_GV-header-00 :: headerFragment"></th:block>
+        <th:block th:replace="fragments/00_GV-breadcrumb-00 :: breadcrumbCtBoardFragment"></th:block>
+
+        <!-- 구인 글 보기 부분 -->
+        <div class="upload">
+            <form name="fo" method="get">
+                <table class="tableB">
+                    <tr>
+                        <td class="tdP">
+                            <div class="rounded-profile-container">
+                                <img src="/img/p2.jpg" alt="Profile Image" class="rounded-profile">
+                            </div>
+                            <p class="nickname">캐롯</p>
+                        </td>
+                        <td>
+                            <div class="profile-container">
+                                <h2 class="profile-title" >어린이 동화 구연을 해주실 수 있는 분을 구합니다.</h2>
+                                <div class="item-details">
+                                    <div class="price-info-ok">
+                                        <i class="fas fa-circle"></i> 구인중
+                                    </div>
+                                </div>
+                                <div class="dropdown">
+                                    <span class="dropdown-toggle">⋮</span>
+                                    <div id="mypageDropdown" class="dropdown-content">
+                                        <!-- 드롭다운 내용을 추가합니다. -->
+                                        <a href="#">수정</a>
+                                        <a href="#">삭제</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <table class="tableA">
+                    <tr>
+                        <td class="post-details">
+                            <!-- <span>키워드 :</span> -->
+                            <span class="keywords">동화</span>
+                            <span class="keywords">더빙</span>
+                            <span class="keywords">소녀</span>
+                            <span class="keywords">차분한</span>
+                            <span class="keywords">청순한</span>
+                        </td>
+                    </tr>
+                </table>
+                <table class="tableD">
+                    <tr>
+                        <td class="tableD_label"><label id="amount">가능 금액</label></td>
+                        <td class="tableC">75,000</td>
+                        <td class="tableD_label"><label id="word_limit">기준 글자 수</label></td>
+                        <td class="tableC">1000자</td>
+                    </tr>
+                    <tr>
+                        <td class="tableD_label"><label id="deadline">마감일</label></td>
+                        <td class="tableC">2024.01.10</td>
+                        <td class="tableD_label"><label id="recording_environment">녹음 환경</label></td>
+                        <td class="tableC">홈 레코딩</td>
+                    </tr>
+                    <tr>
+                        <td class="tableD_label"><label id="usage_range">사용 범위</label></td>
+                        <td class="tableC">영리</td>
+                        <td class="tableD_label"><label id="usage_purpose">사용 목적</label></td>
+                        <td class="tableC">교육방송자료</td>
+                    </tr>
+                    <tr>
+                        <td class="tableD_label"><label id="category">카테고리</label></td>
+                        <td class="tableC">더빙</td>
+                        <td class="tableD_label"><label id="affiliation">소속</label></td>
+                        <td class="tableC">교육채널HS</td>
+                    </tr>
+                </table>
+                <table class="tableE">
+                    <tr><td colspan="6">내용</td></tr>
+                </table>
+
+                <table class="tableF">
+                    <tr>
+                        <td class="td1">
+                            <span>첨부파일:</span>
+                        </td>
+                        <td>
+                            <div class="file-list">
+                                <a class="download-link" href="이이코에 귀요밍.png" download>
+                                    <i class="fas fa-download"></i> 파일명1.png
+                                </a>
+                                <a class="download-link" href="이이코에 귀요밍.png" download>
+                                    <i class="fas fa-download"></i> 파일명2.mp3
+                                </a>
+                                <a class="download-link" href="이이코에 귀요밍.png" download>
+                                    <i class="fas fa-download"></i> 파일명3.pdf
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="date" colspan="6">2023. 10. 30. 오후 12:33</td>
+                    </tr>
+                </table>
+                <div class="Submitbutton">
+                    <button type="submit" class="submit-button">V채팅</button>
+                </div>
+            </form>
+        </div>
+        <!-- 여기까지가 구인 글 보기 부분 -->
+
+        <th:block th:replace="fragments/00_GV-footer-00 :: footerFragment"></th:block>
+    </body>
+    <script>
+            const dropdownToggle = document.querySelector('.dropdown-toggle');
+            const dropdownContent = document.querySelector('.dropdown-content');
+
+            dropdownToggle.addEventListener('click', function() {
+                if (dropdownContent.style.display === 'block') {
+                    dropdownContent.style.display = 'none';
+                } else {
+                    dropdownContent.style.display = 'block';
+                }
+            });
+
+            document.addEventListener('click', function(event) {
+                if (!dropdownToggle.contains(event.target) && !dropdownContent.contains(event.target)) {
+                    dropdownContent.style.display = 'none';
+                }
+            });
+    </script>
+<!--    <script src="/js/modal_window.js"></script>-->
+</html>
+
+
+
+
+  
+

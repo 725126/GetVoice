@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+        <title>공지사항 작성_관리자</title>
+        <link rel="stylesheet" type="text/css" th:href="@{/css/16_GV-B-NoticeW-16.css}">
+    </head>
+        
+
+    <body>
+        <!-- 헤더 -->
+        <th:block th:replace="fragments/00_GV-header-00 :: headerFragment"></th:block>
+        <th:block th:replace="fragments/00_GV-breadcrumb-00 :: breadcrumbFragment"></th:block>
+                  
+
+        <!-- 공지글 작성 부분 -->
+        <div class="upload">
+            <form name="fo" method="get">
+                <table class="tableB">
+                    <tr>
+                        <td class="tdP">
+                            <div class="rounded-profile-container">
+                                <img src="/img/profile_ex5.png" alt="Profile Image" class="rounded-profile">
+                            </div>
+                            <p class="nickname">관리자</p>
+                        </td>
+                        <td colspan="5">
+                            <input type="text" id="title" name="title" required placeholder="제목" rows="5">
+                        </td>
+                    </tr>
+                </table>
+
+                <table>
+                    <tr>
+                        <td><label id="date">등록날짜</label></td>
+                        <td><input type="text" class="word_limit" name="word_limit" required readonly placeholder="작성일자"></td>
+                        <td><label id="word_limit">공지유형</label></td>
+                        <td><input type="text" class="word_limit" name="word_limit" required></td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="15">
+                            <textarea id="content" name="content" placeholder="내용" rows="15"></textarea>
+                        </td>
+                    </tr>
+                </table>
+
+                <table class="tableA">
+                    <tr>
+                        <td class="td3" colspan="2"><input class="selectFiles-button" type="file" name="attachment" id="attachment" /></td>
+                    </tr>
+                </table>
+
+                <div class="Submitbutton">
+                    <button type="submit" class="submit-button">등록</button>
+                </div>
+            </form>
+        </div>
+
+        <th:block th:replace="fragments/00_GV-footer-00 :: footerFragment"></th:block>
+    </body>
+    <script src="/js/modal_window.js"></script>
+    <script src="/js/1.2_dropdown.js"></script>
+</html>
+
+
+
+
+  
+

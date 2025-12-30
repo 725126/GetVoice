@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <form action="/board/ct/9.0_GV-F-CTPost-9.0" method="post">
+
+      <input type="text" id="title" name="title" required placeholder="제목" rows="5">
+
+      <label for="amount">가능 금액</label>
+      <input type="text" id="amount" name="amount" required>
+
+      <label for="word_limit">기준 글자 수</label>
+      <input type="text" id="word_limit" name="wordLimit" required>
+
+      <label for="deadline">마감일</label></td>
+      <input type="date" id="deadline" name="deadline" required>
+
+      <label for="usage_range">사용 범위</label>
+      <input type="text" id="usage_range" name="usageRange" required>
+
+      <label for="usage_purpose">사용 목적</label>
+      <input type="text" id="usage_purpose" name="usagePurpose" required>
+
+      <label for="affiliation">소속</label>
+      <input type="text" id="affiliation" name="affiliation" required>
+
+
+      <span class="option-label">현재 구인 여부</span>
+
+      <input type="checkbox" id="possible" name="availability" value="possible">
+      <label for="possible" class="checkbox-label">
+        <span class="custom-checkbox"></span>
+        구인중
+      </label>
+
+      <input type="checkbox" id="not-possible" name="availability" value="not-possible">
+      <label for="not-possible" class="checkbox-label">
+        <span class="custom-checkbox"></span>
+        구인완료
+      </label>
+
+      <textarea id="content" name="content" required placeholder="내용" rows="6"></textarea>
+
+      <div class="Submitbutton">
+        <button type="submit" class="submit-button" id="submit">올리기</button>
+      </div>
+    </form>
+</body>
+
+</html>

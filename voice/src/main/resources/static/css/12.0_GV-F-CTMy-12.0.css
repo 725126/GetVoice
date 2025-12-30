@@ -1,0 +1,226 @@
+@font-face {
+    font-family: 'S-CoreDream-4Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'S-CoreDream-5Medium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-5Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'S-CoreDream-6Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-6Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+a {
+    text-decoration: none; /* 링크의 밑줄 제거 */
+    color: inherit; /* 링크의 색상 제거 */
+}
+
+
+/* 구인자 마이페이지 부분 */
+
+.upload {
+    max-width: 1000px;
+
+    margin-right: auto;
+    margin-left: auto;
+
+    margin-top: 80px;
+    margin-bottom: 80px;
+
+    padding: 20px;
+    /* background-color: #f4f4f4; */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.upload table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.upload table td {
+    padding: 10px;
+}
+
+.upload table tr {
+    border:  2.2px solid #9DB2BF;
+    width: 110px;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+}
+
+.upload table button {
+    font-family: 'S-CoreDream-5Medium';
+    padding: 10px 20px;
+    background-color: #526D82;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    float: right;
+}
+
+.upload table button:hover {
+    background-color: #27374D;
+}
+
+.tableB tr {
+    height: 80px;
+  }
+
+.tdP {
+    width: 80px;
+}
+
+.rounded-profile {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+  .rounded-profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+
+  .tableB .get-voice-button {
+    font-family: 'S-CoreDream-5Medium';
+    font-size: 15px;
+    padding: 10px 20px;
+    background-color: #526D82;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    float: right;
+}
+
+  /* .nickname {
+    font-family: 'S-CoreDream-4Regular';
+    font-size: 14px;
+    color: #333333;
+    margin-top: 5px; 
+    margin-bottom: 5px;
+    text-align: center;
+  } */
+  
+  .profile-title {
+    font-family: 'S-CoreDream-6Bold';
+    font-size: 28px;
+    margin: 0; 
+    color: #333333; 
+  }
+
+
+  .td3 {
+    text-align: center;
+    margin-left:auto;
+    margin-right:auto;
+    width: 250px;
+  }
+
+  .td4 {
+    text-align: center;
+    margin-left:auto;
+    margin-right:auto;
+    width: 450px;
+  }
+
+
+
+  .tableA {
+    margin-left:auto;
+    margin-right:auto;
+    padding: 7px;
+    border-spacing: 10px 5px;
+  }
+  
+  .tableA td {
+    list-style: none;
+    text-align: center;
+    font-family: 'S-CoreDream-4Regular';
+  }
+
+.user-rating {
+    display: flex; /* 평점 요소를 가로로 나열하기 위해 flexbox를 사용합니다. */
+    align-items: center; /* 아이템을 수직 정렬합니다. */
+    justify-content: center;
+  }
+  
+.star-rating {
+    display: inline-block; /* 별점 요소를 인라인 블록으로 설정합니다. */
+    font-size: 16px; /* 별점의 폰트 크기를 16px로 설정합니다. */
+    color: #ffd700; /* 별점의 색상을 #ffd700 (금색)으로 설정합니다. */
+  }
+  
+.star-rating::before {
+    content: "\2605"; /* ::before 가상 요소를 사용하여 별 모양 문자(★)를 추가합니다. */
+  }
+  
+.star-rating-empty {
+    display: inline-block; /* 빈 별점 요소를 인라인 블록으로 설정합니다. */
+    font-size: 16px; /* 빈 별점의 폰트 크기를 16px로 설정합니다. */
+    color: #ccc; /* 빈 별점의 색상을 #ccc (회색)으로 설정합니다. */
+  }
+  
+.star-rating-empty::before {
+    content: "\2606"; /* ::before 가상 요소를 사용하여 빈 별 모양 문자(☆)를 추가합니다. */
+  }
+
+
+
+  .tableC {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 7px;
+    border-collapse: collapse; 
+  } 
+  
+  .tableC td {
+    list-style: none;
+    text-align: center;
+    font-family: 'S-CoreDream-4Regular';
+    width: 25%;
+    height: 130px;
+    cursor: pointer;
+  }
+
+  .tableC tr:first-child {
+    border-bottom: none;
+  }
+
+.tableC td:hover {
+    background-color: #f0f4f7;
+  }
+  
+.icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 15px;
+}
+
+.tableA tr:first-child td:nth-child(2) {
+  background-color: #9DB2BF;
+  color: #fff;
+}
+
+
+  /* 여기까지가 구인글 작성 부분 */
+
+
+

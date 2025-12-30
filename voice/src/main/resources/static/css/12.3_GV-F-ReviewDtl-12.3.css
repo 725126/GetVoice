@@ -1,0 +1,285 @@
+@font-face {
+  font-family: 'S-CoreDream-4Regular';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'S-CoreDream-5Medium';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-5Medium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'S-CoreDream-6Bold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-6Bold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/* 리뷰 부분 */
+
+
+body {
+  background-color: white;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance:none;
+  background:url('img/arrow.png') no-repeat 85% 50%;
+  background-size: 16px;
+  padding: 9px; /* 내부 여백 설정 */
+  font-family: 'S-CoreDream-6Bold';
+  font-size: 15px; /* 글꼴 크기 설정 */
+  border-radius: 10px; /* 테두리의 모서리를 둥글게 설정 */
+  background-color: #526D82; /* 배경색 설정 */
+  color: #fff; /* 글자색 설정 */
+  width: 80px; /* 너비 설정 */
+}
+
+
+
+.container {
+
+  margin: 15% auto;
+  padding: 20px;
+  text-align: center;
+  background-color: #526D82;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 그림자 효과 추가 */
+}
+
+body {
+  display: flex; /* Flexbox를 사용하여 요소를 수평으로 정렬 */
+  flex-direction: column; /* 요소들을 수직으로 정렬 */
+  align-items: center; /* 요소들을 수평 방향으로 가운데 정렬 */
+  justify-content: center; /* 요소들을 수직 방향으로 가운데 정렬 */
+  height: 100vh; /* 뷰포트의 100% 높이를 설정하여 화면에 꽉 차도록 함 */
+  margin: 0;
+  padding: 0;
+  font-family: 'S-CoreDream-5Medium'; /* 폰트 지정 */
+  background-color: #8BBCCC; /* 배경색을 밝은 회색으로 지정 */
+}
+
+.container {
+    width: 800px; /* 결제화면 컨테이너의 너비를 450px로 지정 */
+    height: 450px; /* 결제화면 컨테이너의 높이를 580px로 지정 */
+    border-radius: 10px; /* 테두리의 모서리를 10px의 둥근 모서리로 지정 */
+    background-color: #fff; /* 배경색을 흰색으로 지정 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 그림자 효과 추가 */
+    margin: 40px auto;
+    text-align: center;
+ }
+
+.close {
+color: #aaa; /* 닫기 버튼 색상 */
+float: right; /* 오른쪽에 위치 */
+font-size: 28px; /* 폰트 크기 */
+font-weight: bold; /* 폰트 굵기 */
+cursor: pointer; /* 마우스 커서를 포인터로 변경 */
+margin-right: 13px;
+}
+
+.close:hover,
+.close:focus {
+color: black; /* 마우스 호버 또는 포커스 시 색상 변경 */
+text-decoration: none; /* 밑줄 제거 */
+cursor: pointer; /* 마우스 커서를 포인터로 변경 */
+}
+
+
+.header {
+border-top-left-radius: 10px; /* 테두리의 모서리를 10px의 둥근 모서리로 지정 */
+border-top-right-radius: 10px;
+padding: 10px; /* 내부 여백을 10px로 지정 */
+background-color: #27374D; /* 배경색을 파란색으로 지정 */
+color: #fff; /* 글자색을 흰색으로 지정 */
+font-size: 18px; /* 글자 크기를 18px로 지정 */
+font-weight: bold; /* 글자 굵기를 bold로 지정 */
+text-align: center; /* 가운데 정렬 */
+}
+
+.upload table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.upload table td {
+  padding: 10px;
+}
+
+.upload table tr {
+  border:  2.2px solid #9DB2BF;
+  width: 110px;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+}
+
+.rounded-profile {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+.rounded-profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 230;
+}
+
+.nickname {
+  font-family: 'S-CoreDream-5Medium';
+  font-size: 14px;
+  color: #27374D;
+  text-align: left;
+  margin-left: 10px;
+}
+
+.date {
+  text-align: left;
+  color: #ccc;
+}
+
+.span {
+  font-size: 12px;
+}
+
+.upload .tableB {
+  width: 790px;
+}
+.tableB td {
+  font-family: 'S-CoreDream-5Medium';
+  text-align: left;
+  margin-left: 10px;
+}
+
+.upload {
+max-height: 400px;
+overflow-y: auto;
+scrollbar-width: thin;
+scrollbar-color: #888 #f0f0f0;
+}
+.upload::-webkit-scrollbar {
+  width: 8px;
+}
+
+.upload::-webkit-scrollbar-thumb {
+  background-color: #888;
+}
+
+.upload::-webkit-scrollbar-thumb:hover {
+  
+
+background-color: #555;
+}
+
+.tableB .detail3 {
+  display: flex;
+  justify-content: center;
+}
+
+.tableB td:last-child {
+  width: 125px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+/* .upload table button {
+  font-family: 'S-CoreDream-5Medium';
+  padding: 8px 10px;
+  background-color: #526D82;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+.upload table button:hover {
+  background-color: #27374D;
+} */
+
+.upload table button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'S-CoreDream-5Medium'; /* 폰트 지정 */
+  padding: 8px 10px;
+  margin-left: 10px;
+  background-color: #27374D; /* 배경색을 파란색으로 지정 */
+  color: #fff; /* 글자색을 흰색으로 지정 */
+  border: none; /* 테두리 제거 */
+  text-align: center;
+  text-decoration: none;
+  font-size: 15px;
+  border-radius: 10px; /* 테두리를 10px의 둥근 모서리로 지정 */
+  cursor: pointer; /* 커서를 포인터로 변경하여 버튼임을 나타냄 */
+ 
+}
+
+.upload table button:hover {
+background-color: #569DAA;
+}
+
+.state {
+  font-family: 'S-CoreDream-4Regular';
+  text-align: center;
+}
+
+.tableB tr:hover {
+  background-color: #dde6ed33;
+}
+
+.tableB td:first-child {
+  width: 200px;
+}
+
+.user-rating {
+  display: flex; /* 평점 요소를 가로로 나열하기 위해 flexbox를 사용합니다. */
+  align-items: center; /* 아이템을 수직 정렬합니다. */
+  justify-content: center;
+  white-space: nowrap;
+}
+
+.star-rating {
+  display: inline-block; /* 별점 요소를 인라인 블록으로 설정합니다. */
+  font-size: 16px; /* 별점의 폰트 크기를 16px로 설정합니다. */
+  color: #ffd700; /* 별점의 색상을 #ffd700 (금색)으로 설정합니다. */
+}
+
+.star-rating::before {
+  content: "\2605"; /* ::before 가상 요소를 사용하여 별 모양 문자(★)를 추가합니다. */
+}
+
+.star-rating-empty {
+  display: inline-block; /* 빈 별점 요소를 인라인 블록으로 설정합니다. */
+  font-size: 16px; /* 빈 별점의 폰트 크기를 16px로 설정합니다. */
+  color: #ccc; /* 빈 별점의 색상을 #ccc (회색)으로 설정합니다. */
+}
+
+.star-rating-empty::before {
+  content: "\2606"; /* ::before 가상 요소를 사용하여 빈 별 모양 문자(☆)를 추가합니다. */
+}
+
+a {
+    text-decoration: none; /* 링크의 밑줄 제거 */
+    color: inherit; /* 링크의 색상 제거 */
+}
+
+
+
+
+
+
+
+
+
+

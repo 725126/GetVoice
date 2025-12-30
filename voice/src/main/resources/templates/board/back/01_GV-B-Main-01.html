@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+      <title>겟보이스-관리자_메인</title>
+      <link rel="stylesheet" type="text/css" th:href="@{/css/01_GV-B-Main-01.css}">
+  </head>
+  
+      <body>
+          <!-- 헤더 -->
+          <th:block th:replace="fragments/00_GV-header-00 :: headerFragment"></th:block>
+          <th:block th:replace="fragments/00_GV-breadcrumb-00 :: breadcrumbFragment"></th:block>
+
+          <main>
+              <div class="upload">
+                <form name="fo" method="get">
+    
+
+                    <table class="tableC">
+                        <tr>
+                            <td>
+                                <a href="05_GV-B-MemInfo-05.html">
+                                    <div class="rounded-profile-container">
+                                        <img src="img/icon3.png" alt="Icon" class="icon">
+                                    </div>
+                                    회원정보
+                                </a>
+                            </td>
+                            <td>
+                                <a href="13_GV-B-TH-13.html">
+                                    <div class="rounded-profile-container">
+                                        <img src="img/icon1.png" alt="Icon" class="icon">
+                                    </div>
+                                    거래내역
+                                </a>
+                            </td>
+                            <td>
+                                <a href="10_GV-B-Inqu-10.html">
+                                    <div class="rounded-profile-container">
+                                        <img src="img/icon5.png" alt="Icon" class="icon">
+                                    </div>
+                                    문의내역
+                                </a>
+                            </td>
+                            <td>
+                                <a href="">
+                                    <div class="rounded-profile-container">
+                                        <img src="img/icon10.png" alt="Icon" class="icon">
+                                    </div>
+                                    공지사항
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+          </main>
+
+          <th:block th:replace="fragments/00_GV-footer-00 :: footerFragment"></th:block>
+    </body>
+    <script src="/js/modal_window.js"></script>
+    <script src="/js/1.2_dropdown.js"></script>
+</html>

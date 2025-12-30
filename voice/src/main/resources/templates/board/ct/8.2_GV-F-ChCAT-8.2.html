@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="utf-8">
+        <title>겟보이스_카테고리 선택</title>
+        <link rel="stylesheet" type="text/css" th:href="@{/css/8.2_GV-F-ChCAT-8.2.css}">
+    </head>
+
+<body>
+  <div class="container">
+    <div class="header">카테고리 선택</div>
+        <form name="fo" method="get">
+        <div class="title">
+            <label class="tit">서비스유형</label>
+        </div>
+        <div class="container1">
+            <div class="checkbox">
+              <input type="checkbox" id="checkbox1" name="checkbox1">
+              <label for="checkbox1">광고</label>
+            </div>
+            <div class="checkbox">
+              <input type="checkbox" id="checkbox2" name="checkbox2">
+              <label for="checkbox2">내레이션</label>
+            </div>
+            <div class="checkbox">
+              <input type="checkbox" id="checkbox3" name="checkbox3">
+              <label for="checkbox3">게임</label>
+            </div>
+            <div class="checkbox">
+              <input type="checkbox" id="checkbox4" name="checkbox4">
+              <label for="checkbox4">더빙</label>
+            </div>
+            <div class="checkbox">
+              <input type="checkbox" id="checkbox5" name="checkbox5">
+              <label for="checkbox5">ARS</label>
+            </div>
+            <div class="checkbox">
+              <input type="checkbox" id="checkbox6" name="checkbox6">
+              <label for="checkbox6">동화</label>
+            </div>
+            <div class="checkbox">
+              <input type="checkbox" id="checkbox7" name="checkbox7">
+              <label for="checkbox7">노래</label>
+            </div>
+            <div class="checkbox">
+              <input type="checkbox" id="checkbox8" name="checkbox8">
+              <label for="checkbox8">교육</label>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" id="checkbox9" name="checkbox9">
+                <label for="checkbox9">카테고리1</label>
+              </div>
+              <div class="checkbox">
+                <input type="checkbox" id="checkbox10" name="checkbox10">
+                <label for="checkbox10">카테고리2</label>
+              </div>
+        </div>
+
+        <button class="btn" onclick="saveCheckbox()">완료</button>
+    </form>
+   </div>
+</body>
+<script src="/js/1.2_dropdown.js"></script>
+</html>
+

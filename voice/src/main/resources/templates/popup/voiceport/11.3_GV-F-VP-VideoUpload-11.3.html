@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>영상샘플파일_업로드</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" th:href="@{/css/11.3_GV-F-VP-VideoUpload-11.3.css}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>
+
+<body>
+    <div class="estcal-container">
+        <div class="vp-header">
+            <h2><i class="fas fa-video"></i> 영상샘플파일 업로드/수정</h2>
+        </div>
+        <div class="table1-container">
+            <table class="table1">
+                <tr>
+<!--                        url 입력 -->
+                    <td class="td3">
+                        <input for="youtubeUrl" type="text" id="youtubeUrl" name="youtubeUrl" placeholder="유튜브 URL을 입력하세요" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td3"><li class="warning">※ 반드시 유튜브의 URL을 입력해주세요.</li></td>
+                </tr>
+            </table>
+        </div>
+        <hr class="hr0"/>
+<!--            제목 입력-->
+        <input type="text" for="title" id="title" name="title" class="title" placeholder="제목을 입력하세요" required>
+        <hr class="hr0"/>
+
+        <button class="keywords" onclick="showpopup_select()">키워드 선택 ▶</button>
+
+        <hr class="hr0"/>
+        <div class="bottom">
+            <button type="button" id="submitBtn" class="finish-button">완료</button>
+        </div>
+    </div>
+</body>
+<script>
+</script>
+<script src="/js/11.2_11.3_clean-checkbox.js"></script>
+<script src="/js/11.3_popup-script.js"></script>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+      <title>겟보이스-문의내역조회</title>
+      <link rel="stylesheet" type="text/css" th:href="@{/css/11_GV-B-MemInqu-11.css}">
+  </head>
+  
+      <body>
+          <!-- 헤더 -->
+          <th:block th:replace="fragments/00_GV-header-00 :: headerFragment"></th:block>
+          <th:block th:replace="fragments/00_GV-breadcrumb-00 :: breadcrumbFragment"></th:block>
+
+          <main>
+            
+              
+
+                <table class="cate">
+                    <tbody>
+                    <tr>         
+                     
+                        <td class="dropdown">
+                            <span class="dropdown-button">정렬 <i class="fas fa-angle-down"></i></span>
+                            <div class="dropdown-content">
+                            <a href="#">최신순</a>
+                            <a href="#">오래된 순</a>
+                            <a href="#">답변대기 우선</a>
+                            <a href="#">답변완료 우선</a>
+                            </div>
+                        </td>
+
+                        <td colspan="2"></td>
+
+                
+                    </tr>
+                    </tbody>
+                </table>
+
+
+                <div class="upload">
+                        <table class="tableB">
+                            <tr>
+                                <td>
+                                   아이디
+                                </td>
+                                <td>
+                                  제목
+                                </td>
+                                <td>
+                                    등록일자
+                                </td>
+                                <td>  
+                                    상태
+                                </td>
+                            </tr>
+
+                            <!-- 거래내역1 -->
+                            <tr>
+                                <td class="tdP">
+                                        <div class="nickname">ewew</div>
+                                </td>
+                              
+                                <td class="deal">
+                                    구직 계정의 리뷰를 구인 계정에 연동할 수는 없나요?
+                                </td>
+                               
+                                <td class="date">
+                                    2023.12.31
+                                </td>
+                                <td>
+                                    <a href="">
+                                        <button class="get-voice-button">답변대기</button>
+                                    </a>
+                                </td>
+                              </tr>
+
+                            <!-- 거래내역2 -->
+                            <tr>
+                                <td class="tdP">
+                                    <div class="nickname">ewew</div>
+                                </td>
+                                
+                                <td class="deal">
+                                    분할 결제를 해주시기로 했는데 잔금을 못 받았습니다.
+                                </td>
+                                
+                                <td class="date">
+                                    2023.12.07
+                                </td>
+                                <td>
+                                    <a href="">
+                                        <button class="button2">답변완료</button>
+                                    </a>
+                                </td>
+                              </tr>
+
+                              <!-- 거래내역3 -->
+                              <tr>
+                                <td class="tdP">
+                                    <div class="nickname">ewew</div>
+                                </td>
+                                
+                                <td class="deal">
+                                    문의드립니다. 서비스 이용 시 의뢰 내용은 보호되나요?
+                                </td>
+                                <td class="date">
+                                    2023.10.20
+                                </td>
+                                <td>
+                                    <a href="">
+                                        <button class="button2">답변완료</button>
+                                    </a>
+                                </td>
+                              </tr>
+                        </table>
+                </div>
+
+        </main>
+
+          <th:block th:replace="fragments/00_GV-footer-00 :: footerFragment"></th:block>
+    </body>
+    <script src="/js/modal_window.js"></script>
+    <script src="/js/1.2_dropdown.js"></script>
+</html>
+
+
+
+
+  
+

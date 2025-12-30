@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+        <title>겟보이스-거래내역조회</title>
+        <link rel="stylesheet" type="text/css" th:href="@{/css/08_GV-B-MemTH-08.css}">
+    </head>
+        
+
+    <body>
+        <!-- 헤더 -->
+        <th:block th:replace="fragments/00_GV-header-00 :: headerFragment"></th:block>
+        <th:block th:replace="fragments/00_GV-breadcrumb-00 :: breadcrumbFragment"></th:block>
+
+        <main>
+                <div class="upload">
+                        <table class="tableB">
+                            <tr>
+                                <td>
+                                    거래자
+                                </td>
+                                <td>
+                                  거래내역
+                                </td>
+                                <td>
+                                    작업상황
+                                </td>
+                              
+                                <td>  
+                                </td>
+                            </tr>
+
+                            <!-- 거래내역1 -->
+                            <tr>
+                                <td class="tdP">
+                                    <div class="rounded-profile-container">
+                                        <img src="img/profile_ex5.png" alt="Profile Image" class="rounded-profile">
+                                        <div class="nickname">일네임</div>
+                                    </div>
+                                </td>
+                                <td class="deal">
+                                  거래날짜: 2023.12.25<br>
+                                  거래금액: 50,000원
+                                </td>
+                                <td class="state">
+                                    진행중
+                                </td>
+                               
+                                <td>
+                                    <a href="">
+                                        <button class="get-voice-button">거래중지</button>
+                                    </a>
+                                </td>
+                              </tr>
+
+                            <!-- 거래내역2 -->
+                            <tr>
+                                <td class="tdP">
+                                    <div class="rounded-profile-container">
+                                        <img src="img/profile_ex5.png" alt="Profile Image" class="rounded-profile">
+                                        <div class="nickname">이네임</div>
+                                    </div>
+                                </td>
+                                <td class="deal">
+                                    거래날짜: 2023.11.08<br>
+                                    거래금액: 120,000원
+                                </td>
+                               
+                                <td class="stateA">
+                                    거래확정
+                                </td>
+                                <td>
+                                    <a href="">
+                                        <button class="button2">거래중지</button>
+                                    </a>
+                                </td>
+                              </tr>
+
+                              <!-- 거래내역3 -->
+                            <tr>
+                                <td class="tdP">
+                                    <div class="rounded-profile-container">
+                                        <img src="img/profile_ex5.png" alt="Profile Image" class="rounded-profile">
+                                        <div class="nickname">삼네임</div>
+                                    </div>
+                                </td>
+                                <td class="deal">
+                                    거래날짜: 2023.10.15<br>
+                                    거래금액: 36,500원
+                                </td>
+                                <td class="state">
+                                    작업완료
+                                </td>
+                
+                                <td>
+                                    <a href="">
+                                        <button class="get-voice-button">거래중지</button>
+                                    </a>
+                                </td>
+                              </tr>
+
+                              <!-- 거래내역4 -->
+                            <tr>
+                                <td class="tdP">
+                                    <div class="rounded-profile-container">
+                                        <img src="img/profile_ex5.png" alt="Profile Image" class="rounded-profile">
+                                        <div class="nickname">사네임</div>
+                                    </div>
+                                </td>
+                                <td class="deal">
+                                    거래날짜: 2023.09.23<br>
+                                    거래금액: 517,000원
+                                </td>
+                                <td class="state">
+                                    진행중
+                                </td>
+                            
+                                <td>
+                                    <a href="">
+                                        <button class="get-voice-button">거래중지</button>
+                                    </a>
+                                </td>
+                              </tr>
+
+                              <!-- 거래내역5 -->
+                            <tr>
+                                <td class="tdP">
+                                    <div class="rounded-profile-container">
+                                        <img src="img/profile_ex5.png" alt="Profile Image" class="rounded-profile">
+                                        <div class="nickname">오네임</div>
+                                    </div>
+                                </td>
+                                <td class="deal">
+                                    거래날짜: 2023.08.31<br>
+                                    거래금액: 70,000원
+                                </td>
+                                
+                                <td class="stateA">
+                                    거래확정
+                                </td>
+                                <td>
+                                    <a href="">
+                                        <button class="button2">거래중지</button>
+                                    </a>
+                                </td>
+                              </tr>
+
+                        </table>
+                </div>
+                <!-- 여기까지가 구인글 작성 부분 -->
+
+        </main>
+        <th:block th:replace="fragments/00_GV-footer-00 :: footerFragment"></th:block>
+
+    </body>
+    <script src="/js/modal_window.js"></script>
+    <script src="/js/1.2_dropdown.js"></script>
+</html>
+
+
+
+
+  
+

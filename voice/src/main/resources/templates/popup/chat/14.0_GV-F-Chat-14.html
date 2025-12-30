@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="utf-8">
+        <title>겟보이스_채팅</title>
+        <link rel="stylesheet" type="text/css" th:href="@{/css/14.0_GV-F-Chat-14.css}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>
+
+    <body>
+    <div class="chat-container">
+        <div class="chat-header">V-채팅</div>
+        <div class="receiver-profile">
+            <table>
+                <tr>
+                    <td>
+                        <div class="circle">
+                            <a href=""><img src="/img/profile_ex2.jpg" alt="대화상대_프로필"></a>
+                        </div>
+                    </td>
+                    <td>
+                        <li>&nbsp;아무개 </li>
+                        <input type="text" id="mid" placeholder="아이디 입력">
+                        <input type="text" id="roomId" placeholder="방번호 입력">
+                        <input type="button" value="로그인" id="btnLogin">
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="chat-messages" id="chat-messages">
+            <th:block th:each="log : ${logDTOList}">
+                <div th:class="${log.mid == '아무개'} ? 'message receiver-message' : 'message sender-message'"
+                     th:utext="${log.message}"
+                     onload="adjustMessageWidth(this)">
+                </div>
+                <div th:class="${log.mid == '아무개'} ? 'timestamp_receiver' : 'timestamp_sender'"
+                     th:text="${log.timestamp}">
+                </div>
+            </th:block>
+
+
+            <div th:if="${paymentDTO.profit != null}" class="warn_table">※ 결제완료 메세지는 대화를 다시보기 시, 복원되지 않는 메세지이며,<br>해당 내용은 거래내역에서 다시 확인 가능합니다.</div>
+            <table th:if="${paymentDTO.profit != null}" class="table2">
+                <tr>
+                    <th colspan="3" class="quote-th-td"><i class="fas fa-check-circle"></i> 결제가 완료되었습니다</th>
+                </tr>
+                <tr>
+                    <td class="quote-th-td">결제금액</td>
+                    <td th:text="${paymentDTO.amount >= 100 ? #numbers.formatInteger(paymentDTO.amount, 3, 'COMMA') + '원' : #numbers.formatInteger(paymentDTO.amount, 1) + '원'}" class="quote-th-td"></td>
+
+                    <td class="quote-th-td" th:if="${paymentDTO.profit == 'for-profit'}">(영리)</td>
+                    <td class="quote-th-td" th:if="${paymentDTO.profit == 'non-profit'}">(비영리)</td>
+                </tr>
+                <tr>
+                    <td class="quote-th-td">의뢰 글자 수</td>
+                    <td th:text="${paymentDTO.characterCount >= 100 ? #numbers.formatInteger(paymentDTO.characterCount, 3, 'COMMA') + '자' : #numbers.formatInteger(paymentDTO.characterCount, 1) + '자'}" class="quote-th-td"></td>
+                    <td class="quote-th-td"><button th:attr="data-script-save=${scriptDTO.saveFileName}, data-script-ori=${scriptDTO.originalFileName}" id="downloadButton" class="down-button"><i class="fas fa-download"></i> 대본</button></td>
+                </tr>
+                <tr>
+                    <td colspan="3" class="quote-th-td"><button class="thgo-button"><i class="fas fa-external-link-alt"></i> 거래내역 바로가기</button> </td>
+                </tr>
+            </table>
+            <div th:text="${paymentDTO.timestamp}" class="timestamp_table"></div>
+
+        </div>
+
+
+        <div class="input-container">
+            <input type="text" class="input-box" id="message-input" placeholder="메시지를 입력하세요">
+            <button id="sendBtn" class="send-button">전송</button>
+        </div>
+        <div>
+            <input class="payment-button" type="button" value="결제하기" onclick="showPopup();" />
+        </div>
+    </div>
+    </body>
+    <script th:src="@{/js/sendMessage.js}"></script>
+    <!-- ▽ 팝업창 생성 (결제하기 버튼을 클릭하면 14.1_GV-F-Payment-14.1.html을 팝업창으로 띄운다) -->
+    <script th:inline="javascript">
+        function showPopup() { window.open("14.1_GV-F-Payment-14.1", "결제하기", "width=470, height=700, left=100, top=50"); }
+    </script>
+</html>

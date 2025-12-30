@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>보이스포트_작성화면</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/11.0_GV-F-VPCtrl-11.0.css}">
+    <link rel="shortcut icon" href="#">
+</head>
+<body>
+
+<div class="container">
+
+        <table class="vp-header">
+            <tr>
+                <td><h1 title>보이스포트 - </h1></td>
+                <td>
+                    <textarea th:text="${vpCtrlDTO.title}" class="vp-title" name="title" placeholder="제목을 입력하세요"></textarea>
+                </td>
+            </tr>
+        </table>
+
+        <table class="top-table">
+            <tr>
+                <td>
+                    <div class="profile">
+                        <div id="profile-image-wrapper">
+                            <div id="profile-image-container">
+                                <img class="profile-image" th:src="${profileDTO.id != null} ? ${profileDTO.fileDownloadUri} : '/img/profile_ex5.png'" alt="Profile Image">
+                            </div>
+                            <div class="upload-icon">
+                                <label for="file-input" class="upload-icon-label">
+                                    <div class="upload-icon-container">
+                                        <div class="upload-icon-inner">
+                                            <img class="upload-icon-image" src="/img/pencil.jpg" alt="Upload Icon">
+                                        </div>
+                                    </div>
+                                </label>
+                                <input type="file" id="file-input">
+                            </div>
+                        </div>
+                        <h2 id="nickname" class="nickname" th:text="${vpCtrlDTO.nickname}"></h2>
+                    </div>
+                </td>
+
+                <td class="td-div_group">
+
+                    <div class="clearfix">
+                        <table class="table1">
+                            <tr>
+                                <td class="likes-icon">
+                                    <!-- 클릭 시 좋아요 수 +1 & ♡ → ♥ -->
+                                    <i class="fas fa-heart"></i>
+                                </td>
+                                <td class="posts-icon">
+                                    <i class="fas fa-microphone microphone-icon"></i>
+                                </td>
+                                <td class="rating-icon">
+                                    <i class="fas fa-star"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <!-- 좋아요 수 -->
+                                <td class="counts">
+                                    <p>100</p>
+                                </td>
+                                <!-- 게시물 수 -->
+                                <td class="counts">
+                                    <p th:text="${vpCtrlDTO.sampleCount}"></p>
+                                </td>
+                                
+                                <!-- 별점수치 (평가자 수) -->
+                                <td class="counts">
+                                    <!-- 클릭 시 리뷰 팝업 창 생성 -->
+                                    <p>4.5 (100)</p> 
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <hr class="hr1"/>
+
+                    <div class="button-group">
+                        <button th:id="'modifyBtn_' + ${thumbnailDTO.id}" th:class="${thumbnailDTO.id != null} ? 'mod-thumbnail thumbnail upload-button' : 'thumbnail upload-button'">
+                            <span th:if="${thumbnailDTO.id != null}">
+                                <i class="fas fa-upload"></i> 썸네일 변경
+                            </span>
+                            <span th:unless="${thumbnailDTO.id != null}">
+                                <i class="fas fa-upload"></i> 썸네일 업로드
+                            </span>
+                        </button>
+                        <button th:id="'modifyBtn_' + ${pdfDTO.id}" th:class="${pdfDTO.id != null} ? 'mod-pdf pdf upload-button' : 'pdf upload-button'">
+                            <span th:if="${pdfDTO.id != null}">
+                                <i class="fas fa-upload"></i> 이력서 PDF 변경
+                            </span>
+                            <span th:unless="${pdfDTO.id != null}">
+                                <i class="fas fa-upload"></i> 이력서 PDF 업로드
+                            </span>
+                        </button>
+                    </div>
+                    <input type="file" class="file-input" style="display: none;">
+
+                </td>
+
+                <td>
+                    <div class="quote-table">
+                        <table class="table2">
+                            <tr>
+                                <th class="quote-th-td">사용 목적</th>
+                                <th colspan="2" class="quote-th-td">한 글자</th>
+                            </tr>
+                            <tr>
+                              <td class="quote-title-th-td">영리 목적</td>
+                              <td colspan="2" class="quote-th-td">
+                                  <th:block th:if="${vpCtrlDTO.forProfitPrice} == 0">
+                                      <input type="text" class="forProfit price_input" placeholder="가격 입력">
+                                  </th:block>
+                                  <th:block th:if="${vpCtrlDTO.forProfitPrice != 0}">
+                                      <input th:field="*{vpCtrlDTO.forProfitPrice}" type="text" class="forProfit price_input" placeholder="가격 입력">
+                                  </th:block>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="quote-title-th-td">비영리 목적</td>
+                              <td colspan="2" class="quote-th-td">
+                                  <th:block th:if="${vpCtrlDTO.nonProfitPrice} == 0">
+                                      <input type="text" class="nonProfit price_input" placeholder="가격 입력">
+                                  </th:block>
+                                  <th:block th:if="${vpCtrlDTO.nonProfitPrice != 0}">
+                                      <input th:field="*{vpCtrlDTO.nonProfitPrice}" type="text" class="nonProfit price_input" placeholder="가격 입력">
+                                  </th:block>
+                              </td>
+                            </tr>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+
+        </table>
+
+        <hr class="hr0"/>
+
+        <div class="settings">
+
+            <!-- 키워드/카테고리 설정 ▶ 버튼 -->
+            <button class="setting-button" th:text="${vpCtrlDTO.voiceTypes == null ? '키워드/카테고리 설정 ▶' : '키워드/카테고리 변경 ▶'}" onclick="showpopup_cate()"></button>
+
+            <div class="option-container">
+                <span class="option-label"><i class="fas fa-check"></i> 현재 의뢰 가능 여부</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <input th:checked="${vpCtrlDTO.availability == 'possible'}"  type="checkbox" id="possible" name="availability" value="possible">
+                <label for="possible" class="checkbox-label">
+                    <span class="custom-checkbox"></span>
+                    가능
+                </label>
+                &nbsp;
+                <input th:checked="${vpCtrlDTO.availability == 'not-possible'}"  type="checkbox" id="not-possible" name="availability" value="not-possible">
+                <label for="not-possible" class="checkbox-label">
+                    <span class="custom-checkbox"></span>
+                    불가
+                </label>
+            </div>
+        </div>
+
+        <!-- 소개 / 수정·재진행 / 취소·환불 탭 -->
+        <div class="tab-menu-explain">
+            <button class="tab-button-explain active" onclick="changeTab2(0)"><i class="fas fa-info-circle"></i> 소개</button>
+            <button class="tab-button-explain" onclick="changeTab2(1)"><i class="fas fa-edit"></i> 수정·재진행</button>
+            <button class="tab-button-explain" onclick="changeTab2(2)"><i class="fas fa-money-check-alt"></i> 취소·환불</button>
+        </div>
+
+        <div class="tab-content-explain active">
+            <textarea th:utext="${vpCtrlDTO.introduceContent}" class="tab" name="introduce" placeholder="소개 탭 내용 입력" rows="4"></textarea>
+        </div>
+
+        <div class="tab-content-explain">
+            <textarea th:utext="${vpCtrlDTO.modifyContent}" class="tab" name="modify" placeholder="수정·재진행 탭 내용 입력" rows="4"></textarea>
+        </div>
+
+        <div class="tab-content-explain">
+            <textarea th:utext="${vpCtrlDTO.refundContent}" class="tab" name="refund" placeholder="취소·환불 탭 내용 입력" rows="4"></textarea>
+        </div>
+
+        <!-- 전시할 탭 결정 -->
+        <span id="tabNum" th:text="${tabNum}" style="display: none;"></span>
+
+        <!-- 영상샘플 / 음성샘플 탭 -->
+        <div class="tab-menu">
+            <button class="tab-button active" onclick="changeTab(event, 'gallery1')"><i class="fas fa-video"></i> 영상샘플</button>
+            <button id="audio-tab-btn" class="tab-button" onclick="changeTab(event, 'gallery2')"><i class="fas fa-volume-up"></i> 음성샘플</button>
+        </div>
+
+        <div id="gallery1" class="gallery">
+            <div class="addContainer">
+                <button class="add-button" onclick="showpopup_add1()"><i class="fas fa-plus-circle"></i></button>
+            </div>
+
+            <!-- 영상샘플 업로드 여부-->
+            <span class="check-video" style="display: none;" th:text="${urlDTOList.isEmpty() ? 'video-empty' : 'video-uploaded'}"></span>
+
+            <!--영상샘플 -->
+            <div th:each="urlDTO : ${urlDTOList}" class="gallery-item">
+                <a th:href="'javascript:showYoutubePopup(\'' + ${urlDTO.youtubeUrl} + '\')'">
+                    <img th:src="${urlDTO.thumbnailUrl}" alt="이미지 1">
+                </a>
+                <h3 th:text="${urlDTO.title}" th:title="${urlDTO.title}">제목</h3>
+                <ul>
+                    <li th:each="keyword : ${urlDTO.selectedKeywords}" th:text="${keyword}" th:title="${keyword}">키워드</li>
+                </ul>
+                <div class="mod">
+                    <span class="inline-text">
+                        <button th:id="'deleteBtn_' + ${urlDTO.id}" class="mod-button delete-video-button">삭제</button>
+                    </span>
+                    <span class="inline-text">|</span>
+                    <span class="inline-text">
+                        <button th:id="'modifyBtn_' + ${urlDTO.id}" class="mod-button mod-video-button">수정</button>
+                    </span>
+                </div>
+            </div>
+            <!-- 나머지 샘플들도 동일한 방식으로 추가 -->
+        </div>
+
+
+        <div id="gallery2" class="gallery" style="display: none;">
+            <div class="addContainer">
+                <button class="add-button" onclick="showpopup_add2()"><i class="fas fa-plus-circle"></i></button>
+            </div>
+
+            <!-- 음성샘플 업로드 여부-->
+            <span class="check-audio" style="display: none;" th:text="${audioDTOList.isEmpty() ? 'audio-empty' : 'audio-uploaded'}"></span>
+
+            <!--음성샘플 -->
+            <div th:each="audioDTO : ${audioDTOList}" class="gallery-item">
+                <div class="imageContainer">
+                    <div class="imageDiv">
+                        <img class="myImage" src="/img/play.jpg" alt="이미지 5">
+                        <audio id="audio" class="audio">
+                            <source th:src="${audioDTO.fileDownloadUri}" type="audio/mpeg" style="display: none;">
+                        </audio>
+                    </div>
+                    <h3 th:text="${audioDTO.title}" th:title="${audioDTO.title}"></h3>
+                    <ul>
+                        <li th:each="keyword : ${audioDTO.selectedKeywords}" th:text="${keyword}" th:title="${keyword}"></li>
+                    </ul>
+                    <div class="mod">
+                        <span class="inline-text">
+                            <button th:id="'deleteBtn_' + ${audioDTO.id}" class="mod-button delete-audio-button">삭제</button>
+                        </span>
+                            <span class="inline-text">|</span>
+                            <span class="inline-text">
+                                <button th:id="'modifyBtn_' + ${audioDTO.id}" class="mod-button mod-audio-button">수정</button>
+                            </span>
+                    </div>
+                </div>
+            </div>
+            <!-- 나머지 샘플들도 동일한 방식으로 추가 -->
+        </div>
+
+        <div class="bottom">
+            <button onclick="getClass(this)" class="save finish-button">임시저장</button>
+            <button onclick="getClass(this)" class="submit finish-button">제출</button>
+        </div>
+    </div>
+
+</body>
+<script th:src="@{/js/10_VP-tapmenu_1.js}"></script>
+<script th:src="@{/js/10_VP-tapmenu_2.js}"></script>
+<script th:src="@{/js/11.0_vp-ctrl-script.js}"></script>
+<script th:src="@{/js/11.0_thumbnail-popup.js}"></script>
+<script th:src="@{/js/11.0_pdf-popup.js}"></script>
+<script th:src="@{/js/11.0_youtube-popup.js}"></script>
+<script th:src="@{/js/11.0_audio-popup.js}"></script>
+<script th:src="@{/js/11.0_show-popup.js}"></script>
+</html>
